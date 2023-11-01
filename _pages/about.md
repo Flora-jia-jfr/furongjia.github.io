@@ -22,7 +22,7 @@ My primary research interests encompass the development of machine learning and 
 ## Education
 <div style='display: flex; justify-content: space-between;'>
 	<p style='font-size:20px'><b>University of Southern California</b></p>
-	<i>Aug. 2020 - May. 2024</i>
+	<i>Aug. 2020 - May 2024</i>
 </div>
 GPA: **3.97**/4
 * Bachelor of Science in **Computer Science**

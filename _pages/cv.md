@@ -23,7 +23,7 @@ redirect_from:
 ## Education
 <div style='display: flex; justify-content: space-between;'>
 	<p style='font-size:20px; margin-bottom:5px'><b>University of Southern California</b></p>
-	<i>Aug. 2020 - May. 2024</i>
+	<i>Aug. 2020 - May 2024</i>
 </div>
 
 <div>
@@ -44,7 +44,7 @@ redirect_from:
 	<i>May 2023 -- Present</i>
 </div>
 <div style='display:flex; justify-content:space-between; margin:0px'>
-<p style='margin:0px'>Research Assistant | <i>Python, Pytorch, Hugging Face, Shell</i></p>
+<p style='margin:0px'>Research Assistant</p>
 advisor: <i><a href='https://viterbi-web.usc.edu/~liu32/'>Prof. Yan Liu</a></i>
 </div>
 
@@ -70,7 +70,7 @@ advisor: <i><a href='https://viterbi-web.usc.edu/~liu32/'>Prof. Yan Liu</a></i>
 	<i>Aug. 2022 -- Present</i>
 </div>
 <div style='display:flex; justify-content:space-between;'>
-<p style='margin:0px'>Research Assistant | <i>Python, Pytorch, Hugging Face, Shell</i></p>
+<p style='margin:0px'>Research Assistant</p>
 advisor: <i><a href='https://jessethomason.com/'>Prof. Jesse Thomason</a></i>
 
 </div>
@@ -91,7 +91,7 @@ advisor: <i><a href='https://jessethomason.com/'>Prof. Jesse Thomason</a></i>
 	<i>Aug. 2021 – Present</i>
 </div>
 <div style='display:flex; justify-content:space-between;'>
-<p style='margin:0px'>Research Assistant | <i>Python, Pytorch, DeepLearning, Bash, Linux, Github, AWS, Vue.js, Firebase</i></p>
+<p style='margin:0px'>Research Assistant</p>
 advisor: <i><a href='https://maja-mataric.web.app/'>Prof. Maja Matarić</a></i>
 </div>
 
@@ -116,7 +116,7 @@ advisor: <i><a href='https://maja-mataric.web.app/'>Prof. Maja Matarić</a></i>
 
 <div style='display: flex; justify-content: space-between;'>
 	<p style='font-size:20px; margin:0px'><b>Galileo Financial Technologies, SoFi</b></p>
-	<i>May. 2022 -- Aug. 2022</i>
+	<i>May 2022 -- Aug. 2022</i>
 </div>
 <div style='display:flex; justify-content:space-between;'>
 <p style='margin:0px'>Software Engineering Intern | <i>Python, Flask, HTML/CSS, TypeScript, Gitlab, CI/CD, lit-element</i></p>
