@@ -1,13 +1,11 @@
 ---
 layout: archive
-title: "CV"
+title: "Furong(Flora) Jia"
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
-# Furong Jia (Flora Jia)
-
 
 ## Publication
 * [**I2I: Initializing Adapters with Improvised Knowledge**](https://arxiv.org/abs/2304.02168)
@@ -45,10 +43,10 @@ redirect_from:
 </div>
 <div style='display:flex; justify-content:space-between; margin:0px'>
 <p style='margin:0px'>Research Assistant</p>
-advisor: <i><a href='https://viterbi-web.usc.edu/~liu32/'>Prof. Yan Liu</a></i>
+<p style='margin:0px'>advisor: <i><a href='https://viterbi-web.usc.edu/~liu32/'>Prof. Yan Liu</a></i></p>
 </div>
 
-### Projects & Contributions:
+<h3 style='margin:10px 0px'> Projects & Contributions:</h3>
 1. Prompt-based Large Language Model for Multimodal Time-series Forecasting
 - Established a pipeline for proposing multimodal time series dataset to improve time series forecasting lending the ability of Large Language Models (LLM), submitted a paper to EAAI-24 as the first author.
 - Pre-processed, analyzed, and established a new multimodal time series dataset on the news using GDELT database and incorporated textual information from related news articles through LLM models.
@@ -71,11 +69,11 @@ advisor: <i><a href='https://viterbi-web.usc.edu/~liu32/'>Prof. Yan Liu</a></i>
 </div>
 <div style='display:flex; justify-content:space-between;'>
 <p style='margin:0px'>Research Assistant</p>
-advisor: <i><a href='https://jessethomason.com/'>Prof. Jesse Thomason</a></i>
+<p style='margin:0px'>advisor: <i><a href='https://jessethomason.com/'>Prof. Jesse Thomason</a></i></p>
 
 </div>
 
-### Projects & Contributions:
+<h3 style='margin:10px 0px'> Projects & Contributions:</h3>
 1. Initializing Adapters with Improvised Knowledge for Multimodal Continual Learning
 - Collaborated with Ph.D. students on a multi-modal continual learning project to enable parameter- efficient knowledge transfer through adapters on question answering tasks.
 - Implemented multiple vision-language tasks, including GQA, COCO-QA, AQUA, trained and imple- mented model architectures to test various settings to enhance forward transfer and reduce knowledge forgetting, resulting in a co-author publication presented at *CoLLAs 2023*.
@@ -92,10 +90,10 @@ advisor: <i><a href='https://jessethomason.com/'>Prof. Jesse Thomason</a></i>
 </div>
 <div style='display:flex; justify-content:space-between;'>
 <p style='margin:0px'>Research Assistant</p>
-advisor: <i><a href='https://maja-mataric.web.app/'>Prof. Maja Matarić</a></i>
+<p style='margin:0px'>advisor: <i><a href='https://maja-mataric.web.app/'>Prof. Maja Matarić</a></i></p>
 </div>
 
-### Projects & Contributions:
+<h3 style='margin:10px 0px'> Projects & Contributions:</h3>
 * ASD Behavior Recognition Project
   - Collaborated with Ph.D. students to develop a large-scale, real-scenario dataset for recognizing children's behaviors, receiving Spring 2022 Provost’s Research Fellowship.
   - Preprocessed, annotated, and detailed children-robot interactions within the dataset, trained and applied state-of-the-art (SOTA) action recognition models to the dataset, with a focus on refining and comparing various sampling methods.
