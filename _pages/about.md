@@ -8,9 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-I am an senior undergraduate student in University of Southern California(USC) majoring in Computer science & Applied and Computational Mathematics. I am currently applying for graduate programs in CS.
+I am a senior undergraduate student in University of Southern California(USC) majoring in Computer science & Applied and Computational Mathematics. I am currently applying for graduate programs in CS.
 
-My primary research interests encompass the development of machine learning and data mining algorithms for handling data with unique structures like multimodal and time-series data, and tackling the distribution shift of data over time through deep learning methods. My current researches focuses on **multimodal** machine learning; **continual learning** methods for distribution shifts; **parameter-efficient fine-tuning** on **pre-trained** models.
+My primary research interests encompass the development of machine learning and data mining algorithms for handling data with unique structures like multimodal and time-series data, and tackling the distribution shift of data over time through deep learning methods. My current research focuses on **multimodal** machine learning; **continual learning** methods for distribution shifts; **parameter-efficient fine-tuning** on **pre-trained** models.
 
 ## Research Interest: 
 * Multimodal machine learning
@@ -35,7 +35,7 @@ GPA: **3.97**/4
 * Research Assistant at [GLAMOR Lab](https://glamor-usc.github.io/) advised by [Prof. Jesse Thomason](https://jessethomason.com/)
 * Research Assistant at [Interaction Lab](https://uscinteractionlab.web.app/) advised by [Prof. Maja Matarić](https://maja-mataric.web.app/)
 
-More details are under [CV](/cv/)
+More details are under [CV](https://flora-jia-jfr.github.io/furongjia.github.io/cv/)
 
 ## Publications
 * [**I2I: Initializing Adapters with Improvised Knowledge**](https://arxiv.org/abs/2304.02168)
