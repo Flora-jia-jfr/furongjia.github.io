@@ -10,7 +10,7 @@ redirect_from:
 
 I am a senior undergraduate student in University of Southern California(USC) majoring in Computer science & Applied and Computational Mathematics. I am currently applying for graduate programs in CS.
 
-My primary research interests encompass the development of machine learning and data mining algorithms for handling data with unique structures like multimodal and time-series data, and tackling the distribution shift of data over time through deep learning methods. My current research focuses on **multimodal** machine learning; **continual learning** methods for distribution shifts; **parameter-efficient fine-tuning** on **pre-trained** models.
+My primary research interests encompass the development of machine learning and data mining algorithms for handling data with unique structures like texts, multimodal, and time-series data, and tackling the distribution shift of data over time through deep learning methods. My current research focuses on **natural langauge processing**; **multimodal** machine learning; **continual learning** methods for distribution shifts; **parameter-efficient fine-tuning** on **pre-trained** models.
 
 ## Research Interest: 
 * Multimodal machine learning
