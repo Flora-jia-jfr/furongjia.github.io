@@ -13,9 +13,9 @@ redirect_from:
 	*Conference on Lifelong Learning Agents (CoLLAs) 2023*
 * GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting. 
 	**Furong Jia**, Kevin Zheng, Yixiang Zheng, Defu Cao, Yan Liu. Submitted to EAAI-24
-* [**TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting**](https://arxiv.org/abs/2310.04948)
+<!-- * [**TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting**](https://arxiv.org/abs/2310.04948)
 	Defu Cao, **Furong Jia**, Sercan O Arik, Tomas Pfister, Yixiang Zheng, Wen Ye, Yan Liu
-	*arXiV preprint*
+	*arXiV preprint* -->
 
 
 ## Education
@@ -55,7 +55,8 @@ redirect_from:
 2. Large Language Models (LLMs) for Time Series
 - Collaborating with Ph.D. students to assess the potential of utilizing Large Language Models (LLMs) for time series tasks through prompting and decomposition, aiming for building foundation model lending LLM.
 - Introduced and employed selection-based prompts to enhance distribution adaption in non-stationary time series.
-- Actively engaged in the complete research cycle: from initial architecture design and implementation to experimentation, visualization, in-depth analysis, and paper drafting, submitted to ICLR-2024 as the second author.
+- Actively engaged in the complete research cycle: from initial architecture design and implementation to experimentation, visualization, in-depth analysis, and paper drafting
+<!-- , submitted to ICLR-2024 as the second author. -->
 
 3. Causal Benchmark in Treatment Effect Estimation
 - Collaborating with Ph.D. students to examine the influence of causal components on current models for treatment effect estimation.

@@ -43,9 +43,9 @@ More details are under [CV](https://flora-jia-jfr.github.io/furongjia.github.io/
 	*Conference on Lifelong Learning Agents (CoLLAs) 2023*
 * GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting. 
 	**Furong Jia**, Kevin Zheng, Yixiang Zheng, Defu Cao, Yan Liu. Submitted to EAAI-24
-* [**TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting**](https://arxiv.org/abs/2310.04948)
+<!-- * [**TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting**](https://arxiv.org/abs/2310.04948)
 	Defu Cao, **Furong Jia**, Sercan O Arik, Tomas Pfister, Yixiang Zheng, Wen Ye, Yan Liu
-	*arXiV preprint*
+	*arXiV preprint* -->
 
 More details are under [Publications](/publications/)
 
