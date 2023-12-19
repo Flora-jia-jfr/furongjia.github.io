@@ -47,7 +47,7 @@ More details are under [CV](https://flora-jia-jfr.github.io/furongjia.github.io/
 	Defu Cao, **Furong Jia**, Sercan O Arik, Tomas Pfister, Yixiang Zheng, Wen Ye, Yan Liu
 	*arXiV preprint* -->
 
-More details are under [Publications](/publications/)
+More details are under [Publications](/furongjia.github.io/publications/)
 
 ## Teaching experience
 
