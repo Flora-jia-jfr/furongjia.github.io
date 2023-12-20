@@ -4,8 +4,8 @@ collection: publications
 permalink: /publication/paper-2
 excerpt: ''
 date: 2023-09-10
-venue: #
-submit: 'EAAI-24'
+venue: 'EAAI-24 (The 14th Symposium on Educational Advances in Artificial Intelligence)'
+# submit: 'EAAI-24'
 paperurl: #'https://arxiv.org/pdf/2304.02168.pdf'
 citation: # 'Srinivasan, Tejas, et al. "I2I: Initializing Adapters with Improvised Knowledge." CoLLAs 2023 arXiv:2304.02168 (2023).'
 authors: '<strong>Furong Jia</strong>, Kevin Wang, Yixiang Zheng, Defu Cao, Yan Liu'
