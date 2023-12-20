@@ -13,7 +13,7 @@ redirect_from:
 	*Conference on Lifelong Learning Agents (CoLLAs) 2023*
 * GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting. 
 	**Furong Jia**, Kevin Zheng, Yixiang Zheng, Defu Cao, Yan Liu. \\
-	The 14th Symposium on Educational Advances in Artificial Intelligence (EAAI-24)
+	*The 14th Symposium on Educational Advances in Artificial Intelligence (EAAI-24)*
 <!-- * [**TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting**](https://arxiv.org/abs/2310.04948)
 	Defu Cao, **Furong Jia**, Sercan O Arik, Tomas Pfister, Yixiang Zheng, Wen Ye, Yan Liu
 	*arXiV preprint* -->
