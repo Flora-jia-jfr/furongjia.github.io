@@ -49,14 +49,14 @@ redirect_from:
 
 <h3 style='margin:10px 0px'> Projects & Contributions:</h3>
 1. Prompt-based Large Language Model for Multimodal Time-series Forecasting
-- Established a pipeline for proposing multimodal time series dataset to improve time series forecasting lending the ability of Large Language Models (LLM), submitted a paper to EAAI-24 as the first author.
+- Established a pipeline for proposing multimodal time series dataset to improve time series forecasting lending the ability of Large Language Models (LLM), leading to a first-authored paper accpeted to EAAI-24.
 - Pre-processed, analyzed, and established a new multimodal time series dataset on the news using GDELT database and incorporated textual information from related news articles through LLM models.
 - Compared state-of-the-art (SOTA) time series forecasting models, and proposed our model (GPT4MTS) by treating textual information as prompt to improve performance.
 
 2. Large Language Models (LLMs) for Time Series
 - Collaborating with Ph.D. students to assess the potential of utilizing Large Language Models (LLMs) for time series tasks through prompting and decomposition, aiming for building foundation model lending LLM.
 - Introduced and employed selection-based prompts to enhance distribution adaption in non-stationary time series.
-- Actively engaged in the complete research cycle: from initial architecture design and implementation to experimentation, visualization, in-depth analysis, and paper drafting
+- Actively engaged in the complete research cycle: from initial architecture design and implementation to experimentation, visualization, in-depth analysis, and paper drafting.
 <!-- , submitted to ICLR-2024 as the second author. -->
 
 3. Causal Benchmark in Treatment Effect Estimation
@@ -135,8 +135,8 @@ redirect_from:
 <i>Shanghai, China</i>
 </div>
 
-* Developed homepages, login, and signup pages indepently through HTML/CSS, Angular.js, and Ionic framework to assist the front end development of an internally used mobile application
-* Utilized Gitee to contribute in the development and modification of “Shanghai Hezhang” project using HTML/CSS, Angular.js, and Node.js: setting up service, modifying layout, and adding new functions such as loading animation and notification for system update
+* Developed homepages, login, and signup pages independently through HTML/CSS, Angular.js, and Ionic framework to assist the front end development of an internally used mobile application
+* Utilized Gitee to contribute to the development and modification of the “Shanghai Hezhang” project using HTML/CSS, Angular.js, and Node.js: setting up service, modifying layout, and adding new functions such as loading animation and notification for system update
 
 
 ## Projects
