@@ -80,7 +80,7 @@ redirect_from:
 - Collaborated with Ph.D. students on a multi-modal continual learning project to enable parameter- efficient knowledge transfer through adapters on question answering tasks.
 - Implemented multiple vision-language tasks, including GQA, COCO-QA, AQUA, trained and imple- mented model architectures to test various settings to enhance forward transfer and reduce knowledge forgetting, resulting in a co-author publication presented at *CoLLAs 2023*.
 
-2. Prompting Methods for Domain Shifts in Multi-modal Continual Learning
+2. Prompting Methods for Multimodal Continual Learning
 - Initiated and currently leading a project exploring the use of prompting methods for visual question answering tasks in multi-modal continual learning.
 - Proposed, executed, and analyzed various methods, actively working towards a conference submission to share the findings. 
 
