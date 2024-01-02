@@ -143,6 +143,19 @@ redirect_from:
 
 <div style='display: flex; justify-content: space-between;'>
 	<p style='margin:0px'>
+		<b style='font-size:20px'>ASK-ANRG</b>	 	
+	 </p>
+	 <i style='margin-top:5px;'>Aug. 2023 -- Dec. 2023</i>
+</div>
+<i style='vertical-align: center;'>Python, Natural Language Processing, Hugging Face, Large Language Models</i>
+
+* Developed an AI Chatbot for [ANRG labs](anrg.usc.edu) aimed at answering questions regarding lab history, members, research papers, and projects, providing a quick and efficient way for students and recruiters to learn about lab.
+* Implemented a Retrieval-Augmented Generation framework to efficiently process lab-specific information through utilizing OpenAI API for query handling and related information retrieval.
+
+<a class="btn" href="https://huggingface.co/spaces/ask-ANRG/Ask-ANRG" title="ASK-ANRG demo" style='color:#fff'>Demo Page</a>
+
+<div style='display: flex; justify-content: space-between;'>
+	<p style='margin:0px'>
 		<b style='font-size:20px'>Text-Meme-Prediction</b>	 	
 	 </p>
 	 <i style='margin-top:5px;'>Oct. 2022 -- Dec. 2022</i>
