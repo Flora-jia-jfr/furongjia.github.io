@@ -88,7 +88,7 @@ redirect_from:
 
 <div style='display: flex; justify-content: space-between;'>
 	<a href='https://uscinteractionlab.web.app/' style='font-size:20px; margin:0px'><b>Interaction Lab</b></a>
-	<i>Aug. 2021 – Present</i>
+	<i>Aug. 2021 – May. 2023</i>
 </div>
 <div style='display:flex; justify-content:space-between;'>
 <p style='margin:0px'>Research Assistant</p>
