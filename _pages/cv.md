@@ -170,7 +170,7 @@ redirect_from:
 	<p style='margin:0px'>
 		<b style='font-size:20px'>Ctrl-F</b>	 	
 	 </p>
-	 <i style='margin-top:5px;'>Aug. 2021 – Present</i>
+	 <i style='margin-top:5px;'>Aug. 2021 – May 2022</i>
 </div>
 <i style='vertical-align: center;'>HTML/CSS, Javascript, Vue.js, Axios, Webpack, Firebase, Java Spring boot, README</i>
 
