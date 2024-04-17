@@ -5,8 +5,6 @@ permalink: /publication/paper-1
 excerpt: ''
 date: 2023-05-15
 venue: 'CoLLAs 2023 (Second Conference on Lifelong Learning Agents)'
-paperurl: #'https://arxiv.org/pdf/2304.02168.pdf'
-citation: # 'Srinivasan, Tejas, et al. "I2I: Initializing Adapters with Improvised Knowledge." CoLLAs 2023 arXiv:2304.02168 (2023).'
 authors: 'Tejas Srinivasan, <strong>Furong Jia</strong>, Mohammad Rostami, Jesse Thomason'
 ---
 
