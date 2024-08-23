@@ -8,14 +8,13 @@ redirect_from:
   - /about.html
 ---
 
-I am a senior undergraduate student in University of Southern California(USC) majoring in Computer science & Applied and Computational Mathematics. I am going to join Duke CS Ph.D. program in Fall 2024.
+I am a first-year Computer Science PhD student in Duke University. I graduated from University of Southern California with a BS in Computer science & Applied and Computational Mathematics in 2024.
 
 My primary research interests encompass the development of machine learning and data mining algorithms for handling data with unique structures like texts, multimodal, and time-series data, and tackling the distribution shift of data over time through deep learning methods. My current research focuses on **natural langauge processing**; **multimodal** machine learning; **continual learning** methods for distribution shifts; **parameter-efficient fine-tuning** on **pre-trained** models.
 
 ## Research Interest: 
-* Multimodal machine learning
 * Natural Language Processing
-* Time series analysis
+* Multimodal machine learning
 * Continual Learning
 * Data Mining
 
