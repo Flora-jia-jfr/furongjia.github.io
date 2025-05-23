@@ -8,19 +8,22 @@ redirect_from:
 ---
 
 ## Publication
-* [**I2I: Initializing Adapters with Improvised Knowledge**](https://arxiv.org/abs/2304.02168)
-	Tejas Srinivasan, **Furong Jia**, Mohammad Rostami, Jesse Thomason. \\
-	*Conference on Lifelong Learning Agents (CoLLAs) 2023*
-* [**GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting**](https://ojs.aaai.org/index.php/AAAI/article/view/30383). 
-	**Furong Jia**, Kevin Zheng, Yixiang Zheng, Defu Cao, Yan Liu. \\
-	*The 14th Symposium on Educational Advances in Artificial Intelligence (EAAI-24)*
+* [**Diagnosing our datasets: How does my language model learn clinical information?**](https://arxiv.org/abs/2505.15024)
+	**Furong Jia**, David Sontag, Monica Agrawal \\
+	*6th Annual Conference on Health, Inference, and Learning (CHIL 2025)*
 * [**TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting**](https://arxiv.org/abs/2310.04948)
 	Defu Cao, **Furong Jia**, Sercan O Arik, Tomas Pfister, Yixiang Zheng, Wen Ye, Yan Liu. \\
 	*The Twelfth International Conference on Learning Representations (ICLR 2024)*
-
+* [**GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting**](https://ojs.aaai.org/index.php/AAAI/article/view/30383). 
+	**Furong Jia**, Kevin Zheng, Yixiang Zheng, Defu Cao, Yan Liu. \\
+	*The 14th Symposium on Educational Advances in Artificial Intelligence (EAAI-24)*
+* [**I2I: Initializing Adapters with Improvised Knowledge**](https://arxiv.org/abs/2304.02168)
+	Tejas Srinivasan, **Furong Jia**, Mohammad Rostami, Jesse Thomason \\
+	*Conference on Lifelong Learning Agents (CoLLAs) 2023*
 
 ## Education
-<div style='display: flex; justify-content: space-between;'>
+
+<!-- <div style='display: flex; justify-content: space-between;'>
 	<p style='font-size:20px; margin-bottom:5px'><b>University of Southern California</b></p>
 	<i>Aug. 2020 - May 2024</i>
 </div>
@@ -33,13 +36,28 @@ redirect_from:
 	<p style='margin:0px'><strong>Fellowships</strong>: Provost’s Research Fellowship, CURVE Research Fellowship</p>
 	<p style='margin:0px'><strong>Honors</strong>: W.V.T. Rusch Engineering Honors Program</p>
 	<p style='margin:0px'><strong>Teaching</strong>: CSCI 270 (Algorithms and Theory of Computing), ITP 104 (Web Publishing)</p>
+</div> -->
+
+<div style='display: flex; justify-content: space-between;'>
+	<p style='font-size:20px'><b>Duke University</b></p>
+	<i>Aug. 2024 - Present</i>
 </div>
+<!-- GPA: **4**/4 -->
+* PhD in **Computer Science**
+
+<div style='display: flex; justify-content: space-between;'>
+	<p style='font-size:20px'><b>University of Southern California</b></p>
+	<i>Aug. 2020 - May 2024</i>
+</div>
+GPA: **3.96**/4
+* Bachelor of Science in **Computer Science**
+* Bachelor of Science in **Applied and Computational Mathematics**
 
 
 ## Research Experience
 
 <div style='display:flex; justify-content: space-between;'>
-	<a href='https://melady.usc.edu/' style='font-size:20px; margin:0px'><b>Melady Lab</b></a>
+	<a href='https://melady.usc.edu/' style='font-size:20px; margin:0px'><b>USC Melady Lab</b></a>
 	<i>May 2023 -- Present</i>
 </div>
 <div style='display:flex; justify-content:space-between; margin:0px'>
@@ -66,7 +84,7 @@ redirect_from:
 
 
 <div style='display: flex; justify-content: space-between;'>
-	<a href='https://glamor-usc.github.io//' style='font-size:20px; margin:0px'><b>GLAMOR Lab</b></a>
+	<a href='https://glamor-usc.github.io//' style='font-size:20px; margin:0px'><b>USC GLAMOR Lab</b></a>
 	<i>Aug. 2022 -- Present</i>
 </div>
 <div style='display:flex; justify-content:space-between;'>
@@ -87,7 +105,7 @@ redirect_from:
 
 
 <div style='display: flex; justify-content: space-between;'>
-	<a href='https://uscinteractionlab.web.app/' style='font-size:20px; margin:0px'><b>Interaction Lab</b></a>
+	<a href='https://uscinteractionlab.web.app/' style='font-size:20px; margin:0px'><b>USC Interaction Lab</b></a>
 	<i>Aug. 2021 – May. 2023</i>
 </div>
 <div style='display:flex; justify-content:space-between;'>
