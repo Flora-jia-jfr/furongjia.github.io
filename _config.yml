@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Furong Jia"
   avatar           : "profile.jpg"
-  bio              : "Senior Undergrad"
-  location         : "Los Angeles, California"
+  bio              : "First-year CS PhD Student"
+  location         : "Durham, North Carolina"
   employer         :
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=yNx9cokAAAAJ&hl=en"
-  email            :  "florajia@usc.edu"
+  email            : "flora.jia@duke.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :

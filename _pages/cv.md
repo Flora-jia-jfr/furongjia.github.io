@@ -31,8 +31,8 @@ redirect_from:
 <div>
 	<p style='margin:0px'><strong>Bachelor of Science in Computer Science</strong></p>
 	<p style='margin:0px'><strong>Bachelor of Science in Applied and Computational Mathematics</strong></p>
-	<p style='margin:0px'><strong>GPA</strong>: 3.97/4</p>
-	<p style='margin:0px'><strong>Awards</strong>: Student Recognition Awards, Viterbi Grand Challenges Scholar, Dean’s List, Academic Achievement Award Scholarship, ABC Innovation Prize  </p>
+	<p style='margin:0px'><strong>GPA</strong>: 3.96/4</p>
+	<p style='margin:0px'><strong>Awards</strong>: Student Recognition Awards, Viterbi Grand Challenges Scholar, Dean’s List, Academic Achievement Award Scholarship, ABC Innovation Prize, Albert Dorman Future Leader Award </p>
 	<p style='margin:0px'><strong>Fellowships</strong>: Provost’s Research Fellowship, CURVE Research Fellowship</p>
 	<p style='margin:0px'><strong>Honors</strong>: W.V.T. Rusch Engineering Honors Program</p>
 	<p style='margin:0px'><strong>Teaching</strong>: CSCI 270 (Algorithms and Theory of Computing), ITP 104 (Web Publishing)</p>
