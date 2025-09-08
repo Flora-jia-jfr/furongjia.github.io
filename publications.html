@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Publications - Your Name</title>
+  <meta name="author" content="Your Name">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Publications of Your Name">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="shared-styles.css">
+  <link rel="icon" type="image/png" href="figures/logo.png">
+  <!-- Page-specific styles -->
+  <style>
+    body {
+      font-display: swap; 
+    }
+    
+    /* Page-specific layout - consistent margins for non-index pages */
+    .main-content-wrapper {
+      max-width: 1000px !important;
+      margin: 0 auto !important;
+      padding: 0 80px !important;
+      box-sizing: border-box !important;
+    }
+    
+    .publications-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0;
+    }
+    
+    /* Fix for paper indentation */
+    .publication-table {
+      width: 100%;
+      border: 0px;
+      border-spacing: 0px;
+      border-collapse: separate;
+      margin: 0 auto 20px;
+    }
+    
+    .publication-table tr {
+      vertical-align: top;
+    }
+    
+    .publication-table td {
+      padding: 10px 20px;
+      vertical-align: top;
+    }
+    
+    /* Publication Lists */
+    .publication-list {
+      list-style-type: disc !important;
+      padding-left: 20px !important;
+      margin: 0 0 20px 0 !important;
+      list-style-position: outside !important;
+    }
+    
+    .publication-list li {
+      margin-bottom: 16px !important;
+    }
+    
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+      .main-content-wrapper {
+        padding: 0 40px !important;
+      }
+      
+      .publications-container {
+        max-width: 100%;
+      }
+      
+      .publication-table td {
+        padding: 10px 15px;
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      .main-content-wrapper {
+        padding: 0 20px !important;
+      }
+      
+      .publication-table td {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Scroll progress indicator -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+  
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Navigation Buttons -->
+  <nav class="nav-buttons" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-button">Home</a>
+    <a href="publications.html" class="nav-button" aria-current="page">Publications</a>
+    <a href="projects.html" class="nav-button">Projects</a>
+    <a href="blogs.html" class="nav-button">Blogs</a>
+    <a href="photography.html" class="nav-button">Photography</a>
+    
+    <!-- Dark mode toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+    </button>
+    
+    <!-- Mobile hamburger menu -->
+    <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu" title="Toggle navigation menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile sidebar overlay -->
+  <div id="mobile-sidebar-overlay" class="mobile-sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <div class="main-content-wrapper">
+      <div class="publications-container">
+        <h1 class="page-title">Publications</h1>
+        
+        <!-- Preprints Section -->
+        <div class="publication-table">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>Preprints</heading>
+                  <ul id="all-preprints-list" class="publication-list">
+                    <!-- All preprints will be inserted here by JavaScript -->
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Publications Section -->
+        <div class="publication-table">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>Publications</heading>
+                  <ul id="all-publications-list" class="publication-list">
+                    <!-- All publications will be inserted here by JavaScript -->
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Load JavaScript files -->
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script>
+    // Page-specific JavaScript for publications page
+    document.addEventListener('DOMContentLoaded', function() {
+      // Populate all preprints (not just selected ones)
+      populatePublications(getPreprints(), 'all-preprints-list');
+      
+      // Populate all publications (not just selected ones)
+      populatePublications(getPublications(), 'all-publications-list');
+      
+      // Initialize dark mode toggle
+      initializeDarkMode();
+      
+      // Initialize mobile menu
+      initializeMobileMenu();
+      
+      // Initialize scroll progress indicator
+      initializeScrollProgress();
+    });
+  </script>
+</body>
+
+</html>

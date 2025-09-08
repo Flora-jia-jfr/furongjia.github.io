@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Blogs - Your Name</title>
+  <meta name="author" content="Your Name">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Blog of Your Name">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="shared-styles.css">
+  <link rel="icon" type="image/png" href="figures/logo.png">
+  <style>
+    body {
+      font-display: swap;
+    }
+    
+    /* Page-specific layout - consistent margins for non-index pages */
+    .main-content-wrapper {
+      max-width: 1000px !important;
+      margin: 0 auto !important;
+      padding: 0 80px !important;
+      box-sizing: border-box !important;
+    }
+    
+    .blogs-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0;
+    }
+    
+    .blog-post {
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: var(--section-bg);
+      transition: transform 0.2s ease;
+    }
+    
+    .blog-post:hover {
+      transform: translateY(-2px);
+    }
+    
+    .blog-post-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    
+    .blog-post-meta {
+      font-size: 14px;
+      color: var(--text-color);
+      opacity: 0.7;
+      margin-bottom: 15px;
+    }
+    
+    .blog-post-excerpt {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    
+    .blog-post-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .blog-post-link:hover {
+      color: var(--secondary-color);
+    }
+    
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+      .main-content-wrapper {
+        padding: 0 40px !important;
+      }
+      
+      .blogs-container {
+        max-width: 100%;
+      }
+      
+      .blog-post {
+        padding: 15px;
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      .main-content-wrapper {
+        padding: 0 20px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Scroll progress indicator -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+  
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Navigation Buttons -->
+  <nav class="nav-buttons" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-button">Home</a>
+    <a href="publications.html" class="nav-button">Publications</a>
+    <a href="projects.html" class="nav-button">Projects</a>
+    <a href="blogs.html" class="nav-button" aria-current="page">Blogs</a>
+    <a href="photography.html" class="nav-button">Photography</a>
+    
+    <!-- Dark mode toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+    </button>
+    
+    <!-- Mobile hamburger menu -->
+    <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu" title="Toggle navigation menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile sidebar overlay -->
+  <div id="mobile-sidebar-overlay" class="mobile-sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <div class="main-content-wrapper">
+      <div class="blogs-container">
+        <h1 class="page-title">Blogs</h1>
+        
+        <div id="blog-posts">
+          <!-- Example blog post - replace with your own content -->
+          <article class="blog-post">
+            <h2 class="blog-post-title">Your First Blog Post Title</h2>
+            <div class="blog-post-meta">Published on January 1, 2025</div>
+            <div class="blog-post-excerpt">
+              This is an excerpt of your blog post. Write a brief summary of what the post is about to give readers a preview of the content.
+            </div>
+            <a href="blog-post.html" class="blog-post-link">Read more →</a>
+          </article>
+          
+          <article class="blog-post">
+            <h2 class="blog-post-title">Another Blog Post</h2>
+            <div class="blog-post-meta">Published on December 15, 2024</div>
+            <div class="blog-post-excerpt">
+              Another example blog post excerpt. You can customize this section to show your actual blog posts or integrate with a blog management system.
+            </div>
+            <a href="blog-post-2.html" class="blog-post-link">Read more →</a>
+          </article>
+          
+          <!-- Add more blog posts here or load them dynamically -->
+        </div>
+        
+        <!-- Optional: Add pagination if you have many blog posts -->
+        <div style="text-align: center; margin-top: 40px;">
+          <p style="color: var(--text-color); opacity: 0.7;">
+            More blog posts coming soon!
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Load JavaScript files -->
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script>
+    // Page-specific JavaScript for blogs page
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize dark mode toggle
+      initializeDarkMode();
+      
+      // Initialize mobile menu
+      initializeMobileMenu();
+      
+      // Initialize scroll progress indicator
+      initializeScrollProgress();
+      
+      // You can add blog-specific functionality here
+      // For example, loading blog posts from a data source
+    });
+  </script>
+</body>
+
+</html>
