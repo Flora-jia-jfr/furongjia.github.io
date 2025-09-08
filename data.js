@@ -1,25 +1,25 @@
-// Template Publications Data - Replace with your own publications
+// Example Publications Data - Replace with your own publications
 const publications = [
   // Preprints Examples
   {
-    title: "Your Preprint Title Here",
-    authors: "<b>Your Name</b>, Co-Author One, Co-Author Two",
-    venue: "ArXiv:YYYY",
+    title: "LEDOM: An Open and Fundamental Reverse Language Model",
+    authors: "<b>Xunjian Yin</b>, Sitao Cheng, Yuxi Xie, Xinyu Hu, Li Lin, Xinyi Wang, Liangming Pan, William Yang Wang, Xiaojun Wan",
+    venue: "ArXiv:2507",
     links: [
-      { text: "Paper", url: "https://arxiv.org/abs/YYYY.XXXXX" },
-      { text: "Code", url: "https://github.com/yourusername/yourproject" }
+      { text: "Paper", url: "https://arxiv.org/abs/2507.01335" },
+      { text: "Model", url: "https://huggingface.co/Corning/Reverse-Model-7B-348B" }
     ],
     isPreprint: true,
     isSelected: true
   },
   // Publications Examples
   {
-    title: "Your Publication Title Here",
-    authors: "<b>Your Name</b>, Co-Author One, Co-Author Two",
-    venue: "Conference Name YYYY",
+    title: "Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement",
+    authors: "<b>Xunjian Yin</b>, Xinyi Wang, Liangming Pan, Xiaojun Wan, William Yang Wang",
+    venue: "ACL 2025",
     links: [
-      { text: "Paper", url: "https://arxiv.org/abs/YYYY.XXXXX" },
-      { text: "Code", url: "https://github.com/yourusername/yourproject" }
+      { text: "Paper", url: "https://arxiv.org/abs/2410.04444" },
+      { text: "Code", url: "https://github.com/Arvid-pku/Godel_Agent" }
     ],
     isNew: false,
     isPreprint: false,
@@ -39,19 +39,22 @@ const preprints = getSelectedPreprints();
 const selectedPublications = getSelectedPublications();
 const fullPublications = getAllPublications();
 
-// Template Projects Data - Replace with your own projects
+// Example Projects Data - Replace with your own projects
 const projects = [
   {
-    title: "Your Project Name",
-    description: "Description of your project with <a href='#'>links</a> if needed. (<a href='https://github.com/yourusername/yourproject'>Project Homepage</a>)",
+    title: "Gödel Agent",
+    description: "A self-referential agent framework for recursive self-improvement implemented with Monkey Patching. (<a href='https://github.com/Arvid-pku/Godel_Agent'>Project Homepage</a>)",
     badges: [
-      { url: "https://github.com/yourusername/yourproject/releases", img: "https://img.shields.io/badge/Version-1.0-blue" },
-      { url: "https://github.com/yourusername/yourproject/blob/main/LICENSE.md", img: "https://img.shields.io/badge/License-MIT-blue" },
-      { url: "https://github.com/yourusername/yourproject/stargazers", img: "https://img.shields.io/github/stars/yourusername/yourproject" },
-      { url: "https://github.com/yourusername/yourproject/network/members", img: "https://img.shields.io/github/forks/yourusername/yourproject" }
+      { url: "https://github.com/Arvid-pku/Godel_Agent/releases", img: "https://img.shields.io/badge/Version-1.0-blue" },
+      { url: "https://github.com/Arvid-pku/Godel_Agent/blob/main/LICENSE.md", img: "https://img.shields.io/badge/License-MIT-blue" },
+      { url: "https://github.com/Arvid-pku/Godel_Agent/stargazers", img: "https://img.shields.io/github/stars/Arvid-pku/Godel_Agent" },
+      { url: "https://github.com/Arvid-pku/Godel_Agent/network/members", img: "https://img.shields.io/github/forks/Arvid-pku/Godel_Agent" },
+      { url: "https://github.com/Arvid-pku/Godel_Agent/issues", img: "https://img.shields.io/github/issues/Arvid-pku/Godel_Agent" },
+      { url: "https://github.com/Arvid-pku/Godel_Agent/pulls", img: "https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" },
+      { url: "https://arxiv.org/abs/2410.04444", img: "https://img.shields.io/badge/Doc-Paper-red" }
     ],
     isSelected: true,
-    demoPath: "photos/project-demo/your-project.png"
+    demoPath: "photos/project-demo/godel-agent.png"
   }
 ];
 

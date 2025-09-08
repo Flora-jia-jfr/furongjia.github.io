@@ -15,6 +15,58 @@
     :root {
       --primary-color: #0065C0;
       --secondary-color: #B31B1B;
+      --text-color: #000000;
+      --bg-color: #FFFFFF;
+      --border-color: #bbb;
+      --sidebar-bg: #FFFFFF;
+      --section-bg: #FFFFFF;
+      --hover-bg: rgba(240, 146, 40, 0.08);
+      --shadow-color: rgba(0, 0, 0, 0.1);
+      --placeholder-bg: #f5f5f5;
+      --placeholder-text: #666;
+    }
+
+    /* Dark mode colors */
+    [data-theme="dark"] {
+      --primary-color: #6BA3F5;
+      --secondary-color: #FFB366;
+      --text-color: #D4D4D4;
+      --bg-color: #1F1F1F;
+      --border-color: #4A4A4A;
+      --sidebar-bg: #2A2A2A;
+      --section-bg: #252525;
+      --hover-bg: rgba(255, 179, 102, 0.12);
+      --shadow-color: rgba(0, 0, 0, 0.2);
+      --placeholder-bg: #333333;
+      --placeholder-text: #B8B8B8;
+    }
+
+    /* Ensure body and main elements use CSS variables */
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    /* Ensure body background changes in dark mode */
+    [data-theme="dark"] body {
+      background-color: var(--bg-color) !important;
+      color: var(--text-color) !important;
+    }
+
+    /* Ensure main content uses proper variables */
+    #main-content {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    /* Fix heading colors */
+    .page-title, heading {
+      color: var(--primary-color);
+    }
+
+    /* Fix table backgrounds */
+    table {
+      background-color: var(--bg-color) !important;
     }
     
     /* Page-specific layout - consistent margins for non-index pages */
@@ -51,19 +103,39 @@
       padding: 0px !important;
     }
     
+    /* Project layout */
+    .project-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin: 16px 0 28px 0;
+    }
+
+    .project-media {
+      flex: 0 0 300px;
+    }
+
+    .project-content {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
     /* Project demo images */
     .project-demo {
       width: 100%;
-      max-width: 400px;
+      max-width: 300px;
       height: auto;
       border-radius: 8px;
-      margin-top: 10px;
+      margin: 0;
       border: 1px solid var(--border-color);
       transition: transform 0.2s ease;
+      display: block;
+      box-shadow: 0 2px 8px var(--shadow-color);
     }
-    
+
     .project-demo:hover {
       transform: scale(1.02);
+      box-shadow: 0 4px 16px var(--shadow-color);
     }
     
     /* Badge styling */
@@ -87,6 +159,14 @@
         max-width: 100%;
       }
       
+      .project-row {
+        flex-direction: column;
+      }
+
+      .project-media {
+        flex: unset;
+      }
+
       .project-demo {
         max-width: 100%;
       }
@@ -165,22 +245,24 @@
         
         // Create project content with demo image if available
         let projectHTML = `
-          <p><strong>${project.title}</strong><br>${project.description}</p>
-          <div class="project-badges">
-            ${project.badges.map(badge => 
-              `<a href="${badge.url}"><img alt="${badge.img.split('-').slice(1).join(' ')}" src="${badge.img}" loading="lazy" /></a>`
-            ).join(' ')}
+          <div class="project-row">
+            ${project.demoPath ? `
+              <div class=\"project-media\">
+                <img src=\"${project.demoPath}\" alt=\"${project.title} demo\" class=\"project-demo\" loading=\"lazy\" />
+              </div>
+            ` : ''}
+            <div class=\"project-content\">
+              <p><strong>${project.title}</strong><br>${project.description}</p>
+              <div class="project-badges">
+                ${project.badges.map(badge => 
+                  `<a href="${badge.url}"><img alt="${badge.img.split('-').slice(1).join(' ')}" src="${badge.img}" loading="lazy" /></a>`
+                ).join(' ')}
+              </div>
+            </div>
           </div>
         `;
         
-        // Add demo image if available
-        if (project.demoPath) {
-          projectHTML += `
-            <div style="margin-top: 10px;">
-              <img src="${project.demoPath}" alt="${project.title} demo" class="project-demo" loading="lazy" />
-            </div>
-          `;
-        }
+        // Add demo image if available (legacy fallback removed)
         
         li.innerHTML = projectHTML;
         list.appendChild(li);
