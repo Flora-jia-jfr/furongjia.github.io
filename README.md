@@ -8,7 +8,7 @@ A clean, modern, and responsive academic homepage template featuring dark mode s
 - Customization Guide: [Academic-Homepage-Template/CUSTOMIZATION.md](Academic-Homepage-Template/CUSTOMIZATION.md)
 - Author Homepage: [Xunjian Yin](https://xunjianyin.github.io/)
 
-![Demo](Academic-Homepage-Template/photos/project-demo/Academic-Homepage-Template.png)
+![Demo](photos/project-demo/Academic-Homepage-Template.png)
 
 ## Features
 
