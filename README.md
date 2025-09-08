@@ -1,6 +1,14 @@
 # Academic Homepage Template
 
+
+
 A clean, modern, and responsive academic homepage template featuring dark mode support, mobile-friendly design, and comprehensive sections for publications, projects, and more.
+
+- Demo Link: [Academic-Homepage-Template](https://arvid-pku.github.io/Academic-Homepage-Template/index.html)
+- Customization Guide: [Academic-Homepage-Template/CUSTOMIZATION.md](Academic-Homepage-Template/CUSTOMIZATION.md)
+- Author Homepage: [Xunjian Yin](https://xunjianyin.github.io/)
+
+![Demo](Academic-Homepage-Template/photos/project-demo/Academic-Homepage-Template.png)
 
 ## Features
 
