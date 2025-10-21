@@ -62,10 +62,11 @@ function populatePublications(publications, listId) {
     // Paper details (authors, venue, links)
     const restDiv = document.createElement('div');
     restDiv.className = 'paper_rest';
+    const linksHtml = pub.links.length > 0
+      ? '   [ ' + pub.links.map(link => `<a href="${link.url}">${link.text}</a>`).join(' | ') + ' ]'
+      : '';
     restDiv.innerHTML = pub.authors + '<br />' +
-      '<span style="color:#CC0000"><i>' + pub.venue + '</i></span>   [ ' +
-      pub.links.map(link => `<a href="${link.url}">${link.text}</a>`).join(' | ') +
-      ' ]';
+      '<span style="color:#CC0000"><i>' + pub.venue + '</i></span>' + linksHtml;
     
     // Bottom spacing
     const bottomSpaceDiv = document.createElement('div');
@@ -85,14 +86,29 @@ function populatePublications(publications, listId) {
 function populateProjects() {
   const list = document.getElementById('projects-list');
   if (!list) return;
-  
+
   getSelectedProjects().forEach(project => {
     const li = document.createElement('li');
+
+    // Build links section
+    const links = [];
+    if (project.paperLink) {
+      links.push(`<a href="${project.paperLink}">Paper</a>`);
+    }
+    if (project.githubLink) {
+      links.push(`<a href="${project.githubLink}">GitHub</a>`);
+    }
+    const linksHtml = links.length > 0 ? `[ ${links.join(' | ')} ]` : '';
+
     li.innerHTML = `
-      <p><strong>${project.title}</strong><br>${project.description}</p>
-      <p>${project.badges.map(badge => 
-        `<a href="${badge.url}"><img alt="${badge.img.split('-').slice(1).join(' ')}" src="${badge.img}" loading="lazy" /></a>`
-      ).join(' ')}</p>
+      <div style="display:flex; gap:20px; align-items:flex-start;">
+        ${project.image ? `<img src="${project.image}" alt="${project.title}" style="width:200px; height:auto; border-radius:8px; flex-shrink:0;" loading="lazy" />` : ''}
+        <div>
+          <p><strong>${project.title}</strong></p>
+          <p>${project.description}</p>
+          ${linksHtml ? `<p>${linksHtml}</p>` : ''}
+        </div>
+      </div>
     `;
     list.appendChild(li);
   });

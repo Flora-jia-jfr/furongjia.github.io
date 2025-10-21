@@ -94,22 +94,39 @@ const preprints = getSelectedPreprints();
 const selectedPublications = getSelectedPublications();
 const fullPublications = getAllPublications();
 
-// Example Projects Data - Replace with your own projects
+// Furong Jia's Research Projects
 const projects = [
   {
-    title: "Gödel Agent",
-    description: "A self-referential agent framework for recursive self-improvement implemented with Monkey Patching. (<a href='https://github.com/Arvid-pku/Godel_Agent'>Project Homepage</a>)",
-    badges: [
-      { url: "https://github.com/Arvid-pku/Godel_Agent/releases", img: "https://img.shields.io/badge/Version-1.0-blue" },
-      { url: "https://github.com/Arvid-pku/Godel_Agent/blob/main/LICENSE.md", img: "https://img.shields.io/badge/License-MIT-blue" },
-      { url: "https://github.com/Arvid-pku/Godel_Agent/stargazers", img: "https://img.shields.io/github/stars/Arvid-pku/Godel_Agent" },
-      { url: "https://github.com/Arvid-pku/Godel_Agent/network/members", img: "https://img.shields.io/github/forks/Arvid-pku/Godel_Agent" },
-      { url: "https://github.com/Arvid-pku/Godel_Agent/issues", img: "https://img.shields.io/github/issues/Arvid-pku/Godel_Agent" },
-      { url: "https://github.com/Arvid-pku/Godel_Agent/pulls", img: "https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" },
-      { url: "https://arxiv.org/abs/2410.04444", img: "https://img.shields.io/badge/Doc-Paper-red" }
-    ],
-    isSelected: true,
-    demoPath: "photos/project-demo/godel-agent.png"
+    title: "Diagnosing our datasets: How does my language model understand clinical text?",
+    description: "Developed a novel diagnostic framework to analyze how language models learn clinical information from pretraining data.",
+    image: "photos/project-demo/diagnosing-datasets.png", // Add your image here
+    paperLink: "https://arxiv.org/abs/2505.15024",
+    githubLink: "https://github.com/Flora-jia-jfr/diagnosing_our_datasets", // Add GitHub link if available
+    isSelected: true
+  },
+  {
+    title: "Counting Clues: A Lightweight Probabilistic Baseline Can Match an LLM",
+    description: "Demonstrated that simple probabilistic models can achieve competitive performance with large language models in diagnostic reasoning tasks.",
+    image: "photos/project-demo/counting-clues.png", // Add your image here
+    paperLink: "", // Add paper link when available
+    githubLink: "", // Add GitHub link if available
+    isSelected: true
+  },
+  {
+    title: "Interpreting Dataset Shift in Clinical Notes",
+    description: "Investigated temporal and distributional shifts in clinical notes datasets and their effects on clinical NLP systems.",
+    image: "photos/project-demo/dataset-shift.png", // Add your image here
+    paperLink: "", // Add paper link when available
+    githubLink: "", // Add GitHub link if available
+    isSelected: true
+  },
+  {
+    title: "GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting",
+    description: "Created a novel framework that combines numerical time series data with textual context using large language models for improved forecasting accuracy.",
+    image: "photos/project-demo/gpt4mts.png", // Add your image here
+    paperLink: "https://ojs.aaai.org/index.php/AAAI/article/view/30383",
+    githubLink: "https://github.com/Flora-jia-jfr/GPT4MTS-Prompt-based-Large-Language-Model-for-Multimodal-Time-series-Forecasting", // Add GitHub link if available
+    isSelected: true
   }
 ];
 
