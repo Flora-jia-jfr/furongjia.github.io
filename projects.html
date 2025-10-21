@@ -151,6 +151,24 @@
       transform: scale(1.01);
       box-shadow: 0 4px 16px var(--shadow-color);
     }
+
+    /* Side-by-side layout for square images */
+    .project-side-by-side {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .project-side-by-side img {
+      width: 250px;
+      height: auto;
+      flex-shrink: 0;
+      margin: 0;
+    }
+
+    .project-side-by-side .project-content {
+      flex: 1;
+    }
     
     /* Badge styling */
     .project-badges img {
@@ -168,11 +186,11 @@
       .main-content-wrapper {
         padding: 0 30px !important;
       }
-      
+
       .projects-container {
         max-width: 100%;
       }
-      
+
       .project-row {
         flex-direction: column;
       }
@@ -183,6 +201,16 @@
 
       .project-demo {
         max-width: 100%;
+      }
+
+      /* Stack side-by-side layout on mobile */
+      .project-side-by-side {
+        flex-direction: column;
+      }
+
+      .project-side-by-side img {
+        width: 100%;
+        margin-bottom: 15px;
       }
     }
     
@@ -281,14 +309,33 @@
         }
         const linksHtml = links.length > 0 ? `[ ${links.join(' | ')} ]` : '';
 
-        li.innerHTML = `
-          <div style="margin-bottom:30px;">
-            <p><strong>${project.title}</strong></p>
-            ${project.image ? `<img src="${project.image}" alt="${project.title}" class="project-demo" loading="lazy" />` : ''}
-            <p>${project.description}</p>
-            ${linksHtml ? `<p>${linksHtml}</p>` : ''}
-          </div>
-        `;
+        // Render based on layout type
+        if (project.layout === 'side-by-side') {
+          // Side-by-side layout: image on left, text on right
+          li.innerHTML = `
+            <div style="margin-bottom:30px;">
+              <p><strong>${project.title}</strong></p>
+              <div class="project-side-by-side">
+                ${project.image ? `<img src="${project.image}" alt="${project.title}" class="project-demo" loading="lazy" />` : ''}
+                <div class="project-content">
+                  <p>${project.description}</p>
+                  ${linksHtml ? `<p>${linksHtml}</p>` : ''}
+                </div>
+              </div>
+            </div>
+          `;
+        } else {
+          // Default wide layout: title, then image, then description
+          li.innerHTML = `
+            <div style="margin-bottom:30px;">
+              <p><strong>${project.title}</strong></p>
+              ${project.image ? `<img src="${project.image}" alt="${project.title}" class="project-demo" loading="lazy" />` : ''}
+              <p>${project.description}</p>
+              ${linksHtml ? `<p>${linksHtml}</p>` : ''}
+            </div>
+          `;
+        }
+
         list.appendChild(li);
       });
     }

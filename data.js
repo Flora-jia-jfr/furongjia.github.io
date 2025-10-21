@@ -99,10 +99,11 @@ const projects = [
   {
     title: "Diagnosing our datasets: How does my language model understand clinical text?",
     description: "Developed a novel diagnostic framework to analyze how language models learn clinical information from pretraining data.",
-    image: "photos/project-demo/diagnosing-datasets.png", // Add your image here
+    image: "photos/project-demo/diagnosing-datasets.pdf", // Add your image here
     paperLink: "https://arxiv.org/abs/2505.15024",
     githubLink: "https://github.com/Flora-jia-jfr/diagnosing_our_datasets", // Add GitHub link if available
-    isSelected: true
+    isSelected: true,
+    layout: "wide" // wide images display vertically: title, image, description
   },
   {
     title: "Counting Clues: A Lightweight Probabilistic Baseline Can Match an LLM",
@@ -110,7 +111,8 @@ const projects = [
     image: "photos/project-demo/counting-clues.png", // Add your image here
     paperLink: "", // Add paper link when available
     githubLink: "", // Add GitHub link if available
-    isSelected: true
+    isSelected: true,
+    layout: "wide" // wide images display vertically: title, image, description
   },
   {
     title: "Interpreting Dataset Shift in Clinical Notes",
@@ -118,7 +120,8 @@ const projects = [
     image: "photos/project-demo/dataset-shift.png", // Add your image here
     paperLink: "", // Add paper link when available
     githubLink: "", // Add GitHub link if available
-    isSelected: true
+    isSelected: true,
+    layout: "wide" // wide images display vertically: title, image, description
   },
   {
     title: "GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting",
@@ -126,7 +129,8 @@ const projects = [
     image: "photos/project-demo/gpt4mts.png", // Add your image here
     paperLink: "https://ojs.aaai.org/index.php/AAAI/article/view/30383",
     githubLink: "https://github.com/Flora-jia-jfr/GPT4MTS-Prompt-based-Large-Language-Model-for-Multimodal-Time-series-Forecasting", // Add GitHub link if available
-    isSelected: true
+    isSelected: true,
+    layout: "side-by-side" // square/compact images display horizontally: image on left, text on right
   }
 ];
 
