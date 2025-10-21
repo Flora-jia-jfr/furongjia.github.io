@@ -99,7 +99,7 @@ const projects = [
   {
     title: "Diagnosing our datasets: How does my language model understand clinical text?",
     description: "Developed a novel diagnostic framework to analyze how language models learn clinical information from pretraining data.",
-    image: "photos/project-demo/diagnosing-datasets.pdf", // Add your image here
+    image: "photos/project-demo/diagnosing-datasets.png", // Add your image here
     paperLink: "https://arxiv.org/abs/2505.15024",
     githubLink: "https://github.com/Flora-jia-jfr/diagnosing_our_datasets", // Add GitHub link if available
     isSelected: true
