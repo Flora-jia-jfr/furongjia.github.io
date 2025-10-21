@@ -1,25 +1,80 @@
-// Example Publications Data - Replace with your own publications
+// Furong Jia's Publications
 const publications = [
-  // Preprints Examples
+  // Under Review / Preprints
   {
-    title: "LEDOM: An Open and Fundamental Reverse Language Model",
-    authors: "<b>Xunjian Yin</b>, Sitao Cheng, Yuxi Xie, Xinyu Hu, Li Lin, Xinyi Wang, Liangming Pan, William Yang Wang, Xiaojun Wan",
-    venue: "ArXiv:2507",
-    links: [
-      { text: "Paper", url: "https://arxiv.org/abs/2507.01335" },
-      { text: "Model", url: "https://huggingface.co/Corning/Reverse-Model-7B-348B" }
-    ],
+    title: "Counting Clues: A Lightweight Probabilistic Baseline Can Match an LLM",
+    authors: "<b>Furong Jia</b>*, Yuan Pu*, Finn Guo, Monica Agrawal",
+    venue: "Under Review",
+    links: [],
     isPreprint: true,
     isSelected: true
   },
-  // Publications Examples
   {
-    title: "Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement",
-    authors: "<b>Xunjian Yin</b>, Xinyi Wang, Liangming Pan, Xiaojun Wan, William Yang Wang",
-    venue: "ACL 2025",
+    title: "Interpreting Dataset Shift in Clinical Notes",
+    authors: "Shariar Vaez-Ghaemi*, <b>Furong Jia</b>*, Monica Agrawal",
+    venue: "Under Review",
+    links: [],
+    isPreprint: true,
+    isSelected: true
+  },
+  {
+    title: "Batch-of-Thought: Cross-Instance Learning for Enhanced LLM Reasoning",
+    authors: "Xuan Yang, <b>Furong Jia</b>, Roy Xie, Xi Xiong, Jian Li, Monica Agrawal",
+    venue: "Under Review",
+    links: [],
+    isPreprint: true,
+    isSelected: true
+  },
+  {
+    title: "What Patients Really Ask: Exploring the Effect of False Assumptions in Patient Information Seeking",
+    authors: "Raymond M Xiong, <b>Furong Jia</b>, Lionel Wong, Monica Agrawal",
+    venue: "Under Review",
+    links: [],
+    isPreprint: true,
+    isSelected: true
+  },
+  // 2025 Publications
+  {
+    title: "Diagnosing our datasets: How does my language model understand clinical text?",
+    authors: "<b>Furong Jia</b>, David Sontag, Monica Agrawal",
+    venue: "CHIL 2025",
     links: [
-      { text: "Paper", url: "https://arxiv.org/abs/2410.04444" },
-      { text: "Code", url: "https://github.com/Arvid-pku/Godel_Agent" }
+      { text: "Paper", url: "https://arxiv.org/abs/2505.15024" }
+    ],
+    isNew: true,
+    isPreprint: false,
+    isSelected: true
+  },
+  // 2024 Publications
+  {
+    title: "TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting",
+    authors: "Defu Cao, <b>Furong Jia</b>, Sercan O Arik, Tomas Pfister, Yixiang Zheng, Wen Ye, Yan Liu",
+    venue: "ICLR 2024",
+    links: [
+      { text: "Paper", url: "https://arxiv.org/abs/2310.04948" }
+    ],
+    isNew: false,
+    isPreprint: false,
+    isSelected: true
+  },
+  {
+    title: "GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting",
+    authors: "<b>Furong Jia</b>, Kevin Zheng, Yixiang Zheng, Defu Cao, Yan Liu",
+    venue: "EAAI-24",
+    links: [
+      { text: "Paper", url: "https://ojs.aaai.org/index.php/AAAI/article/view/30383" }
+    ],
+    isNew: false,
+    isPreprint: false,
+    isSelected: true
+  },
+  // 2023 Publications
+  {
+    title: "I2I: Initializing Adapters with Improvised Knowledge",
+    authors: "Tejas Srinivasan, <b>Furong Jia</b>, Mohammad Rostami, Jesse Thomason",
+    venue: "CoLLAs 2023",
+    links: [
+      { text: "Paper", url: "https://arxiv.org/abs/2304.02168" }
     ],
     isNew: false,
     isPreprint: false,
@@ -62,25 +117,46 @@ const projects = [
 const getSelectedProjects = () => projects.filter(project => project.isSelected);
 const getAllProjects = () => projects;
 
-// Template Research Experience Data - Replace with your own experience
+// Furong Jia's Research Experience
 const researchExperience = [
   {
-    period: "Month YYYY - Month YYYY",
-    institution: "Your Institution Name",
-    mentor: "Prof. Mentor Name",
-    description: "Brief description of your research work and achievements."
+    period: "Aug 2024 - Present",
+    institution: "DukeNLP, Duke University",
+    mentor: "Prof. Monica Agrawal",
+    description: "Working on clinical NLP, examining how language models learn clinical information from pretraining data. Research includes developing benchmarks for clinical jargon understanding, analyzing dataset shift in clinical notes, and exploring probabilistic approaches for diagnostic reasoning."
+  },
+  {
+    period: "May 2023 - June 2024",
+    institution: "Melady Lab, University of Southern California",
+    mentor: "Prof. Yan Liu",
+    description: "Developed TEMPO, a GPT-based foundation model for time series forecasting with zero-shot capabilities. Created GPT4MTS framework for multimodal time series forecasting combining numerical data with textual context."
+  },
+  {
+    period: "Aug 2022 - Present",
+    institution: "GLAMOR Lab, University of Southern California",
+    mentor: "Prof. Jesse Thomason",
+    description: "Applied parameter-efficient knowledge transfer using adapters in multimodal models for visual question-answering tasks to enhance forward transfer and reduce catastrophic forgetting."
+  },
+  {
+    period: "Aug 2021 - May 2023",
+    institution: "Interaction Lab, University of Southern California",
+    mentor: "Prof. Maja Matarić",
+    description: "Built large-scale real-world dataset for ASD behavior recognition in child-robot interaction. Designed full pipeline including video processing, annotation guidelines, and benchmarked state-of-the-art action recognition models."
   }
 ];
 
-// Template Teaching Data - Replace with your own teaching experience
+// Furong Jia's Teaching Experience
 const teaching = [
-  "Teaching Assistant, Institution, Course Name, Semester YYYY, with Prof. Name"
+  "Teaching Assistant, Duke University, Applied Machine Learning (CS 290), Spring 2025",
+  "Teaching Assistant, University of Southern California, Algorithms and Theory of Computing (CSCI 270), Spring 2022",
+  "Course Producer, University of Southern California, Web Publishing and Front-end Development (ITP 104), Fall 2021 - Spring 2024"
 ];
 
-// Template Academic Services Data - Replace with your own services
+// Furong Jia's Academic Services
 const academicServices = [
-  "Reviewer: Conference1 YYYY, Conference2 YYYY",
-  "Volunteer: Conference YYYY volunteer"
+  "Reviewer: ACL ARR 2024 (June, October), ACL ARR 2025 (February, May)",
+  "Reviewer: NeurIPS 2025",
+  "Reviewer: ML4H 2025"
 ];
 
 // Template Talks Data - Replace with your own talks
@@ -95,8 +171,14 @@ const talks = [
   }
 ];
 
-// Template Honors Data - Replace with your own honors and awards
+// Furong Jia's Honors and Awards
 const honors = [
-  "Your Award Name, Institution, Date",
-  "Another Award Name, Institution, Date"
+  "Albert Dorman Future Leader Award, University of Southern California, 2024",
+  "Student Recognition Awards, University of Southern California, 2024",
+  "Provost's Research Fellowship, University of Southern California, Fall 2023",
+  "CURVE Research Fellowship, University of Southern California, Fall 2022 & Spring 2023",
+  "Academic Achievement Award Scholarship, University of Southern California, 2021",
+  "ABC Innovation Prize, University of Southern California, 2021",
+  "W.V.T. Rusch Engineering Honors Program",
+  "Viterbi Grand Challenges Scholar"
 ];
