@@ -240,15 +240,21 @@
   </main>
 
   <!-- Load JavaScript files -->
-  <script src="data.js?v=4"></script>
-  <script src="main.js?v=4"></script>
+  <script src="data.js?v=5"></script>
+  <script src="main.js?v=5"></script>
   <script>
     // Enhanced project population function for projects page
     function populateAllProjects() {
       const list = document.getElementById('all-projects-list');
-      if (!list) return;
+      if (!list) {
+        console.error('all-projects-list element not found');
+        return;
+      }
 
-      getAllProjects().forEach(project => {
+      const allProjects = getAllProjects();
+      console.log('Loading projects:', allProjects.length);
+
+      allProjects.forEach(project => {
         const li = document.createElement('li');
 
         // Build links section
