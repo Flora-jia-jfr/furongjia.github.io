@@ -153,12 +153,6 @@ const researchExperience = [
     institution: "GLAMOR Lab, University of Southern California",
     mentor: "Prof. Jesse Thomason",
     description: "Applied parameter-efficient knowledge transfer using adapters in multimodal models for visual question-answering tasks to enhance forward transfer and reduce catastrophic forgetting."
-  },
-  {
-    period: "Aug 2021 - May 2023",
-    institution: "Interaction Lab, University of Southern California",
-    mentor: "Prof. Maja Matarić",
-    description: "Built large-scale real-world dataset for ASD behavior recognition in child-robot interaction. Designed full pipeline including video processing, annotation guidelines, and benchmarked state-of-the-art action recognition models."
   }
 ];
 
@@ -176,17 +170,18 @@ const academicServices = [
   "Reviewer: ML4H 2025"
 ];
 
-// Template Talks Data - Replace with your own talks
+// Furong Jia's Talks - Add your talks here
 const talks = [
-  {
-    title: "Your Talk Title",
-    venue: "Venue Name",
-    date: "Mon DD, YYYY",
-    attachments: [
-      { text: "Slides", url: "files/your-talk/slides.pdf", type: "pdf" }
-    ]
-  }
+  // {
+  //   title: "Your Talk Title",
+  //   venue: "Venue Name",
+  //   date: "Mon DD, YYYY",
+  //   attachments: [
+  //     {text:"Slides", url:"files/your-talk/slides.pdf", type: "pdf"}
+  //   ]
+  // }
 ];
+
 
 // Furong Jia's Honors and Awards
 const honors = [

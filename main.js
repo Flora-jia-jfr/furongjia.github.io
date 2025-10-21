@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Populate publications and other sections
   populatePublications(getSelectedPreprints(), 'preprints-list');
   populatePublications(getSelectedPublications(), 'selected-publications-list');
-  populateProjects();
   populateResearchExperience();
   populateAcademicServices();
   populateTeaching();
@@ -167,14 +166,30 @@ function populateTeaching() {
  */
 function populateTalks() {
   const list = document.getElementById('talks-list');
+  const section = document.getElementById('talks-section');
+
   if (!list) return;
-  
+
+  // Hide the entire talks section if there are no talks
+  if (talks.length === 0) {
+    if (section) {
+      section.style.display = 'none';
+    }
+    // Remove talks link from sidebar
+    const sidebarLinks = document.querySelectorAll('#outline-list a[href="#talks"]');
+    sidebarLinks.forEach(link => {
+      const li = link.parentElement;
+      if (li) li.remove();
+    });
+    return;
+  }
+
   talks.forEach(talk => {
     const li = document.createElement('li');
-    const attachmentLinks = talk.attachments.map(attachment => 
+    const attachmentLinks = talk.attachments.map(attachment =>
       `<a href="${attachment.url}" target="_blank">${attachment.text}</a>`
     ).join(' | ');
-    
+
     li.innerHTML = `<p>${talk.title}, ${talk.venue}, ${talk.date} [ ${attachmentLinks} ]</p>`;
     list.appendChild(li);
   });

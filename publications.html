@@ -99,13 +99,11 @@
     <a href="index.html" class="nav-button">Home</a>
     <a href="publications.html" class="nav-button" aria-current="page">Publications</a>
     <a href="projects.html" class="nav-button">Projects</a>
-    <a href="blogs.html" class="nav-button">Blogs</a>
-    <a href="photography.html" class="nav-button">Photography</a>
-    
+
     <!-- Dark mode toggle -->
     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
     </button>
-    
+
     <!-- Mobile hamburger menu -->
     <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu" title="Toggle navigation menu">
       <span class="hamburger-line"></span>
@@ -116,6 +114,17 @@
 
   <!-- Mobile sidebar overlay -->
   <div id="mobile-sidebar-overlay" class="mobile-sidebar-overlay"></div>
+
+  <!-- Floating Outline Sidebar -->
+  <aside id="outline-sidebar" role="complementary" aria-label="Page outline">
+    <h2 class="sidebar-heading">Outline</h2>
+    <nav role="navigation" aria-label="Page sections">
+      <ul id="outline-list">
+        <li><a href="#preprints" aria-label="Jump to Preprints section">Preprints</a></li>
+        <li><a href="#publications" aria-label="Jump to Publications section">Publications</a></li>
+      </ul>
+    </nav>
+  </aside>
 
   <!-- Main Content -->
   <main id="main-content" role="main">
@@ -129,7 +138,7 @@
             <tbody>
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading>Preprints</heading>
+                  <heading id="preprints">Preprints</heading>
                   <ul id="all-preprints-list" class="publication-list">
                     <!-- All preprints will be inserted here by JavaScript -->
                   </ul>
@@ -145,7 +154,7 @@
             <tbody>
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading>Publications</heading>
+                  <heading id="publications">Publications</heading>
                   <ul id="all-publications-list" class="publication-list">
                     <!-- All publications will be inserted here by JavaScript -->
                   </ul>
