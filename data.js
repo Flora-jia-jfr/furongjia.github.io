@@ -116,7 +116,7 @@ const projects = [
   },
   {
     title: "Interpreting Dataset Shift in Clinical Notes",
-    description: "Distribution shift degrades ML performance, especially in clinical text. Therefore, actionability requires not just detection but <i>>explanation</i>. We establish an extensible benchmark suite that induces synthetic distribution shifts using real clinical notes and develop two methods for assessing generated shift explanations. We further introduce <em>SIReNs</em>, a general-domain end-to-end approach that explains distributional differences by selecting representative notes from each. SIReNs reliably recover salient binary shifts with comparatively lower performance on subtle continuous changes, showing a gap to a ground-truth oracle and suggesting room for improvement in future methods.",
+    description: "Distribution shift degrades ML performance, especially in clinical text. Therefore, actionability requires not just detection but <i>explanation</i>. We establish an extensible benchmark suite that induces synthetic distribution shifts using real clinical notes and develop two methods for assessing generated shift explanations. We further introduce <em>SIReNs</em>, a general-domain end-to-end approach that explains distributional differences by selecting representative notes from each. SIReNs reliably recover salient binary shifts with comparatively lower performance on subtle continuous changes, showing a gap to a ground-truth oracle and suggesting room for improvement in future methods.",
     image: "photos/project-demo/dataset-shift.png", // Add your image here
     paperLink: "", // Add paper link when available
     githubLink: "", // Add GitHub link if available
