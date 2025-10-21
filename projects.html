@@ -240,39 +240,37 @@
   </main>
 
   <!-- Load JavaScript files -->
-  <script src="data.js"></script>
-  <script src="main.js"></script>
+  <script src="data.js?v=4"></script>
+  <script src="main.js?v=4"></script>
   <script>
     // Enhanced project population function for projects page
     function populateAllProjects() {
       const list = document.getElementById('all-projects-list');
       if (!list) return;
-      
+
       getAllProjects().forEach(project => {
         const li = document.createElement('li');
-        
-        // Create project content with demo image if available
-        let projectHTML = `
-          <div class="project-row">
-            ${project.demoPath ? `
-              <div class=\"project-media\">
-                <img src=\"${project.demoPath}\" alt=\"${project.title} demo\" class=\"project-demo\" loading=\"lazy\" />
-              </div>
-            ` : ''}
-            <div class=\"project-content\">
-              <p><strong>${project.title}</strong><br>${project.description}</p>
-              <div class="project-badges">
-                ${project.badges.map(badge => 
-                  `<a href="${badge.url}"><img alt="${badge.img.split('-').slice(1).join(' ')}" src="${badge.img}" loading="lazy" /></a>`
-                ).join(' ')}
-              </div>
+
+        // Build links section
+        const links = [];
+        if (project.paperLink) {
+          links.push(`<a href="${project.paperLink}">Paper</a>`);
+        }
+        if (project.githubLink) {
+          links.push(`<a href="${project.githubLink}">GitHub</a>`);
+        }
+        const linksHtml = links.length > 0 ? `[ ${links.join(' | ')} ]` : '';
+
+        li.innerHTML = `
+          <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
+            ${project.image ? `<img src="${project.image}" alt="${project.title}" style="width:200px; height:auto; border-radius:8px; flex-shrink:0;" loading="lazy" />` : ''}
+            <div>
+              <p><strong>${project.title}</strong></p>
+              <p>${project.description}</p>
+              ${linksHtml ? `<p>${linksHtml}</p>` : ''}
             </div>
           </div>
         `;
-        
-        // Add demo image if available (legacy fallback removed)
-        
-        li.innerHTML = projectHTML;
         list.appendChild(li);
       });
     }

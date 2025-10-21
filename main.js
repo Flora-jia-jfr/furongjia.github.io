@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
   populateResearchExperience();
   populateAcademicServices();
   populateTeaching();
-  populateTalks();
   populateHonors();
   
   // Initialize lazy loading for visitor map
