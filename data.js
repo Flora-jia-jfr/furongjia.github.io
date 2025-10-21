@@ -98,8 +98,8 @@ const fullPublications = getAllPublications();
 const projects = [
   {
     title: "Diagnosing our datasets: How does my language model understand clinical text?",
-    description: "Developed a novel diagnostic framework to analyze how language models learn clinical information from pretraining data.",
-    image: "photos/project-demo/diagnosing-datasets.pdf", // Add your image here
+    description: "We examined the relationship of clinical information (clinical jargon understanding and unsupported medical claims) between the occurrence of keyword pairs in pretraining corpora and model performance. For clinical jargon understanding, we also curated a benchmark <i>Medlingo</i> using clinical abbreviations from real-world clinical notes. We further analyzed the sources of clinical information in pretraining datasets to guide future corpus design.",
+    image: "photos/project-demo/diagnosing-datasets.png", // Add your image here
     paperLink: "https://arxiv.org/abs/2505.15024",
     githubLink: "https://github.com/Flora-jia-jfr/diagnosing_our_datasets", // Add GitHub link if available
     isSelected: true,
@@ -107,7 +107,7 @@ const projects = [
   },
   {
     title: "Counting Clues: A Lightweight Probabilistic Baseline Can Match an LLM",
-    description: "Demonstrated that simple probabilistic models can achieve competitive performance with large language models in diagnostic reasoning tasks.",
+    description: "We probed whether LLM success on clinical Multiple-Choice Diagnostic Questions reflects probabilistic inference by developing the <i>Frequency-Based Diagnostic Ranker (FBDR)</i>, a simple Naive Bayes approach that extracts clinical concepts and scores diagnosis options using co-occurrence statistics from pretraining corpora. We found that FBDR achieved accuracy closely matched by a corresponding 7B LLM using the same pretraining corpora, and the predictions are complementary. While LLM performance appears driven by mechanisms beyond simple frequency aggregation, a historically grounded, low-complexity, expert-system style approach still accounts for a substantial portion of benchmark performance.",
     image: "photos/project-demo/counting-clues.png", // Add your image here
     paperLink: "", // Add paper link when available
     githubLink: "", // Add GitHub link if available
@@ -116,7 +116,7 @@ const projects = [
   },
   {
     title: "Interpreting Dataset Shift in Clinical Notes",
-    description: "Investigated temporal and distributional shifts in clinical notes datasets and their effects on clinical NLP systems.",
+    description: "Distribution shift degrades ML performance, especially in clinical text. Therefore, actionability requires not just detection but <i>>explanation</i>. We establish an extensible benchmark suite that induces synthetic distribution shifts using real clinical notes and develop two methods for assessing generated shift explanations. We further introduce <em>SIReNs</em>, a general-domain end-to-end approach that explains distributional differences by selecting representative notes from each. SIReNs reliably recover salient binary shifts with comparatively lower performance on subtle continuous changes, showing a gap to a ground-truth oracle and suggesting room for improvement in future methods.",
     image: "photos/project-demo/dataset-shift.png", // Add your image here
     paperLink: "", // Add paper link when available
     githubLink: "", // Add GitHub link if available
@@ -125,7 +125,7 @@ const projects = [
   },
   {
     title: "GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting",
-    description: "Created a novel framework that combines numerical time series data with textual context using large language models for improved forecasting accuracy.",
+    description: "We introduced <i>GPT4MTS</i>, a prompt-based framework that fuses numeric time series with aligned textual context. We also built a GDELT-derived multimodal news impact dataset and showed consistent forecasting gains over strong unimodal baselines, demonstrating effective multimodal fusion and the value of extra-textual information.",
     image: "photos/project-demo/gpt4mts.png", // Add your image here
     paperLink: "https://ojs.aaai.org/index.php/AAAI/article/view/30383",
     githubLink: "https://github.com/Flora-jia-jfr/GPT4MTS-Prompt-based-Large-Language-Model-for-Multimodal-Time-series-Forecasting", // Add GitHub link if available
