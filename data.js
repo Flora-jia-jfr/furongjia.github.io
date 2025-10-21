@@ -140,19 +140,19 @@ const researchExperience = [
     period: "Aug 2024 - Present",
     institution: "DukeNLP, Duke University",
     mentor: "Prof. Monica Agrawal",
-    description: "Working on clinical NLP, examining how language models learn clinical information from pretraining data. Research includes developing benchmarks for clinical jargon understanding, analyzing dataset shift in clinical notes, and exploring probabilistic approaches for diagnostic reasoning."
+    description: "Diagnosing our datasets: How does my language model understand clinical text?<br>Counting Clues: A Lightweight Probabilistic Baseline Can Match an LLM<br>Interpreting Dataset Shift in Clinical Notes"
   },
   {
     period: "May 2023 - June 2024",
     institution: "Melady Lab, University of Southern California",
     mentor: "Prof. Yan Liu",
-    description: "Developed TEMPO, a GPT-based foundation model for time series forecasting with zero-shot capabilities. Created GPT4MTS framework for multimodal time series forecasting combining numerical data with textual context."
+    description: "TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting<br>GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting"
   },
   {
     period: "Aug 2022 - Present",
     institution: "GLAMOR Lab, University of Southern California",
     mentor: "Prof. Jesse Thomason",
-    description: "Applied parameter-efficient knowledge transfer using adapters in multimodal models for visual question-answering tasks to enhance forward transfer and reduce catastrophic forgetting."
+    description: "I2I: Initializing Adapters with Improvised Knowledge"
   }
 ];
 
