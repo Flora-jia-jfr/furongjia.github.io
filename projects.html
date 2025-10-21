@@ -106,6 +106,16 @@
       padding: 0px !important;
     }
     
+    /* Remove bullet points from project list */
+    #all-projects-list {
+      list-style-type: none !important;
+      padding-left: 0 !important;
+    }
+
+    #all-projects-list li {
+      margin-bottom: 40px !important;
+    }
+
     /* Project layout */
     .project-row {
       display: flex;
@@ -123,21 +133,22 @@
       min-width: 0;
     }
 
-    /* Project demo images */
+    /* Project demo images - optimized for wide images */
     .project-demo {
       width: 100%;
-      max-width: 300px;
+      max-width: 100%;
       height: auto;
       border-radius: 8px;
-      margin: 0;
+      margin: 0 0 15px 0;
       border: 1px solid var(--border-color);
       transition: transform 0.2s ease;
       display: block;
       box-shadow: 0 2px 8px var(--shadow-color);
+      object-fit: contain;
     }
 
     .project-demo:hover {
-      transform: scale(1.02);
+      transform: scale(1.01);
       box-shadow: 0 4px 16px var(--shadow-color);
     }
     
@@ -271,13 +282,11 @@
         const linksHtml = links.length > 0 ? `[ ${links.join(' | ')} ]` : '';
 
         li.innerHTML = `
-          <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
-            ${project.image ? `<img src="${project.image}" alt="${project.title}" style="width:200px; height:auto; border-radius:8px; flex-shrink:0;" loading="lazy" />` : ''}
-            <div>
-              <p><strong>${project.title}</strong></p>
-              <p>${project.description}</p>
-              ${linksHtml ? `<p>${linksHtml}</p>` : ''}
-            </div>
+          <div style="margin-bottom:30px;">
+            <p><strong>${project.title}</strong></p>
+            ${project.image ? `<img src="${project.image}" alt="${project.title}" class="project-demo" loading="lazy" />` : ''}
+            <p>${project.description}</p>
+            ${linksHtml ? `<p>${linksHtml}</p>` : ''}
           </div>
         `;
         list.appendChild(li);
