@@ -59,7 +59,7 @@ const publications = [
   },
   {
     title: "GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting",
-    authors: "<b>Furong Jia</b>, Kevin Zheng, Yixiang Zheng, Defu Cao, Yan Liu",
+    authors: "<b>Furong Jia</b>, Kevin Wang, Yixiang Zheng, Defu Cao, Yan Liu",
     venue: "EAAI-24",
     links: [
       { text: "Paper", url: "https://ojs.aaai.org/index.php/AAAI/article/view/30383" }
