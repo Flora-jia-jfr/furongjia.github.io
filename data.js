@@ -140,19 +140,19 @@ const researchExperience = [
     period: "Aug 2024 - Present",
     institution: "DukeNLP, Duke University",
     mentor: "Prof. Monica Agrawal",
-    description: "Diagnosing our datasets: How does my language model understand clinical text?<br>Counting Clues: A Lightweight Probabilistic Baseline Can Match an LLM<br>Interpreting Dataset Shift in Clinical Notes"
+    description: "- Diagnosing our datasets: How does my language model understand clinical text?<br>- Counting Clues: A Lightweight Probabilistic Baseline Can Match an LLM<br>- Interpreting Dataset Shift in Clinical Notes"
   },
   {
     period: "May 2023 - June 2024",
     institution: "Melady Lab, University of Southern California",
     mentor: "Prof. Yan Liu",
-    description: "TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting<br>GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting"
+    description: "- TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting<br>- GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting"
   },
   {
     period: "Aug 2022 - Present",
     institution: "GLAMOR Lab, University of Southern California",
     mentor: "Prof. Jesse Thomason",
-    description: "I2I: Initializing Adapters with Improvised Knowledge"
+    description: "- I2I: Initializing Adapters with Improvised Knowledge"
   }
 ];
 
