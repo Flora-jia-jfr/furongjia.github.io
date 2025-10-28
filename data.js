@@ -11,14 +11,6 @@ const publications = [
   },
   // 2025 Publications
   {
-    title: "Counting Clinical Clues: A Lightweight Probabilistic Baseline Can Match an LLM",
-    authors: "<b>Furong Jia</b>*, Yuan Pu*, Finn Guo, Monica Agrawal",
-    venue: "ML4H 2025 Findings",
-    links: [],
-    isPreprint: false,
-    isSelected: true
-  },
-  {
     title: "Interpreting Dataset Shift in Clinical Notes",
     authors: "Shariar Vaez-Ghaemi*, <b>Furong Jia</b>*, Monica Agrawal",
     venue: "ML4H 2025",
@@ -27,8 +19,8 @@ const publications = [
     isSelected: true
   },
   {
-    title: "What Patients Really Ask: Exploring the Effect of False Assumptions in Patient Information Seeking",
-    authors: "Raymond M Xiong, <b>Furong Jia</b>, Lionel Wong, Monica Agrawal",
+    title: "Counting Clinical Clues: A Lightweight Probabilistic Baseline Can Match an LLM",
+    authors: "<b>Furong Jia</b>*, Yuan Pu*, Finn Guo, Monica Agrawal",
     venue: "ML4H 2025 Findings",
     links: [],
     isPreprint: false,
@@ -42,6 +34,14 @@ const publications = [
       { text: "Paper", url: "https://arxiv.org/abs/2505.15024" }
     ],
     isNew: false,
+    isPreprint: false,
+    isSelected: true
+  },
+  {
+    title: "What Patients Really Ask: Exploring the Effect of False Assumptions in Patient Information Seeking",
+    authors: "Raymond M Xiong, <b>Furong Jia</b>, Lionel Wong, Monica Agrawal",
+    venue: "ML4H 2025 Findings",
+    links: [],
     isPreprint: false,
     isSelected: true
   },
