@@ -2,22 +2,6 @@
 const publications = [
   // Under Review / Preprints
   {
-    title: "Counting Clues: A Lightweight Probabilistic Baseline Can Match an LLM",
-    authors: "<b>Furong Jia</b>*, Yuan Pu*, Finn Guo, Monica Agrawal",
-    venue: "Under Review",
-    links: [],
-    isPreprint: true,
-    isSelected: true
-  },
-  {
-    title: "Interpreting Dataset Shift in Clinical Notes",
-    authors: "Shariar Vaez-Ghaemi*, <b>Furong Jia</b>*, Monica Agrawal",
-    venue: "Under Review",
-    links: [],
-    isPreprint: true,
-    isSelected: true
-  },
-  {
     title: "Batch-of-Thought: Cross-Instance Learning for Enhanced LLM Reasoning",
     authors: "Xuan Yang, <b>Furong Jia</b>, Roy Xie, Xi Xiong, Jian Li, Monica Agrawal",
     venue: "Under Review",
@@ -25,15 +9,31 @@ const publications = [
     isPreprint: true,
     isSelected: true
   },
+  // 2025 Publications
+  {
+    title: "Counting Clinical Clues: A Lightweight Probabilistic Baseline Can Match an LLM",
+    authors: "<b>Furong Jia</b>*, Yuan Pu*, Finn Guo, Monica Agrawal",
+    venue: "ML4H 2025 Findings",
+    links: [],
+    isPreprint: false,
+    isSelected: true
+  },
+  {
+    title: "Interpreting Dataset Shift in Clinical Notes",
+    authors: "Shariar Vaez-Ghaemi*, <b>Furong Jia</b>*, Monica Agrawal",
+    venue: "ML4H 2025",
+    links: [],
+    isPreprint: false,
+    isSelected: true
+  },
   {
     title: "What Patients Really Ask: Exploring the Effect of False Assumptions in Patient Information Seeking",
     authors: "Raymond M Xiong, <b>Furong Jia</b>, Lionel Wong, Monica Agrawal",
-    venue: "Under Review",
+    venue: "ML4H 2025 Findings",
     links: [],
-    isPreprint: true,
+    isPreprint: false,
     isSelected: true
   },
-  // 2025 Publications
   {
     title: "Diagnosing our datasets: How does my language model understand clinical text?",
     authors: "<b>Furong Jia</b>, David Sontag, Monica Agrawal",
@@ -41,7 +41,7 @@ const publications = [
     links: [
       { text: "Paper", url: "https://arxiv.org/abs/2505.15024" }
     ],
-    isNew: true,
+    isNew: false,
     isPreprint: false,
     isSelected: true
   },
