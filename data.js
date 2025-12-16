@@ -14,15 +14,15 @@ const publications = [
     title: "Interpreting Dataset Shift in Clinical Notes",
     authors: "Shariar Vaez-Ghaemi*, <b>Furong Jia</b>*, Monica Agrawal",
     venue: "ML4H 2025",
-    links: [],
+    links: [https://openreview.net/pdf?id=ldSvsVeEDJ],
     isPreprint: false,
     isSelected: true
   },
   {
-    title: "Counting Clinical Clues: A Lightweight Probabilistic Baseline Can Match an LLM",
+    title: "Counting Clues: A Lightweight Probabilistic Baseline Can Match an LLM",
     authors: "<b>Furong Jia</b>*, Yuan Pu*, Finn Guo, Monica Agrawal",
     venue: "ML4H 2025 Findings",
-    links: [],
+    links: [https://arxiv.org/abs/2512.12868],
     isPreprint: false,
     isSelected: true
   },
