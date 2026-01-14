@@ -5,7 +5,9 @@ const publications = [
     title: "Batch-of-Thought: Cross-Instance Learning for Enhanced LLM Reasoning",
     authors: "Xuan Yang, <b>Furong Jia</b>, Roy Xie, Xi Xiong, Jian Li, Monica Agrawal",
     venue: "Under Review",
-    links: [],
+    links: [
+      {text: "paper", url: "https://arxiv.org/abs/2601.02950"}
+    ],
     isPreprint: true,
     isSelected: true
   },
