@@ -47,7 +47,9 @@ const publications = [
     title: "What Patients Really Ask: Exploring the Effect of False Assumptions in Patient Information Seeking",
     authors: "Raymond M Xiong, <b>Furong Jia</b>, Lionel Wong, Monica Agrawal",
     venue: "ML4H 2025 Findings",
-    links: [],
+    links: [
+      { text: "Paper", url: "https://arxiv.org/pdf/2601.15674" }
+    ],
     isPreprint: false,
     isSelected: true
   },
