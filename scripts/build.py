@@ -39,11 +39,8 @@ def paper_row(paper):
 def papers(page=False):
     tag = 'h1' if page else 'h2'
     result = f'<section class="section" id="publications"><div class="section-heading"><{tag}>Publications</{tag}><span class="equal-contribution">* Equal contribution</span></div>'
-    groups = []
-    for year in sorted({p['year'] for p in DATA['publications']}, reverse=True):
-        groups.append((str(year), [p for p in DATA['publications'] if p['year'] == year]))
-    for title, rows in groups:
-        result += f'<h3 class="year-heading">{title}</h3><ul class="paper-list">' + ''.join(map(paper_row, rows)) + '</ul>'
+    rows = sorted(DATA['publications'], key=lambda p: p['year'], reverse=True)
+    result += '<ul class="paper-list">' + ''.join(map(paper_row, rows)) + '</ul>'
     return result + '</section>'
 
 
@@ -87,7 +84,7 @@ def main():
     about += '</section>'
     service_summary = '<section class="section" id="academic-services"><div class="section-heading"><h2>Academic service</h2>' + link('Service & teaching →', 'service.html') + '</div>' + items(DATA['service']) + '</section>'
     build_page('index.html', 'Furong Jia', about + papers() + service_summary, 'about')
-    build_page('publications.html', 'Publications · Furong Jia', papers(page=True), 'publications', 'All papers by Furong Jia, organized by year, with publication and code links.')
+    build_page('publications.html', 'Publications · Furong Jia', papers(page=True), 'publications', 'All papers by Furong Jia, with publication and code links.')
     build_page('experience.html', 'Experience · Furong Jia', experience(), 'experience', 'Research experience, teaching, and honors of Furong Jia.')
     service_page = '<section class="section" id="academic-services"><h1>Academic service</h1>' + items(DATA['service']) + '</section>' + section('Teaching', items(DATA['teaching']), 'teaching')
     build_page('service.html', 'Academic service · Furong Jia', service_page, 'service', 'Academic reviewing and teaching service by Furong Jia.')

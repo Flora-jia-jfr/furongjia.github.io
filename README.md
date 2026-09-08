@@ -18,7 +18,7 @@ python3 scripts/check.py
 | 内容 | 编辑位置 |
 | --- | --- |
 | 姓名、邮箱、照片、CV 链接 | `profile` |
-| About 的三个段落 | `about`（支持简单 HTML 链接） |
+| 原有 bio 的三个段落 | `about`（保留原文、HTML 链接及加粗；不要自动改写） |
 | 全部论文和预印本 | `publications` |
 | 学历 | `education` |
 | Research experience | `research_experience` |
@@ -45,8 +45,8 @@ python3 scripts/check.py
 ```
 
 - `id` 必须唯一，用于论文链接锚点。
-- 所有论文统一按年份排列，不分 Preprints。未发表的论文可将 `venue` 写为 `arXiv`，也可留空。
-- 年份自动倒序；同一年内按数据文件的排列顺序显示。可以把重要的论文往前放。
+- 所有论文显示为一个连续列表，不显示年份分组或 Preprints 分组。未发表的论文可将 `venue` 写为 `arXiv`，也可留空。
+- `year` 仅用于倒序排序；同一年内按数据文件的排列顺序显示。会议名称和年份按 `venue` 原文展示。
 - 本人的名字自动加粗，不需要在作者字段手写 HTML。
 - Paper、Code、Project、Slides 等入口统一使用 `links`，不需要独立 Projects 栏目。
 

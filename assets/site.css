@@ -57,8 +57,7 @@ h3 { margin: 0 0 .6rem; font-size: 1.0625rem; line-height: 1.5; font-weight: 600
 .section-heading h1, .section-heading h2 { margin-bottom: 0; }
 .section-heading > a, .equal-contribution { font-size: .8125rem; }
 .equal-contribution { color: var(--muted); }
-.year-heading { font-family: inherit; font-weight: 500; font-size: .875rem; color: var(--muted); margin: 1.8rem 0 1.25rem; padding-bottom: .4rem; border-bottom: 1px solid var(--line); }
-.paper-list { list-style: none; padding: 0; margin: 0; }
+.paper-list { list-style: none; padding: 0; margin: 1.5rem 0 0; }
 .paper { margin-bottom: 1.65rem; }
 .paper-title { font-size: 1rem; font-weight: 600; line-height: 1.5; margin: 0 0 .3rem; }
 .authors { font-size: .875rem; color: var(--muted); line-height: 1.6; margin: 0 0 .25rem; }

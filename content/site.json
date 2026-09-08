@@ -27,9 +27,9 @@
     ]
   },
   "about": [
-    "I am a Computer Science Ph.D. student at <a href=\"https://www.duke.edu/\">Duke University</a>, advised by <a href=\"https://www.monicaagrawal.com/\">Prof. Monica Agrawal</a>. My research focuses on understanding how data shapes the behavior of large language models, with the goal of making these systems more reliable, interpretable, and robust.",
-    "I am particularly interested in how models learn from diverse data—including text, time series, and multimodal inputs—and adapt to changes during training and deployment. A central application of my work is clinical NLP, where understanding model capabilities, limitations, and generalization is especially important.",
-    "Previously, I received my B.S. in Computer Science and Applied and Computational Mathematics from the <a href=\"https://www.usc.edu/\">University of Southern California</a>, where I was fortunate to work with <a href=\"https://sites.google.com/view/yanliu-ai/home\">Prof. Yan Liu</a>, <a href=\"https://jessethomason.com/\">Prof. Jesse Thomason</a>, and <a href=\"https://maja-mataric.web.app/\">Prof. Maja Matarić</a>."
+    "Hi! I am a second-year Computer Science PhD student at <a href=\"https://www.duke.edu/\">Duke University</a>, supervised by Prof. <a\n                    href=\"https://www.monicaagrawal.com/\">Monica Agrawal</a>. Previously, I received my Bachelor of Science in Computer Science and Applied and Computational Mathematics from <a href=\"https://www.usc.edu/\">University of Southern California</a>, where I was fortunate to work with <a href=\"https://sites.google.com/view/yanliu-ai/home\">Prof. Yan Liu</a>, <a href=\"https://jessethomason.com/\">Prof. Jesse Thomason</a>, and <a href=\"https://maja-mataric.web.app/\">Prof. Maja Matarić</a>.",
+    "<b>Research:</b> My research centers on developing a principled understanding of <b>large foundation models</b>, particularly <b>large language models (LLMs)</b>, with the aim of enhancing their capabilities, addressing their limitations, and optimizing their deployment across diverse applications. I am broadly interested in making these AI systems <b>reliable, interpretable, and robust</b> by understanding how <b>data shapes model behavior</b> at training and inference time. My specific interests include developing methods that leverage properties of <b>diverse data</b> (text, time-series, multimodal) to make models <b>adaptable to changes</b> that arise during both training and deployment. A parallel interest is applying these approaches in <b>clinical contexts</b>, where robustness, generalizability, and responsible deployment are critical.",
+    "Feel free to reach out to me if you'd like to discuss research or explore potential collaboration!"
   ],
   "publications": [
     {
@@ -37,7 +37,7 @@
       "title": "Batch-of-Thought: Cross-Instance Learning for Enhanced LLM Reasoning",
       "authors": "Xuan Yang, Furong Jia, Roy Xie, Xi Xiong, Jian Li, Monica Agrawal",
       "year": 2026,
-      "venue": "arXiv",
+      "venue": "EMNLP Main",
       "links": [
         {
           "label": "Paper",
@@ -62,8 +62,8 @@
       "id": "counting-clues",
       "title": "Counting Clues: A Lightweight Probabilistic Baseline Can Match an LLM",
       "authors": "Furong Jia*, Yuan Pu*, Finn Guo, Monica Agrawal",
-      "year": 2025,
-      "venue": "ML4H 2025 Findings",
+      "year": 2026,
+      "venue": "ACL-IJCNLP Main",
       "links": [
         {
           "label": "Paper",
