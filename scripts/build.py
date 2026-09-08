@@ -36,9 +36,8 @@ def paper_row(paper):
     return f'<li class="paper" id="{esc(paper["id"])}"><article><h3 class="paper-title">{title}</h3><p class="authors">{authors}</p><div class="paper-meta">{venue}{links}</div></article></li>'
 
 
-def papers(page=False):
-    tag = 'h1' if page else 'h2'
-    result = f'<section class="section" id="publications"><div class="section-heading"><{tag}>Publications</{tag}><span class="equal-contribution">* Equal contribution</span></div>'
+def papers():
+    result = '<section class="section" id="publications"><div class="section-heading"><h2>Publications</h2><span class="equal-contribution">* Equal contribution</span></div>'
     rows = sorted(DATA['publications'], key=lambda p: p['year'], reverse=True)
     result += '<ul class="paper-list">' + ''.join(map(paper_row, rows)) + '</ul>'
     return result + '</section>'
@@ -67,9 +66,15 @@ def experience():
 
 
 def build_page(filename, title, content, current, description=None):
-    routes = [('About', 'index.html', 'about'), ('Publications', 'publications.html', 'publications'), ('Experience', 'experience.html', 'experience'), ('Service', 'service.html', 'service'), ('CV', 'cv.html', 'cv')]
-    navigation = ''.join(link(label, url, ' aria-current="page"' if key == current else '') for label, url, key in routes)
-    socials = ''.join(link(row['label'], row['url']) for row in PROFILE['socials'])
+    home = '' if filename == 'index.html' else 'index.html'
+    routes = [('About', f'{home}#about', 'about'), ('Publications', f'{home}#publications', 'publications'), ('Experience', 'experience.html', 'experience'), ('Service', f'{home}#academic-services', 'service'), ('CV', 'cv.html', 'cv')]
+    active = 'location' if filename == 'index.html' else 'page'
+    navigation = ''.join(link(label, url, f' aria-current="{active}"' if key == current else '') for label, url, key in routes)
+    socials = ''
+    for row in PROFILE['socials']:
+        icon = (ROOT / 'assets/icons' / (row['icon'] + '.svg')).read_text()
+        icon = icon.replace('<svg ', '<svg aria-hidden="true" focusable="false" ', 1)
+        socials += f'<a class="social-icon" href="{esc(row["url"])}" aria-label="{esc(row["label"])}" title="{esc(row["label"])}">{icon}</a>'
     canonical = urljoin(PROFILE['url'], '' if filename == 'index.html' else filename)
     values = {key: esc(value) for key, value in PROFILE.items() if isinstance(value, str)}
     values.update(title=esc(title), description=esc(description or PROFILE['description']), canonical=esc(canonical), social_image=esc(urljoin(PROFILE['url'], PROFILE['photo'])), navigation=navigation, socials=socials, content=content)
@@ -85,22 +90,21 @@ def redirect(filename, target):
 def main():
     about = '<section class="section about" id="about"><h1>About me</h1>' + ''.join(f'<p>{p}</p>' for p in DATA['about'])
     about += '</section>'
-    service_summary = '<section class="section" id="academic-services"><div class="section-heading"><h2>Academic service</h2>' + link('Service & teaching →', 'service.html') + '</div>' + items(DATA['service']) + '</section>'
+    reviewing = '; '.join(row.removeprefix('Reviewer: ') for row in DATA['service'])
+    teaching = '; '.join(row.removeprefix('Teaching Assistant, ') for row in DATA['teaching'])
+    service_summary = section('Academic service', f'<ul class="plain-list"><li><strong>Reviewer:</strong> {esc(reviewing)}.</li><li><strong>Teaching Assistant:</strong> {esc(teaching)}.</li></ul>', 'academic-services')
     build_page('index.html', 'Furong Jia', about + papers() + service_summary, 'about')
-    build_page('publications.html', 'Publications · Furong Jia', papers(page=True), 'publications', 'All papers by Furong Jia, with publication and code links.')
     build_page('experience.html', 'Experience · Furong Jia', experience(), 'experience', 'Research experience, teaching, and honors of Furong Jia.')
-    service_page = '<section class="section" id="academic-services"><h1>Academic service</h1>' + items(DATA['service']) + '</section>' + section('Teaching', items(DATA['teaching']), 'teaching')
-    build_page('service.html', 'Academic service · Furong Jia', service_page, 'service', 'Academic reviewing and teaching service by Furong Jia.')
     cv_url = esc(PROFILE['cv'])
     cv = f'<section class="section"><h1>Curriculum vitae</h1><div class="document-actions"><a class="document-link" href="{cv_url}">Open CV (PDF) ↗</a><a href="{cv_url}" download>Download</a></div><object class="cv-preview" data="{cv_url}" type="application/pdf" aria-label="Furong Jia curriculum vitae"><p><a href="{cv_url}">Open the CV PDF</a></p></object></section>'
     build_page('cv.html', 'CV · Furong Jia', cv + section('Education', education(), 'education'), 'cv', 'Curriculum vitae and education of Furong Jia, Computer Science Ph.D. student at Duke University.')
-    for filename, target in [('projects.html', 'index.html#publications'), ('blogs.html', 'index.html'), ('photography.html', 'index.html')]:
+    for filename, target in [('publications.html', 'index.html#publications'), ('service.html', 'index.html#academic-services'), ('projects.html', 'index.html#publications'), ('blogs.html', 'index.html'), ('photography.html', 'index.html')]:
         redirect(filename, target)
-    urls = [PROFILE['url']] + [urljoin(PROFILE['url'], f) for f in ['publications.html', 'experience.html', 'service.html', 'cv.html']]
+    urls = [PROFILE['url']] + [urljoin(PROFILE['url'], f) for f in ['experience.html', 'cv.html']]
     (ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{esc(url)}</loc></url>\n' for url in urls) + '</urlset>\n')
     (ROOT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {PROFILE["url"]}sitemap.xml\n')
     (ROOT / '.nojekyll').touch()
-    print(f'Built 5 pages and 3 legacy redirects with {len(DATA["publications"])} papers.')
+    print(f'Built 3 pages and 5 legacy redirects with {len(DATA["publications"])} papers.')
 
 
 if __name__ == '__main__':

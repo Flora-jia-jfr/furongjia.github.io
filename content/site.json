@@ -13,15 +13,18 @@
     "description": "Furong Jia is a Computer Science Ph.D. student at Duke University studying language models, clinical NLP, and data-centric machine learning.",
     "socials": [
       {
-        "label": "Scholar",
+        "label": "Google Scholar",
+        "icon": "google-scholar",
         "url": "https://scholar.google.com/citations?user=yNx9cokAAAAJ&hl=en"
       },
       {
         "label": "GitHub",
+        "icon": "github",
         "url": "https://github.com/Flora-jia-jfr"
       },
       {
         "label": "Twitter",
+        "icon": "twitter",
         "url": "https://twitter.com/Flora__Jia"
       }
     ]

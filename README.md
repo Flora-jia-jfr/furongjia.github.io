@@ -1,6 +1,6 @@
 # Furong Jia's academic website
 
-A personal academic website with a sticky top navigation, a wide reading column, a sticky profile on desktop, all publications, and separate experience, service, and CV pages. The design takes inspiration from Minimal Light; the layout, styles, and generator are written for this site. No Jekyll theme, frontend framework, or package installation is required.
+A personal academic website with a sticky top navigation, a wide reading column, a sticky profile on desktop, all publications and academic service on the homepage, and separate experience and CV pages. The design takes inspiration from Minimal Light; the layout, styles, and generator are written for this site. No Jekyll theme, frontend framework, or package installation is required.
 
 Live website: https://flora-jia-jfr.github.io/furongjia.github.io/
 
@@ -56,6 +56,8 @@ python3 scripts/check.py
 
 照片在页面中以 4:5 竖幅、轻微圆角显示，原照片文件保持完整。姓名和栏目标题采用本地托管的 Source Serif 4，字体及 SIL Open Font License 位于 `assets/fonts/`。正文使用系统无衬线字体。
 
+左栏 Google Scholar、GitHub 和 Twitter 使用本地 SVG logo，配置在 `profile.socials` 的 `label`、`url`、`icon` 字段。图标使用统一主题色，并提供名称提示和无障碍标签。图标来自 Font Awesome Free 6.7.2，文件及许可证位于 `assets/icons/`。
+
 ### 调整排版
 
 编辑 `assets/site.css`。桌面最大宽度在 `.site-layout` 中设为 `1200px`，左栏 `244px`，右栏使用余下空间。顶部固定显示导航和太阳／月亮外观图标；左栏仅显示照片和个人信息，使用 `position: sticky` 停在导航下方。整个文档正常滚动，没有两套嵌套滚动条。窄屏或过矮的窗口恢复自然流布局，以保证所有链接可达。
@@ -63,6 +65,8 @@ python3 scripts/check.py
 论文保持连续列表；鼠标悬停或键盘焦点进入一条论文时，会显示轻微底色和标题下划线。资源链接带有箭头提示。减少动态效果的系统设置会关闭底色过渡。
 
 会议按 `venue` 原文显示，例如 `EMNLP 2026 Main`、`ACL-IJCNLP 2026 Main`、`ML4H 2025 Findings`，中间不加分隔点。
+
+顶部 About、Publications、Service 直接链接到首页对应标题；Experience 和 CV 保留独立页面。首页 Academic service 合并显示为 Reviewer 和 Teaching Assistant 两项，由 `service` 和 `teaching` 数组生成，保留各会议、课程与日期。
 
 研究经历按机构、职位、日期及项目组织。`research_experience` 中每项包含 `period`、`institution`、`role`、`mentor`、`mentor_label`、`location` 和 `projects`。每个项目的 `title` 为项目标题，`paragraphs` 为项目描述段落；若简历只列职位下的工作描述，可将项目标题留空。当前 IBM、DukeNLP、Melady、GLAMOR 项目描述、Service 与 Teaching 根据提供的两页 CV 更新；课程编号沿用已有数据及作者确认的 Duke CS 572。
 
@@ -74,7 +78,7 @@ python3 scripts/check.py
 python3 -m http.server 8000
 ```
 
-打开 http://localhost:8000 。网站内容预先生成为 HTML，禁用 JavaScript 时仍可阅读。JavaScript 仅用于本机保存的明暗外观偏好。
+打开 http://localhost:8000 。网站内容预先生成为 HTML，禁用 JavaScript 时仍可阅读和使用标题锚点。JavaScript 用于保存明暗外观偏好，并随滚动更新首页导航的当前栏目提示。
 
 ## 分支与发布
 
@@ -102,11 +106,12 @@ templates/base.html # 所有页面共用的布局
 scripts/build.py    # 生成页面；只依赖 Python 标准库
 scripts/check.py    # 检查本地链接、锚点、照片、论文完整性与顺序
 assets/site.css     # 字体、宽度、留白、响应式布局
-assets/site.js      # 明暗外观切换
-index.html          # About + 全部论文 + 简短 Academic Service
-publications.html   # 保留已有 URL 的完整论文专页
+assets/site.js      # 明暗外观切换 + 首页当前栏目提示
+assets/icons/       # 社交 logo 及许可证
+index.html          # About + 全部论文 + Reviewer / Teaching Assistant
+publications.html   # 跳转至首页 Publications 标题
 experience.html     # Research experience + Teaching + Honors
-service.html        # Academic Service + Teaching
+service.html        # 跳转至首页 Academic service 标题
 cv.html             # PDF 简历 + Education
 ```
 
@@ -115,4 +120,5 @@ cv.html             # PDF 简历 + Education
 ## Design references
 
 - [Minimal Light](https://github.com/yaoyao-liu/minimal-light): visual inspiration for the profile / reading-column composition.
+- [Font Awesome Free](https://fontawesome.com/license/free): brand icons by Fonticons, Inc., licensed under CC BY 4.0; attribution and license are included in `assets/icons/`.
 - The previous website used the [Academic Homepage Template](https://github.com/Arvid-pku/Academic-Homepage-Template), with credit to Jon Barron and Xunjian Yin. This redesign preserves Furong Jia's existing academic content and assets.
