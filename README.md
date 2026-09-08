@@ -6,15 +6,17 @@ The site presents my research interests, publications, academic service, researc
 
 ## Design and colors
 
-The design uses a wide reading column, a portrait sidebar, serif headings, and a restrained **Duke-inspired custom blue palette**.
+The design uses a wide reading column, a portrait sidebar, serif headings, and the **official Duke blue palette**.
 
 | Color | Light appearance | Dark appearance |
 | --- | --- | --- |
-| Headings, links, and icons | `#234F70` | `#AACDE8` |
-| Page background | `#FFFFFF` | `#151C24` |
-| Body text | `#303C48` | `#E2E8EF` |
+| Headings, links, and icons | Duke Navy `#012169` | White `#FFFFFF` |
+| Page background | White `#FFFFFF` | Duke Navy `#012169` |
+| Body text | Cast Iron `#262626` | White `#FFFFFF` |
+| Secondary text | Graphite `#666666` | Hatteras `#E2E6ED` |
+| Hover background | Whisper Gray `#F3F2F1` | Duke Royal `#00539B` |
 
-These are custom colors. For comparison, the [official Duke palette](https://brand.duke.edu/colors/) defines Duke Navy Blue as `#012169` and Duke Royal Blue as `#00539B`.
+Colors follow the [Duke Brand Guide](https://brand.duke.edu/colors/). Light appearance uses Duke Navy on white; dark appearance uses white text on Duke Navy, with Duke Royal for hover backgrounds. Blue values are used unchanged.
 
 ## Updating the site
 

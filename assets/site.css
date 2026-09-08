@@ -7,15 +7,16 @@
 }
 :root {
   color-scheme: light dark;
-  --paper: light-dark(#fff, #151c24);
-  --ink: light-dark(#303c48, #e2e8ef);
-  --muted: light-dark(#667482, #acb9c7);
-  /* Custom Duke-inspired blues; official Duke Navy is #012169, Royal is #00539B.
-     Color reference: https://brand.duke.edu/colors/ */
-  --accent: light-dark(#234f70, #aacde8);
-  --line: light-dark(#e2e8ef, #303d4b);
-  --soft: light-dark(#f4f7fa, #202b37);
-  --paper-hover: light-dark(#f5f8fc, #1c2835);
+  /* Official Duke Navy #012169 and Royal #00539B, with Duke neutral colors.
+     In dark mode, reverse light text onto Navy to preserve contrast.
+     Source: https://brand.duke.edu/colors/ */
+  --paper: light-dark(#ffffff, #012169);
+  --ink: light-dark(#262626, #ffffff);
+  --muted: light-dark(#666666, #e2e6ed);
+  --accent: light-dark(#012169, #ffffff);
+  --line: light-dark(#e2e6ed, #00539b);
+  --soft: light-dark(#f3f2f1, #00539b);
+  --paper-hover: light-dark(#f3f2f1, #00539b);
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --header-offset: 104px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
