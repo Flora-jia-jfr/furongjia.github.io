@@ -159,42 +159,90 @@
   ],
   "research_experience": [
     {
+      "period": "May 2026 - Aug 2026",
+      "institution": "IBM Research, Core AI Team",
+      "role": "Research Intern",
+      "mentor": "Akash Srivastava",
+      "mentor_label": "Mentor",
+      "location": "Boston, MA",
+      "projects": [
+        {
+          "title": "",
+          "paragraphs": [
+            "Developing modular AI-agent harnesses for scientific discovery, comparing orchestration, structured search, memory, and role-based components under matched backbone, interface, and compute budgets.",
+            "Studying where humans should intervene in agentic scientific workflows, with focus on failure modes, task boundaries beyond current agent capability, and help-seeking policies that elicit useful human input."
+          ]
+        }
+      ]
+    },
+    {
       "period": "Aug 2024 - Present",
       "institution": "DukeNLP, Duke University",
-      "mentor": "Prof. Monica Agrawal",
-      "papers": [
-        "Diagnosing our datasets: How does my language model understand clinical text?",
-        "Counting Clues: A Lightweight Probabilistic Baseline Can Match an LLM",
-        "Interpreting Dataset Shift in Clinical Notes"
+      "role": "",
+      "mentor": "Monica Agrawal",
+      "mentor_label": "Advisor",
+      "location": "Durham, NC",
+      "projects": [
+        {
+          "title": "Understanding LLM dynamics as a function of pretraining data",
+          "paragraphs": [
+            "We examined how evidence in pretraining corpora shapes clinical LLM behavior. We linked keyword-pair occurrences in pretraining data to model performance on clinical jargon understanding and unsupported medical claims, curated MedLingo from real-world clinical-note abbreviations, and analyzed sources of clinical information in pretraining datasets to guide future corpus design.",
+            "We tested how much clinical diagnostic benchmark performance can be explained by explicit corpus-frequency signals rather than LLM inference alone. We introduced Frequency-Based Probabilistic Ranker (FBPR), a lightweight Naive Bayes method that scores diagnoses using clinical-concept co-occurrence statistics from the same pretraining corpora as the evaluated models. FBPR achieved performance comparable to corpus-aligned LLMs, answered largely different subsets of questions, and improved performance when combined with LLM predictions through a simple hybrid method. These results show that explicit probabilistic baselines can serve as meaningful, historically grounded reference points and complementary signals for hybridization.",
+            "We studied how faithfully LLMs acquire probabilistic knowledge from pretraining text. We built a controlled continual-pretraining framework where known data-generating networks define ground-truth distributions, synthetic clinical-style corpora verbalize sampled configurations, and OLMo-2 models are evaluated by comparing native next-token probabilities with ground-truth posteriors. We found that models recover simple conditional distributions well but show scale-dependent recovery ceilings in larger settings, and that they often learn the direction of probability shifts while underestimating their magnitude."
+          ]
+        },
+        {
+          "title": "Interpreting Dataset Shift in Clinical Notes",
+          "paragraphs": [
+            "We addressed the need to explain, rather than only detect, distribution shifts in clinical text. We established an extensible benchmark suite that induces synthetic shifts using real clinical notes, developed methods for evaluating generated shift explanations, and introduced SIReNs, an end-to-end approach that explains distributional differences by selecting representative notes from each distribution. We are also extending this work to benchmark agent capabilities and agent harnesses for interpreting shifts in multi-factorial settings and more general textual domains."
+          ]
+        }
       ]
     },
     {
       "period": "May 2023 - June 2024",
       "institution": "Melady Lab, University of Southern California",
-      "mentor": "Prof. Yan Liu",
-      "papers": [
-        "TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting",
-        "GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting"
+      "role": "",
+      "mentor": "Yan Liu",
+      "mentor_label": "Advisor",
+      "location": "Los Angeles, CA",
+      "projects": [
+        {
+          "title": "Large Language Models for Time Series Forecasting",
+          "paragraphs": [
+            "We introduced GPT4MTS, a prompt-based framework that fuses numeric time series with texts. We also built a GDELT-derived multimodal news impact dataset and showed consistent forecasting gains over strong unimodal baselines, demonstrating effective multimodal fusion and the value of extra-textual information.",
+            "We developed TEMPO, a GPT architecture-based time series framework that combines seasonal trend decomposition with adaptive, selection-based prompting for non-stationary distribution shift. It achieves zero-shot state-of-the-art across diverse and unseen (including multi-modal) benchmarks, indicating strong potential as a foundation model for time series forecasting."
+          ]
+        }
       ]
     },
     {
       "period": "Aug 2022 - Present",
       "institution": "GLAMOR Lab, University of Southern California",
-      "mentor": "Prof. Jesse Thomason",
-      "papers": [
-        "I2I: Initializing Adapters with Improvised Knowledge"
+      "role": "",
+      "mentor": "Jesse Thomason",
+      "mentor_label": "Advisor",
+      "location": "Los Angeles, CA",
+      "projects": [
+        {
+          "title": "Initializing Adapters with Improvised Knowledge for Multimodal Continual Learning",
+          "paragraphs": [
+            "We applied parameter-efficient knowledge transfer using adapters in multimodal models for visual question-answering tasks. We implemented and trained model architectures on multiple vision-language tasks, including GQA, COCO-QA, and AQUA, to enhance forward transfer and reduce knowledge forgetting."
+          ]
+        }
       ]
     }
   ],
   "teaching": [
+    "Teaching Assistant, Duke University, Natural Language Processing (CS 572), Spring 2026",
     "Teaching Assistant, Duke University, Applied Machine Learning (CS 290), Spring 2025",
     "Teaching Assistant, University of Southern California, Algorithms and Theory of Computing (CSCI 270), Spring 2022",
-    "Course Producer, University of Southern California, Web Publishing and Front-end Development (ITP 104), Fall 2021 - Spring 2024"
+    "Teaching Assistant, University of Southern California, Web Publishing and Front-end Development (ITP 104), Fall 2021 - Spring 2024"
   ],
   "service": [
-    "Reviewer: ACL ARR 2024 (June, October), ACL ARR 2025 (February, May)",
-    "Reviewer: NeurIPS 2025",
-    "Reviewer: ML4H 2025"
+    "Reviewer: NeurIPS 2026, NeurIPS 2025",
+    "Reviewer: ML4H 2025",
+    "Reviewer: ACL ARR 2024 (June, October), ACL ARR 2025 (February, May)"
   ],
   "honors": [
     "Albert Dorman Future Leader Award, University of Southern California, 2024",

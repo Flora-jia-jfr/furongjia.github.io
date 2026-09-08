@@ -60,7 +60,11 @@ python3 scripts/check.py
 
 编辑 `assets/site.css`。桌面最大宽度在 `.site-layout` 中设为 `1200px`，左栏 `244px`，右栏使用余下空间。顶部固定显示导航和太阳／月亮外观图标；左栏仅显示照片和个人信息，使用 `position: sticky` 停在导航下方。整个文档正常滚动，没有两套嵌套滚动条。窄屏或过矮的窗口恢复自然流布局，以保证所有链接可达。
 
-论文保持连续列表；鼠标悬停或键盘焦点进入一条论文时，会显示轻微底色和标题下划线。会议名称与 Main / Findings 在排版上分开，`venue` 数据仍保存完整会议文本。资源链接带有箭头提示。减少动态效果的系统设置会关闭底色过渡。
+论文保持连续列表；鼠标悬停或键盘焦点进入一条论文时，会显示轻微底色和标题下划线。资源链接带有箭头提示。减少动态效果的系统设置会关闭底色过渡。
+
+会议按 `venue` 原文显示，例如 `EMNLP 2026 Main`、`ACL-IJCNLP 2026 Main`、`ML4H 2025 Findings`，中间不加分隔点。
+
+研究经历按机构、职位、日期及项目组织。`research_experience` 中每项包含 `period`、`institution`、`role`、`mentor`、`mentor_label`、`location` 和 `projects`。每个项目的 `title` 为项目标题，`paragraphs` 为项目描述段落；若简历只列职位下的工作描述，可将项目标题留空。当前 IBM、DukeNLP、Melady、GLAMOR 项目描述、Service 与 Teaching 根据提供的两页 CV 更新；课程编号沿用已有数据及作者确认的 Duke CS 572。
 
 ## 本地预览
 
