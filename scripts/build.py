@@ -31,8 +31,16 @@ def section(title, body, anchor, extra=''):
 def paper_row(paper):
     title = link(paper['title'], paper['links'][0]['url']) if paper['links'] else esc(paper['title'])
     authors = esc(paper['authors']).replace(esc(PROFILE['name']), f'<strong>{esc(PROFILE["name"])}</strong>')
-    links = ''.join(link(l['label'], l['url']) for l in paper['links'])
-    venue = f'<span class="venue">{esc(paper["venue"])}</span>' if paper.get('venue') else ''
+    links = ''.join(f'<a class="paper-resource" href="{esc(l["url"])}">{esc(l["label"])}<span class="resource-arrow" aria-hidden="true">↗</span></a>' for l in paper['links'])
+    venue = ''
+    if paper.get('venue'):
+        venue_name, track = paper['venue'], ''
+        for suffix in (' Main', ' Findings'):
+            if venue_name.endswith(suffix):
+                venue_name, track = venue_name[:-len(suffix)], suffix.strip()
+                break
+        detail = f' <span class="venue-separator" aria-hidden="true">·</span> <span class="venue-track">{esc(track)}</span>' if track else ''
+        venue = f'<span class="venue"><span class="venue-name">{esc(venue_name)}</span>{detail}</span>'
     return f'<li class="paper" id="{esc(paper["id"])}"><article><h3 class="paper-title">{title}</h3><p class="authors">{authors}</p><div class="paper-meta">{venue}{links}</div></article></li>'
 
 
