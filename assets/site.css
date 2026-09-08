@@ -93,7 +93,7 @@ h3 { margin: 0 0 .6rem; font-size: 1.0625rem; line-height: 1.5; font-weight: 600
 .experience > h2 { margin-bottom: .5rem; font-size: 1.5rem; }
 .research-project { margin-top: 1.4rem; }
 .research-project h3 { font-size: 1rem; margin-bottom: .75rem; }
-.research-project p { margin-bottom: 1rem; font-size: 1rem; }
+.research-project .plain-list { margin-top: 0; }
 .period { color: var(--muted); font-size: .875rem; margin-bottom: .35rem; }
 .mentor { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin-bottom: .6rem; font-size: .9375rem; }
 .experience ul { font-size: .9375rem; }

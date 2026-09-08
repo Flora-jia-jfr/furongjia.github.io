@@ -68,7 +68,7 @@ python3 scripts/check.py
 
 顶部 About、Publications、Service 直接链接到首页对应标题；Experience 和 CV 保留独立页面。首页 Academic service 合并显示为 Reviewer 和 Teaching Assistant 两项，由 `service` 和 `teaching` 数组生成，保留各会议、课程与日期。
 
-研究经历按机构、职位、日期及项目组织。`research_experience` 中每项包含 `period`、`institution`、`role`、`mentor`、`mentor_label`、`location` 和 `projects`。每个项目的 `title` 为项目标题，`paragraphs` 为项目描述段落；若简历只列职位下的工作描述，可将项目标题留空。当前 IBM、DukeNLP、Melady、GLAMOR 项目描述、Service 与 Teaching 根据提供的两页 CV 更新；课程编号沿用已有数据及作者确认的 Duke CS 572。
+研究经历按机构、职位、日期及项目组织。`research_experience` 中每项包含 `period`、`institution`、`role`、`mentor`、`mentor_label`、`location` 和 `projects`。每个项目的 `title` 为项目标题，`bullets` 为简短的研究要点；若简历只列职位下的工作描述，可将项目标题留空。Duke 职位为 PhD Student，USC 两段职位为 Research Assistant。所有研究内容使用 bullet points，Duke 和 USC 的描述按作者要求从 CV 大幅精简；IBM 保留 CV 的两项工作描述。Service 与 Teaching 根据提供的两页 CV 更新，课程编号沿用已有数据及作者确认的 Duke CS 572。
 
 ## 本地预览
 

@@ -57,8 +57,7 @@ def experience():
         projects = ''
         for project in row['projects']:
             heading = f'<h3>{esc(project["title"])}</h3>' if project.get('title') else ''
-            paragraphs = ''.join(f'<p>{esc(p)}</p>' for p in project['paragraphs'])
-            projects += f'<div class="research-project">{heading}{paragraphs}</div>'
+            projects += f'<div class="research-project">{heading}{items(project["bullets"])}</div>'
         role = f'<span>{esc(row["role"])}</span>' if row.get('role') else ''
         mentor = f'<span>{esc(row["mentor_label"])}: {esc(row["mentor"])}</span>'
         result += f'<article class="experience"><div class="experience-meta"><span>{esc(row["period"])}</span><span>{esc(row["location"])}</span></div><h2>{esc(row["institution"])}</h2><p class="mentor">{role}{mentor}</p>{projects}</article>'
