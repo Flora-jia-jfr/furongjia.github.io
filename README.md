@@ -18,7 +18,7 @@ python3 scripts/check.py
 | 内容 | 编辑位置 |
 | --- | --- |
 | 姓名、邮箱、照片、CV 链接 | `profile` |
-| 原有 bio 的三个段落 | `about`（保留原文、HTML 链接及加粗；不要自动改写） |
+| Bio 的三个段落 | `about`（Research 按作者确认的兴趣更新，其余段落保留原文；未经要求不自动改写） |
 | 全部论文和预印本 | `publications` |
 | 学历 | `education` |
 | Research experience | `research_experience` |
