@@ -37,7 +37,7 @@
       "title": "Batch-of-Thought: Cross-Instance Learning for Enhanced LLM Reasoning",
       "authors": "Xuan Yang, Furong Jia, Roy Xie, Xi Xiong, Jian Li, Monica Agrawal",
       "year": 2026,
-      "venue": "EMNLP Main",
+      "venue": "EMNLP 2026 Main",
       "links": [
         {
           "label": "Paper",
@@ -63,7 +63,7 @@
       "title": "Counting Clues: A Lightweight Probabilistic Baseline Can Match an LLM",
       "authors": "Furong Jia*, Yuan Pu*, Finn Guo, Monica Agrawal",
       "year": 2026,
-      "venue": "ACL-IJCNLP Main",
+      "venue": "ACL-IJCNLP 2026 Main",
       "links": [
         {
           "label": "Paper",
