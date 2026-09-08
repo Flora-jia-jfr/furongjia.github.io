@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap location (update with your actual domain)
-Sitemap: https://yourwebsite.com/sitemap.xml
-
-# Optional: Disallow specific directories if needed
-# Disallow: /private/
-# Disallow: /drafts/
+Sitemap: https://flora-jia-jfr.github.io/furongjia.github.io/sitemap.xml

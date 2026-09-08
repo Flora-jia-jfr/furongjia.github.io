@@ -1,0 +1,226 @@
+{
+  "profile": {
+    "name": "Furong Jia",
+    "alias": "I also go by Flora",
+    "role": "Ph.D. Student",
+    "department": "Computer Science",
+    "institution": "Duke University",
+    "institution_url": "https://www.duke.edu/",
+    "email": "flora.jia@duke.edu",
+    "photo": "figures/me.jpg",
+    "cv": "files/Furong_Flora__Jia_CV____Duke.pdf",
+    "url": "https://flora-jia-jfr.github.io/furongjia.github.io/",
+    "description": "Furong Jia is a Computer Science Ph.D. student at Duke University studying language models, clinical NLP, and data-centric machine learning.",
+    "socials": [
+      {
+        "label": "Scholar",
+        "url": "https://scholar.google.com/citations?user=yNx9cokAAAAJ&hl=en"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Flora-jia-jfr"
+      },
+      {
+        "label": "Twitter",
+        "url": "https://twitter.com/Flora__Jia"
+      }
+    ]
+  },
+  "about": [
+    "I am a Computer Science Ph.D. student at <a href=\"https://www.duke.edu/\">Duke University</a>, advised by <a href=\"https://www.monicaagrawal.com/\">Prof. Monica Agrawal</a>. My research focuses on understanding how data shapes the behavior of large language models, with the goal of making these systems more reliable, interpretable, and robust.",
+    "I am particularly interested in how models learn from diverse data—including text, time series, and multimodal inputs—and adapt to changes during training and deployment. A central application of my work is clinical NLP, where understanding model capabilities, limitations, and generalization is especially important.",
+    "Previously, I received my B.S. in Computer Science and Applied and Computational Mathematics from the <a href=\"https://www.usc.edu/\">University of Southern California</a>, where I was fortunate to work with <a href=\"https://sites.google.com/view/yanliu-ai/home\">Prof. Yan Liu</a>, <a href=\"https://jessethomason.com/\">Prof. Jesse Thomason</a>, and <a href=\"https://maja-mataric.web.app/\">Prof. Maja Matarić</a>."
+  ],
+  "announcement": "Open to 2026 research opportunities: in-semester (part-time).",
+  "publications": [
+    {
+      "id": "batch-of-thought",
+      "title": "Batch-of-Thought: Cross-Instance Learning for Enhanced LLM Reasoning",
+      "authors": "Xuan Yang, Furong Jia, Roy Xie, Xi Xiong, Jian Li, Monica Agrawal",
+      "year": 2026,
+      "venue": "Under Review",
+      "preprint": true,
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2601.02950"
+        }
+      ]
+    },
+    {
+      "id": "dataset-shift",
+      "title": "Interpreting Dataset Shift in Clinical Notes",
+      "authors": "Shariar Vaez-Ghaemi*, Furong Jia*, Monica Agrawal",
+      "year": 2025,
+      "venue": "ML4H 2025",
+      "preprint": false,
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://openreview.net/pdf?id=ldSvsVeEDJ"
+        }
+      ],
+      "description": "Distribution shift degrades ML performance, especially in clinical text. Therefore, actionability requires not just detection but explanation. We establish an extensible benchmark suite that induces synthetic distribution shifts using real clinical notes and develop two methods for assessing generated shift explanations. We further introduce SIReNs, a general-domain end-to-end approach that explains distributional differences by selecting representative notes from each. SIReNs reliably recover salient binary shifts with comparatively lower performance on subtle continuous changes, showing a gap to a ground-truth oracle and suggesting room for improvement in future methods.",
+      "image": "photos/project-demo/dataset-shift.png"
+    },
+    {
+      "id": "counting-clues",
+      "title": "Counting Clues: A Lightweight Probabilistic Baseline Can Match an LLM",
+      "authors": "Furong Jia*, Yuan Pu*, Finn Guo, Monica Agrawal",
+      "year": 2025,
+      "venue": "ML4H 2025 Findings",
+      "preprint": false,
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2512.12868"
+        }
+      ],
+      "description": "We probed whether LLM success on clinical Multiple-Choice Diagnostic Questions reflects probabilistic inference by developing the Frequency-Based Diagnostic Ranker (FBDR), a simple Naive Bayes approach that extracts clinical concepts and scores diagnosis options using co-occurrence statistics from pretraining corpora. We found that FBDR achieved accuracy closely matched by a corresponding 7B LLM using the same pretraining corpora, and the predictions are complementary. While LLM performance appears driven by mechanisms beyond simple frequency aggregation, a historically grounded, low-complexity, expert-system style approach still accounts for a substantial portion of benchmark performance.",
+      "image": "photos/project-demo/counting-clues.png"
+    },
+    {
+      "id": "diagnosing-datasets",
+      "title": "Diagnosing our datasets: How does my language model understand clinical text?",
+      "authors": "Furong Jia, David Sontag, Monica Agrawal",
+      "year": 2025,
+      "venue": "CHIL 2025",
+      "preprint": false,
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2505.15024"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Flora-jia-jfr/diagnosing_our_datasets"
+        }
+      ],
+      "description": "We examined the relationship of clinical information (clinical jargon understanding and unsupported medical claims) between the occurrence of keyword pairs in pretraining corpora and model performance. For clinical jargon understanding, we also curated a benchmark Medlingo using clinical abbreviations from real-world clinical notes. We further analyzed the sources of clinical information in pretraining datasets to guide future corpus design.",
+      "image": "photos/project-demo/diagnosing-datasets.png"
+    },
+    {
+      "id": "patient-assumptions",
+      "title": "What Patients Really Ask: Exploring the Effect of False Assumptions in Patient Information Seeking",
+      "authors": "Raymond M Xiong, Furong Jia, Lionel Wong, Monica Agrawal",
+      "year": 2025,
+      "venue": "ML4H 2025 Findings",
+      "preprint": false,
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/pdf/2601.15674"
+        }
+      ]
+    },
+    {
+      "id": "tempo",
+      "title": "TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting",
+      "authors": "Defu Cao, Furong Jia, Sercan O Arik, Tomas Pfister, Yixiang Zheng, Wen Ye, Yan Liu",
+      "year": 2024,
+      "venue": "ICLR 2024",
+      "preprint": false,
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2310.04948"
+        }
+      ]
+    },
+    {
+      "id": "gpt4mts",
+      "title": "GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting",
+      "authors": "Furong Jia, Kevin Wang, Yixiang Zheng, Defu Cao, Yan Liu",
+      "year": 2024,
+      "venue": "EAAI-24",
+      "preprint": false,
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://ojs.aaai.org/index.php/AAAI/article/view/30383"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Flora-jia-jfr/GPT4MTS-Prompt-based-Large-Language-Model-for-Multimodal-Time-series-Forecasting"
+        }
+      ],
+      "description": "We introduced GPT4MTS, a prompt-based framework that fuses numeric time series with aligned textual context. We also built a GDELT-derived multimodal news impact dataset and showed consistent forecasting gains over strong unimodal baselines, demonstrating effective multimodal fusion and the value of extra-textual information.",
+      "image": "photos/project-demo/gpt4mts.png"
+    },
+    {
+      "id": "i2i",
+      "title": "I2I: Initializing Adapters with Improvised Knowledge",
+      "authors": "Tejas Srinivasan, Furong Jia, Mohammad Rostami, Jesse Thomason",
+      "year": 2023,
+      "venue": "CoLLAs 2023",
+      "preprint": false,
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2304.02168"
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Ph.D. in Computer Science",
+      "institution": "Duke University",
+      "detail": "Advisor: Prof. Monica Agrawal"
+    },
+    {
+      "degree": "B.S. in Computer Science and Applied and Computational Mathematics",
+      "institution": "University of Southern California",
+      "detail": ""
+    }
+  ],
+  "research_experience": [
+    {
+      "period": "Aug 2024 - Present",
+      "institution": "DukeNLP, Duke University",
+      "mentor": "Prof. Monica Agrawal",
+      "papers": [
+        "Diagnosing our datasets: How does my language model understand clinical text?",
+        "Counting Clues: A Lightweight Probabilistic Baseline Can Match an LLM",
+        "Interpreting Dataset Shift in Clinical Notes"
+      ]
+    },
+    {
+      "period": "May 2023 - June 2024",
+      "institution": "Melady Lab, University of Southern California",
+      "mentor": "Prof. Yan Liu",
+      "papers": [
+        "TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting",
+        "GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting"
+      ]
+    },
+    {
+      "period": "Aug 2022 - Present",
+      "institution": "GLAMOR Lab, University of Southern California",
+      "mentor": "Prof. Jesse Thomason",
+      "papers": [
+        "I2I: Initializing Adapters with Improvised Knowledge"
+      ]
+    }
+  ],
+  "teaching": [
+    "Teaching Assistant, Duke University, Applied Machine Learning (CS 290), Spring 2025",
+    "Teaching Assistant, University of Southern California, Algorithms and Theory of Computing (CSCI 270), Spring 2022",
+    "Course Producer, University of Southern California, Web Publishing and Front-end Development (ITP 104), Fall 2021 - Spring 2024"
+  ],
+  "service": [
+    "Reviewer: ACL ARR 2024 (June, October), ACL ARR 2025 (February, May)",
+    "Reviewer: NeurIPS 2025",
+    "Reviewer: ML4H 2025"
+  ],
+  "honors": [
+    "Albert Dorman Future Leader Award, University of Southern California, 2024",
+    "Student Recognition Awards, University of Southern California, 2024",
+    "Provost's Research Fellowship, University of Southern California, Fall 2023",
+    "CURVE Research Fellowship, University of Southern California, Fall 2022 & Spring 2023",
+    "Academic Achievement Award Scholarship, University of Southern California, 2021",
+    "ABC Innovation Prize, University of Southern California, 2021",
+    "W.V.T. Rusch Engineering Honors Program",
+    "Viterbi Grand Challenges Scholar"
+  ]
+}

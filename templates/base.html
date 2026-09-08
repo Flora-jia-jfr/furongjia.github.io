@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>$title</title>
+  <meta name="description" content="$description">
+  <meta name="author" content="$name">
+  <link rel="canonical" href="$canonical">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="$title">
+  <meta property="og:description" content="$description">
+  <meta property="og:url" content="$canonical">
+  <meta property="og:image" content="$social_image">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="$title">
+  <meta name="twitter:description" content="$description">
+  <meta name="twitter:image" content="$social_image">
+  <link rel="icon" href="figures/logo.png" type="image/png">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="site-layout">
+    <aside class="profile" aria-label="Profile and navigation">
+      <a class="portrait-link" href="index.html" aria-label="$name home">
+        <img class="portrait" src="$photo" alt="$name smiling outdoors" width="184" height="184">
+      </a>
+      <a class="profile-name" href="index.html">$name</a>
+      <p class="alias">$alias</p>
+      <p class="affiliation">$role<br>$department<br><a href="$institution_url">$institution</a></p>
+      <a class="email" href="mailto:$email">$email</a>
+      <div class="social-links">$socials</div>
+      <nav class="site-nav" aria-label="Main navigation">$navigation</nav>
+      <button class="theme-toggle" type="button" hidden>Use dark appearance</button>
+    </aside>
+    <div class="reading-column">
+      <main id="main">$content</main>
+      <footer class="site-footer"><span>$name · $institution</span><a href="mailto:$email">Contact</a></footer>
+    </div>
+  </div>
+</body>
+</html>
