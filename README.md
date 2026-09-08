@@ -1,279 +1,124 @@
-# Academic Homepage Template
+# Furong Jia's academic website
 
+A personal academic website with a sticky top navigation, a wide reading column, a sticky profile on desktop, all publications and academic service on the homepage, and separate experience and CV pages. The design takes inspiration from Minimal Light; the layout, styles, and generator are written for this site. No Jekyll theme, frontend framework, or package installation is required.
 
+Live website: https://flora-jia-jfr.github.io/furongjia.github.io/
 
-A clean, modern, and responsive academic homepage template featuring dark mode support, mobile-friendly design, and comprehensive sections for publications, projects, and more.
+## 更新内容
 
-- Demo Link: [Academic-Homepage-Template](https://arvid-pku.github.io/Academic-Homepage-Template/index.html)
-- Customization Guide: [Academic-Homepage-Template/CUSTOMIZATION.md](Academic-Homepage-Template/CUSTOMIZATION.md)
-- Author Homepage: [Xunjian Yin](https://xunjianyin.github.io/)
+主要编辑 **`content/site.json`**，然后运行：
 
-![Demo](photos/project-demo/Academic-Homepage-Template.png)
-
-## Features
-
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **Dark Mode**: Built-in theme toggle with system preference detection
-- **Modern UI**: Clean, professional design with smooth animations
-- **SEO Optimized**: Proper meta tags, structured data, and semantic HTML
-- **Accessibility**: WCAG compliant with keyboard navigation and screen reader support
-- **Performance**: Optimized loading with lazy loading and efficient CSS
-- **Easy Customization**: Well-organized code structure for easy modifications
-
-## Fork and Deploy to GitHub Pages
-
-The easiest way to get started is to fork this template and deploy it directly to GitHub Pages:
-
-### Option 1: Fork and Deploy (Recommended)
-
-1. **Fork this repository** to your GitHub account
-2. **Rename the repository** to `yourusername.github.io` (replace `yourusername` with your actual GitHub username)
-3. **Clone your fork** to your local machine:
-   ```bash
-   git clone https://github.com/yourusername/yourusername.github.io.git
-   cd yourusername.github.io
-   ```
-4. **Customize the content** (see [Quick Start](#quick-start) section below)
-5. **Commit and push your changes**:
-   ```bash
-   git add .
-   git commit -m "Customize homepage with my information"
-   git push origin main
-   ```
-6. **Enable GitHub Pages** in your repository settings (Settings → Pages → Source: Deploy from a branch → Branch: main)
-7. **Your website will be live** at `https://yourusername.github.io`
-
-### Option 2: Download and Upload
-
-1. **Download this template** as a ZIP file
-2. **Extract and customize** the files locally
-3. **Create a new repository** named `yourusername.github.io`
-4. **Upload your customized files** to the repository
-5. **Enable GitHub Pages** as described above
-
-### GitHub Pages Configuration
-
-Once your repository is set up:
-- Your site will automatically update when you push changes to the main branch
-- It may take a few minutes for changes to appear live
-- You can use a custom domain by adding a `CNAME` file to your repository
-
-## File Structure
-
-```
-homepage-template/
-├── index.html              # Main homepage
-├── publications.html       # Publications page
-├── projects.html          # Projects showcase
-├── blogs.html             # Blog posts
-├── photography.html       # Photography portfolio
-├── data.js               # Your content data
-├── config.js             # Website configuration
-├── main.js               # Core functionality
-├── stylesheet.css        # Main styles
-├── shared-styles.css     # Shared component styles
-├── figures/
-│   ├── me.jpg           # Your profile photo
-│   └── logo.png         # Website logo/favicon
-├── files/
-│   └── CV.pdf           # Your CV/Resume
-├── photos/
-│   └── project-demo/    # Project demonstration images
-├── blogs/               # Blog post files
-└── README.md            # This file
+```sh
+python3 scripts/build.py
+python3 scripts/check.py
 ```
 
-## Quick Start
+生成的 HTML 文件需要一起提交。GitHub Pages 直接发布 `main` 分支的根目录；合并到 `main` 后会自动更新，不需要改变 Pages 设置。
 
-1. **Download the template** to your desired directory
-2. **Replace placeholder content** with your information:
-   - Edit `data.js` with your publications, projects, and experience
-   - Update personal information in `index.html`
-   - Replace placeholder images in `figures/` folder
-3. **Customize styling** (optional):
-   - Modify colors in `config.js`
-   - Adjust layouts in CSS files
-4. **Deploy** to your web server or GitHub Pages
+| 内容 | 编辑位置 |
+| --- | --- |
+| 姓名、邮箱、照片、CV 链接 | `profile` |
+| Bio 的三个段落 | `about`（Research 保留模型可靠性、可解释性、鲁棒性、数据与适应性等原有方向，并补充 AI for science / healthcare、agent behavior 和 human–agent interaction；其余段落保留原文，未经要求不自动改写） |
+| 全部论文和预印本 | `publications` |
+| 学历 | `education` |
+| Research experience | `research_experience` |
+| Teaching | `teaching` |
+| Academic service | `service` |
+| 荣誉（保留数据，当前不展示） | `honors` |
 
-## Content Customization
+### 添加论文
 
-### Personal Information (index.html)
+在 `publications` 数组加入一项：
 
-Update the following placeholders in `index.html`:
-
-```html
-<!-- Replace these with your information -->
-<title>Your Name</title>
-<meta name="description" content="Your description here">
-<name>Your Name</name>
-<!-- Update structured data in the JSON-LD script -->
+```json
+{
+  "id": "unique-paper-name",
+  "title": "Paper title",
+  "authors": "First Author, Furong Jia, Last Author",
+  "year": 2026,
+  "venue": "Conference 2026",
+  "links": [
+    {"label": "Paper", "url": "https://example.org/paper"},
+    {"label": "Code", "url": "https://github.com/example/repository"}
+  ]
+}
 ```
 
-### Publications & Projects (data.js)
+- `id` 必须唯一，用于论文链接锚点。
+- 所有论文显示为一个连续列表，不显示年份分组或 Preprints 分组。未发表的论文可将 `venue` 写为 `arXiv`，也可留空。
+- `year` 仅用于倒序排序；同一年内按数据文件的排列顺序显示。会议名称和年份按 `venue` 原文展示。
+- 本人的名字自动加粗，不需要在作者字段手写 HTML。
+- Paper、Code、Project、Slides 等入口统一使用 `links`，不需要独立 Projects 栏目。
 
-Edit the `data.js` file to add your publications and projects:
+### 更新照片与简历
 
-```javascript
-const publications = [
-  {
-    title: "Your Paper Title",
-    authors: "<b>Your Name</b>, Co-Author",
-    venue: "Conference/Journal Name",
-    links: [
-      { text: "Paper", url: "paper-url" },
-      { text: "Code", url: "code-url" }
-    ],
-    isPreprint: false,
-    isSelected: true
-  }
-];
+照片位于 `figures/me.jpg`。CV 文件位于 `files/`，具体文件名由 `profile.cv` 指定。替换 PDF 后，如果文件名变化，也要同步更新这个字段。
 
-const projects = [
-  {
-    title: "Your Project",
-    description: "Project description with <a href='#'>links</a>",
-    badges: [
-      { url: "github-url", img: "badge-image-url" }
-    ],
-    isSelected: true,
-    demoPath: "photos/project-demo/your-project.png"
-  }
-];
+照片在页面中以 4:5 竖幅、轻微圆角显示，原照片文件保持完整。姓名和栏目标题采用本地托管的 Source Serif 4，字体及 SIL Open Font License 位于 `assets/fonts/`。正文使用系统无衬线字体。
+
+左栏 Google Scholar、GitHub 和 Twitter 使用本地 SVG logo，配置在 `profile.socials` 的 `label`、`url`、`icon` 字段。图标使用统一主题色，并提供名称提示和无障碍标签。图标来自 Font Awesome Free 6.7.2，文件及许可证位于 `assets/icons/`。
+
+### 调整排版
+
+编辑 `assets/site.css`。桌面最大宽度在 `.site-layout` 中设为 `1200px`，左栏 `244px`，右栏使用余下空间。顶部固定显示导航和太阳／月亮外观图标；左栏仅显示照片和个人信息，使用 `position: sticky` 停在导航下方。整个文档正常滚动，没有两套嵌套滚动条。窄屏或过矮的窗口恢复自然流布局，以保证所有链接可达。
+
+论文保持连续列表；鼠标悬停或键盘焦点进入一条论文时，会显示轻微底色和标题下划线。资源链接带有箭头提示。减少动态效果的系统设置会关闭底色过渡。
+
+会议按 `venue` 原文显示，例如 `EMNLP 2026 Main`、`ACL-IJCNLP 2026 Main`、`ML4H 2025 Findings`，中间不加分隔点。
+
+顶部 About、Publications、Service 直接链接到首页对应标题；Experience 和 CV 保留独立页面。首页 Academic service 合并显示为 Reviewer 和 Teaching Assistant 两项，由 `service` 和 `teaching` 数组生成，保留各会议、课程与日期。
+
+研究经历按机构、职位、日期及项目组织。`research_experience` 中每项包含 `period`、`institution`、`role`、`mentor`、`mentor_label`、`location` 和 `projects`。每个项目的 `title` 为项目标题，`bullets` 为简短的研究要点；若简历只列职位下的工作描述，可将项目标题留空。Duke 职位为 PhD Student，USC 两段职位为 Research Assistant。所有研究内容使用 bullet points，Duke 和 USC 的描述按作者要求从 CV 大幅精简；IBM 保留 CV 的两项工作描述。Service 与 Teaching 根据提供的两页 CV 更新，课程编号沿用已有数据及作者确认的 Duke CS 572。
+
+## 本地预览
+
+在仓库根目录运行：
+
+```sh
+python3 -m http.server 8000
 ```
 
-### Research Experience & Other Sections
+打开 http://localhost:8000 。网站内容预先生成为 HTML，禁用 JavaScript 时仍可阅读和使用标题锚点。JavaScript 用于保存明暗外观偏好，并随滚动更新首页导航的当前栏目提示。
 
-Update the following arrays in `data.js`:
-- `researchExperience`
-- `teaching`
-- `academicServices`
-- `talks`
-- `honors`
+## 分支与发布
 
-## Customization
+建议在自己的仓库中新建分支、预览并发起 PR，然后合并到 `main`：
 
-### Colors & Styling
-
-Modify the color scheme in `config.js`:
-
-```javascript
-const CONFIG = {
-  colors: {
-    primary: '#0065C0',      // Main accent color
-    secondary: '#f09228',    // Secondary accent
-    text: '#000000',         // Text color
-    background: '#FFFFFF',   // Background color
-    // ... more colors
-  }
-};
+```sh
+git switch -c update/publications
+# Edit content/site.json
+python3 scripts/build.py
+python3 scripts/check.py
+git add content/site.json index.html publications.html experience.html service.html cv.html
+git commit -m "Update website content"
+git push -u origin update/publications
 ```
 
-### Adding New Sections
+PR 的目标仓库应为 **`Flora-jia-jfr/furongjia.github.io`**，不是以前的模板仓库。当前设置为 Settings → Pages → Deploy from a branch → `main` → `/ (root)`。
 
-1. Add the section to your HTML file
-2. Create corresponding data in `data.js`
-3. Add a population function in `main.js`
-4. Update the outline sidebar if needed
+如果需要从 GitHub 的 fork network 中独立出来，另参阅 [GitHub: Detaching a fork](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/detaching-a-fork)。这与网页重设计分开处理；离开 fork network 是不可逆操作，且 GitHub 文档提示可能丢失 issues、PR 等仓库元数据。单纯更新网页不需要执行此操作。
 
-### Navigation
+## 页面与源文件
 
-To modify the navigation menu, edit the nav section in each HTML file:
-
-```html
-<nav class="nav-buttons">
-  <a href="index.html" class="nav-button">Home</a>
-  <a href="your-new-page.html" class="nav-button">New Page</a>
-  <!-- Add more navigation items -->
-</nav>
+```text
+content/site.json    # 个人内容的单一来源
+templates/base.html # 所有页面共用的布局
+scripts/build.py    # 生成页面；只依赖 Python 标准库
+scripts/check.py    # 检查本地链接、锚点、照片、论文完整性与顺序
+assets/site.css     # 字体、宽度、留白、响应式布局
+assets/site.js      # 明暗外观切换 + 首页当前栏目提示
+assets/icons/       # 社交 logo 及许可证
+index.html          # About + 全部论文 + Reviewer / Teaching Assistant
+publications.html   # 跳转至首页 Publications 标题
+experience.html     # 仅 Research experience
+service.html        # 跳转至首页 Academic service 标题
+cv.html             # PDF 简历 + Education
 ```
 
-## Responsive Design
+以前的 `projects.html` 跳转到首页论文区，`blogs.html` 和 `photography.html` 跳转到首页。已有论文图、照片和 PDF 路径保留，旧模板源代码仍可在 Git 历史中找到。
 
-The template is fully responsive with breakpoints at:
-- **Mobile**: ≤ 600px
-- **Tablet**: 601px - 768px
-- **Desktop**: > 768px
+## Design references
 
-## Dark Mode
-
-Dark mode is automatically enabled based on system preferences and can be toggled using the theme button. The preference is saved in localStorage.
-
-## Advanced Features
-
-### Visitor Map
-
-The template includes a lazy-loaded visitor map. To set up your own map:
-
-1. Get your map code from [ClustrMaps](https://clustrmaps.com/)
-2. Replace the map script URL in `main.js`
-
-### Blog System
-
-The blog section is ready for integration with:
-- Static blog generators (Jekyll, Hugo, etc.)
-- Markdown files
-- External blog platforms
-
-### SEO Optimization
-
-The template includes:
-- Open Graph tags for social media
-- Twitter Card support
-- Structured data (JSON-LD)
-- Semantic HTML structure
-- Proper heading hierarchy
-
-## Deployment
-
-### GitHub Pages
-
-1. Create a new repository named `yourusername.github.io`
-2. Upload your customized template files
-3. Enable GitHub Pages in repository settings
-4. Your site will be available at `https://yourusername.github.io`
-
-### Other Platforms
-
-The template works with any static hosting service:
-- Netlify
-- Vercel
-- AWS S3
-- Traditional web hosting
-
-## Performance Tips
-
-1. **Optimize images**: Compress your photos and use appropriate formats
-2. **Minimize HTTP requests**: Combine CSS/JS files if needed
-3. **Enable caching**: Configure proper cache headers on your server
-4. **Use CDN**: Consider using a CDN for faster global delivery
-
-## Troubleshooting
-
-### Common Issues
-
-**Images not loading**: Check file paths and ensure images are uploaded to the correct directories.
-
-**Dark mode not working**: Verify that the theme toggle JavaScript is loaded and localStorage is available.
-
-**Mobile menu not opening**: Ensure all JavaScript files are properly loaded and there are no console errors.
-
-**Publications not displaying**: Check the `data.js` file for syntax errors and ensure the data structure matches the expected format.
-
-## Contributing
-
-Feel free to submit issues and enhancement requests! If you make improvements to the template, consider sharing them with others.
-
-## License
-
-This template is free to use for academic and personal purposes. Attribution is appreciated but not required.
-
-## Support
-
-If you need help customizing this template, feel free to:
-1. Check the troubleshooting section above
-2. Review the code comments for guidance
-3. Create an issue if you find bugs or have questions
-
----
-
-**Happy building!**
+- [Minimal Light](https://github.com/yaoyao-liu/minimal-light): visual inspiration for the profile / reading-column composition.
+- [Font Awesome Free](https://fontawesome.com/license/free): brand icons by Fonticons, Inc., licensed under CC BY 4.0; attribution and license are included in `assets/icons/`.
+- The previous website used the [Academic Homepage Template](https://github.com/Arvid-pku/Academic-Homepage-Template), with credit to Jon Barron and Xunjian Yin. This redesign preserves Furong Jia's existing academic content and assets.

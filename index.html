@@ -1,337 +1,55 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Furong Jia</title>
-  <meta name="author" content="Furong Jia">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Furong Jia - PhD Student in Computer Science at Duke University. Research interests in Natural Language Processing, Clinical NLP, and Data-centric Machine Learning.">
-  <meta name="keywords" content="Furong Jia, Duke University, Natural Language Processing, Clinical NLP, Machine Learning, Time Series">
-  <meta name="robots" content="index, follow">
-
-  <!-- Open Graph tags for social media -->
-  <meta property="og:title" content="Furong Jia - PhD Student at Duke University">
-  <meta property="og:description" content="PhD Student in Computer Science working on Natural Language Processing and Clinical NLP">
-  <meta property="og:image" content="https://flora-jia-jfr.github.io/furongjia.github.io/figures/me.jpg">
+  <meta name="color-scheme" content="light dark">
+  <title>Furong Jia</title>
+  <meta name="description" content="Furong Jia is a Computer Science Ph.D. student at Duke University interested in AI for science, AI for healthcare, LLM reliability, agent behavior, and human–agent interaction.">
+  <meta name="author" content="Furong Jia">
+  <link rel="canonical" href="https://flora-jia-jfr.github.io/furongjia.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Furong Jia">
+  <meta property="og:description" content="Furong Jia is a Computer Science Ph.D. student at Duke University interested in AI for science, AI for healthcare, LLM reliability, agent behavior, and human–agent interaction.">
   <meta property="og:url" content="https://flora-jia-jfr.github.io/furongjia.github.io/">
-  <meta property="og:type" content="profile">
-
-  <!-- Twitter Card tags -->
+  <meta property="og:image" content="https://flora-jia-jfr.github.io/furongjia.github.io/figures/me.jpg">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Furong Jia - PhD Student at Duke University">
-  <meta name="twitter:description" content="PhD Student in Computer Science working on Natural Language Processing and Clinical NLP">
+  <meta name="twitter:title" content="Furong Jia">
+  <meta name="twitter:description" content="Furong Jia is a Computer Science Ph.D. student at Duke University interested in AI for science, AI for healthcare, LLM reliability, agent behavior, and human–agent interaction.">
   <meta name="twitter:image" content="https://flora-jia-jfr.github.io/furongjia.github.io/figures/me.jpg">
-  
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="stylesheet" type="text/css" href="shared-styles.css">
-  <link rel="icon" type="image/png" href="figures/logo.png">
-  
-  <!-- Preload critical assets -->
-  <link rel="preload" href="figures/me.jpg" as="image">
-  <link rel="preload" href="https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2" as="font" type="font/woff2" crossorigin>
-  
-  <!-- DNS prefetch for external domains -->
-  <link rel="dns-prefetch" href="//clustrmaps.com">
-  <link rel="dns-prefetch" href="//fonts.gstatic.com">
-  
-  <!-- Structured Data for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Furong Jia",
-    "description": "PhD Student in Computer Science at Duke University",
-    "url": "https://flora-jia-jfr.github.io/furongjia.github.io/",
-    "image": "https://flora-jia-jfr.github.io/furongjia.github.io/figures/me.jpg",
-    "email": "flora.jia@duke.edu",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "Duke University",
-      "url": "https://www.duke.edu/"
-    },
-    "sameAs": [
-      "https://github.com/Flora-jia-jfr",
-      "https://twitter.com/Flora__Jia",
-      "https://scholar.google.com/citations?user=yNx9cokAAAAJ&hl=en"
-    ],
-    "knowsAbout": [
-      "Natural Language Processing",
-      "Clinical NLP",
-      "Data-centric Machine Learning",
-      "Time Series Analysis",
-      "Multimodal Machine Learning"
-    ]
-  }
-  </script>
-  
-  <!-- Page-specific styles -->
-  <style>
-    body {
-      font-display: swap;
-      line-height: 1.7;
-    }
-    
-    .section-spacing {
-      margin-bottom: 1px !important;
-      margin-left: -20px !important;
-    }
-    
-    /* Reduce internal section padding consistently */
-    .section-spacing td,
-    .section-spacing table td {
-      padding: 10px 20px !important;
-    }
-    
-    /* Ensure footer section also has consistent spacing */
-    .footer-section {
-      margin-top: 1px !important;
-      padding-top: 10px !important;
-    }
-    
-    /* Subtle profile photo enhancement */
-    .profile-photo {
-      border: 2px solid #f5f5f5;
-      transition: border-color 0.3s ease;
-    }
-    
-    .profile-photo:hover {
-      border-color: #e0e0e0;
-    }
-  </style>
+  <link rel="icon" href="figures/logo.png" type="image/png">
+  <link rel="preload" href="assets/fonts/source-serif-4-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
 </head>
-
 <body>
-  <!-- Scroll progress indicator -->
-  <div class="scroll-progress" id="scroll-progress"></div>
-  
-  <!-- Skip to main content link for accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  
-  <!-- Navigation Buttons -->
-  <nav class="nav-buttons" role="navigation" aria-label="Main navigation">
-    <a href="index.html" class="nav-button" aria-current="page">Home</a>
-    <a href="publications.html" class="nav-button">Publications</a>
-    <a href="projects.html" class="nav-button">Projects</a>
-
-    <!-- Dark mode toggle -->
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
-    </button>
-
-    <!-- Mobile hamburger menu -->
-    <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu" title="Toggle navigation menu">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
-  </nav>
-
-  <!-- Mobile sidebar overlay -->
-  <div id="mobile-sidebar-overlay" class="mobile-sidebar-overlay"></div>
-  
-  <!-- Floating Outline Sidebar -->
-  <aside id="outline-sidebar" role="complementary" aria-label="Page outline">
-    <h2 class="sidebar-heading">Outline</h2>
-    <nav role="navigation" aria-label="Page sections">
-      <ul id="outline-list">
-        <li><a href="#preprints" aria-label="Jump to Preprints section">Preprints</a></li>
-        <li><a href="#selected-publications" aria-label="Jump to Publications section">Publications</a></li>
-        <li><a href="#research-experience" aria-label="Jump to Research Experience section">Research Experience</a></li>
-        <li><a href="#academic-services" aria-label="Jump to Academic Services section">Academic Services</a></li>
-        <li><a href="#teaching" aria-label="Jump to Teaching section">Teaching</a></li>
-        <li><a href="#honors-and-awards" aria-label="Jump to Honors and Awards section">Honors and Awards</a></li>
-      </ul>
-    </nav>
-  </aside>
-
-  <!-- Main Content with Padding -->
-  <main id="main-content" role="main">
-    <div class="main-content-wrapper">
-      <table
-        style="width:100%;background:var(--bg-color);border:0px;border-spacing:0px;border-collapse:separate;">
-        <tbody>
-          <tr style="padding:0px">
-            <td style="padding:0px">
-            <!-- Introduction with Photo Floating Right -->
-            <div style="margin-bottom:40px;overflow:hidden;">
-              <!-- Photo floated to the right -->
-              <img class="profile-photo"
-                   style="float:right;width:200px;height:200px;border-radius:50%;margin-left:5px;margin-top:160px;"
-                   alt="Profile photo of Furong Jia"
-                   src="figures/me.jpg"
-                   loading="eager"
-                   width="200"
-                   height="200">
-
-              <!-- Text content maintains full width centering -->
-              <div>
-                <p style="text-align:center;margin-left:235px;">
-                  <name>Furong Jia</name>
-                  <br />(I also go by <it>Flora</it>)
-                </p>
-                <p>
-                  Hi! I am a second-year Computer Science PhD student at <a href="https://www.duke.edu/">Duke University</a>, supervised by Prof. <a
-                    href="https://www.monicaagrawal.com/">Monica Agrawal</a>. Previously, I received my Bachelor of Science in Computer Science and Applied and Computational Mathematics from <a href="https://www.usc.edu/">University of Southern California</a>, where I was fortunate to work with <a href="https://sites.google.com/view/yanliu-ai/home">Prof. Yan Liu</a>, <a href="https://jessethomason.com/">Prof. Jesse Thomason</a>, and <a href="https://maja-mataric.web.app/">Prof. Maja Matarić</a>.
-                </p>
-                <!-- <p> <b>Research:</b> I am broadly interested in making AI systems, especially large language models, reliable, interpretable, and robust by understanding how data shapes model behavior at training and inference time. My interests include methods that leverage properties of diverse data (text, time-series, multimodal) to make models adaptable to changes that arise during both training and deployment. A parallel interest is applying these approaches in clinical contexts, where robustness, generalizability, and responsible deployment are critical.</p> -->
-                <p>
-                  <b>Research:</b> My research centers on developing a principled understanding of <b>large foundation models</b>, particularly <b>large language models (LLMs)</b>, with the aim of enhancing their capabilities, addressing their limitations, and optimizing their deployment across diverse applications. I am broadly interested in making these AI systems <b>reliable, interpretable, and robust</b> by understanding how <b>data shapes model behavior</b> at training and inference time. My specific interests include developing methods that leverage properties of <b>diverse data</b> (text, time-series, multimodal) to make models <b>adaptable to changes</b> that arise during both training and deployment. A parallel interest is applying these approaches in <b>clinical contexts</b>, where robustness, generalizability, and responsible deployment are critical.
-                </p>
-                </p>
-                <p style="color: red; text-align: center;">
-                  📌 Open to 2026 Research Opportunities: In-semester (Part-time).
-                </p>
-                <p>Feel free to reach out to me if you'd like to discuss research or explore potential collaboration!
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:flora.jia@duke.edu">Email</a>  /
-                  <a href="https://github.com/Flora-jia-jfr">Github</a>  /
-                  <a href="https://twitter.com/Flora__Jia">Twitter</a>  /
-                  <a href="files/Furong_Flora__Jia_CV____Duke.pdf">CV</a>  /
-                  <a href="https://scholar.google.com/citations?user=yNx9cokAAAAJ&hl=en">Google Scholar</a>
-                </p>
-              </div>
-              <!-- Clear float to prevent affecting subsequent content -->
-              <div style="clear:both;"></div>
-            </div>
-
-            <!-- Preprints -->
-            <div class="section-spacing">
-              <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
-                <tbody>
-                  <tr>
-                    <td style="padding:20px;width:100%;vertical-align:middle">
-                      <heading id="preprints">Under Review</heading>
-                      <ul id="preprints-list" class="publication-list">
-                        <!-- Preprints will be inserted here -->
-                      </ul>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- Selected Publications -->
-            <div class="section-spacing">
-              <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
-                <tbody>
-                  <tr>
-                    <td style="padding:20px;width:100%;vertical-align:middle">
-                      <heading id="selected-publications">Selected Publications</heading>   
-                      <ul id="selected-publications-list" class="publication-list">
-                        <!-- Publications will be inserted here -->
-                      </ul>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- Research Experience -->
-            <div class="section-spacing">
-              <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
-                <tbody>
-                  <tr>
-                    <td style="padding:20px;width:100%;vertical-align:middle">
-                      <heading id="research-experience">Research Experience</heading>
-                      <ul id="research-experience-list">
-                        <!-- Research Experience will be inserted here -->
-                      </ul>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- Academic Services -->
-            <div class="section-spacing">
-              <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
-                <tbody>
-                  <tr>
-                    <td style="padding:20px;width:100%;vertical-align:middle">
-                      <heading id="academic-services">Academic Services</heading>
-                      <ul id="academic-services-list">
-                        <!-- Academic Services will be inserted here -->
-                      </ul>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- Teaching -->
-            <div class="section-spacing">
-              <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
-                <tbody>
-                  <tr>
-                    <td style="padding:20px;width:100%;vertical-align:middle">
-                      <heading id="teaching">Teaching</heading>
-                      <ul id="teaching-list">
-                        <!-- Teaching will be inserted here -->
-                      </ul>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- Honors and Awards with Map -->
-            <div class="section-spacing">
-              <table class="honors-map-container" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
-                <tr>
-                  <td style="padding:20px; vertical-align:middle; width:80%;">
-                    <heading id="honors-and-awards">Selected Honors and Awards</heading>
-                    <ul id="honors-list">
-                      <!-- Honors will be inserted here -->
-                    </ul>
-                  </td>
-                  <td style="padding:20px; vertical-align:middle; width:20%; text-align:right;">
-                    <div id="map-container" style="width:160px; height:160px; border-radius:8px;">
-                      <!-- Visitor map will be loaded lazily -->
-                      <div id="visitor-map-placeholder" style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; border-radius:8px; cursor:pointer;">
-                        <span style="font-size:12px; color:var(--placeholder-text);">📍 Click to load visitor map</span>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-
-            <!-- Footer -->
-            <div class="footer-section">
-              <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
-                <tbody>
-                  <tr>
-                    <td style="padding:20px; text-align: left; width:33%; vertical-align:middle;">
-                      <div id="footer" style="font-size: small;">
-                        <div id="last-modified-time"></div>
-                      </div>
-                    </td>
-                    <td style="padding:20px; text-align: center; width:34%; vertical-align:middle;">
-                      <p style="font-size:small; margin:0;">
-                        © 2026 Furong Jia. All rights reserved.
-                      </p>
-                    </td>
-                    <td style="padding:20px; text-align: right; width:33%; vertical-align:middle;">
-                      <p style="font-size:small; margin:0;"> Credit to <a style="font-size:small;" href="https://jonbarron.info/">Jon
-                          Barron</a> and <a style="font-size:small;" href="https://xunjianyin.github.io/">Xunjian Yin</a> for this amazing template.
-                      </p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            
-            <!-- Load JavaScript files -->
-            <!-- Load data first, then main.js which depends on the data -->
-            <script src="data.js?v=5"></script>
-            <script src="main.js?v=5"></script>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-brand" href="index.html">Furong Jia</a>
+      <nav class="site-nav" aria-label="Main navigation"><a href="#about" aria-current="location">About</a><a href="#publications">Publications</a><a href="experience.html">Experience</a><a href="#academic-services">Service</a><a href="cv.html">CV</a></nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" hidden>
+        <svg class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13.3A9 9 0 0 1 10.7 3.1 9 9 0 1 0 20.9 13.3Z"/></svg>
+        <svg class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
     </div>
-  </main>
+  </header>
+  <div class="site-layout">
+    <aside class="profile" aria-label="Profile and contact">
+      <a class="portrait-link" href="index.html" aria-label="Furong Jia home">
+        <img class="portrait" src="figures/me.jpg" alt="Furong Jia smiling outdoors" width="200" height="250">
+      </a>
+      <a class="profile-name" href="index.html">Furong Jia</a>
+      <p class="alias">I also go by Flora</p>
+      <p class="affiliation">Ph.D. Student<br>Computer Science<br><a href="https://www.duke.edu/">Duke University</a></p>
+      <a class="email" href="mailto:flora.jia@duke.edu">flora.jia@duke.edu</a>
+      <div class="social-links"><a class="social-icon" href="https://scholar.google.com/citations?user=yNx9cokAAAAJ&amp;hl=en" aria-label="Google Scholar" title="Google Scholar"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/></svg></a><a class="social-icon" href="https://github.com/Flora-jia-jfr" aria-label="GitHub" title="GitHub"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a><a class="social-icon" href="https://twitter.com/Flora__Jia" aria-label="Twitter" title="Twitter"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a></div>
+    </aside>
+    <div class="reading-column">
+      <main id="main"><section class="section about" id="about"><h1>About me</h1><p>Hi! I am a second-year Computer Science PhD student at <a href="https://www.duke.edu/">Duke University</a>, supervised by Prof. <a
+                    href="https://www.monicaagrawal.com/">Monica Agrawal</a>. Previously, I received my Bachelor of Science in Computer Science and Applied and Computational Mathematics from <a href="https://www.usc.edu/">University of Southern California</a>, where I was fortunate to work with <a href="https://sites.google.com/view/yanliu-ai/home">Prof. Yan Liu</a>, <a href="https://jessethomason.com/">Prof. Jesse Thomason</a>, and <a href="https://maja-mataric.web.app/">Prof. Maja Matarić</a>.</p><p><b>Research:</b> My research focuses on <b>large foundation models</b>, particularly <b>large language models (LLMs)</b>, and AI agents. I am broadly interested in making these systems <b>reliable, interpretable, and robust</b> by understanding how <b>data shapes model behavior</b> at training and inference time. This includes developing methods that use <b>diverse data</b> (text, time series, and multimodal inputs) to improve model capabilities, understand their limitations, and make them <b>adaptable to changes</b> during training and deployment. I am also interested in <b>understanding agent behavior</b> and <b>human–agent interaction</b>, including how agents collaborate with people and when they should seek human input. I am interested in applying these approaches to <b>AI for science</b> and <b>AI for healthcare</b>, particularly in <b>clinical contexts</b>, where generalizability and responsible deployment are critical.</p><p>Feel free to reach out to me if you'd like to discuss research or explore potential collaboration!</p></section><section class="section" id="publications"><div class="section-heading"><h2>Publications</h2><span class="equal-contribution">* Equal contribution</span></div><ul class="paper-list"><li class="paper" id="batch-of-thought"><article><h3 class="paper-title"><a href="https://arxiv.org/abs/2601.02950">Batch-of-Thought: Cross-Instance Learning for Enhanced LLM Reasoning</a></h3><p class="authors">Xuan Yang, <strong>Furong Jia</strong>, Roy Xie, Xi Xiong, Jian Li, Monica Agrawal</p><div class="paper-meta"><span class="venue"><span class="venue-name">EMNLP 2026 Main</span></span><a class="paper-resource" href="https://arxiv.org/abs/2601.02950">Paper<span class="resource-arrow" aria-hidden="true">↗</span></a></div></article></li><li class="paper" id="counting-clues"><article><h3 class="paper-title"><a href="https://arxiv.org/abs/2512.12868">Counting Clues: A Lightweight Probabilistic Baseline Can Match an LLM</a></h3><p class="authors"><strong>Furong Jia</strong>*, Yuan Pu*, Finn Guo, Monica Agrawal</p><div class="paper-meta"><span class="venue"><span class="venue-name">ACL-IJCNLP 2026 Main</span></span><a class="paper-resource" href="https://arxiv.org/abs/2512.12868">Paper<span class="resource-arrow" aria-hidden="true">↗</span></a></div></article></li><li class="paper" id="dataset-shift"><article><h3 class="paper-title"><a href="https://openreview.net/pdf?id=ldSvsVeEDJ">Interpreting Dataset Shift in Clinical Notes</a></h3><p class="authors">Shariar Vaez-Ghaemi*, <strong>Furong Jia</strong>*, Monica Agrawal</p><div class="paper-meta"><span class="venue"><span class="venue-name">ML4H 2025</span></span><a class="paper-resource" href="https://openreview.net/pdf?id=ldSvsVeEDJ">Paper<span class="resource-arrow" aria-hidden="true">↗</span></a></div></article></li><li class="paper" id="diagnosing-datasets"><article><h3 class="paper-title"><a href="https://arxiv.org/abs/2505.15024">Diagnosing our datasets: How does my language model understand clinical text?</a></h3><p class="authors"><strong>Furong Jia</strong>, David Sontag, Monica Agrawal</p><div class="paper-meta"><span class="venue"><span class="venue-name">CHIL 2025</span></span><a class="paper-resource" href="https://arxiv.org/abs/2505.15024">Paper<span class="resource-arrow" aria-hidden="true">↗</span></a><a class="paper-resource" href="https://github.com/Flora-jia-jfr/diagnosing_our_datasets">Code<span class="resource-arrow" aria-hidden="true">↗</span></a></div></article></li><li class="paper" id="patient-assumptions"><article><h3 class="paper-title"><a href="https://arxiv.org/pdf/2601.15674">What Patients Really Ask: Exploring the Effect of False Assumptions in Patient Information Seeking</a></h3><p class="authors">Raymond M Xiong, <strong>Furong Jia</strong>, Lionel Wong, Monica Agrawal</p><div class="paper-meta"><span class="venue"><span class="venue-name">ML4H 2025 Findings</span></span><a class="paper-resource" href="https://arxiv.org/pdf/2601.15674">Paper<span class="resource-arrow" aria-hidden="true">↗</span></a></div></article></li><li class="paper" id="tempo"><article><h3 class="paper-title"><a href="https://arxiv.org/abs/2310.04948">TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting</a></h3><p class="authors">Defu Cao, <strong>Furong Jia</strong>, Sercan O Arik, Tomas Pfister, Yixiang Zheng, Wen Ye, Yan Liu</p><div class="paper-meta"><span class="venue"><span class="venue-name">ICLR 2024</span></span><a class="paper-resource" href="https://arxiv.org/abs/2310.04948">Paper<span class="resource-arrow" aria-hidden="true">↗</span></a></div></article></li><li class="paper" id="gpt4mts"><article><h3 class="paper-title"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/30383">GPT4MTS: Prompt-based Large Language Model for Multimodal Time-series Forecasting</a></h3><p class="authors"><strong>Furong Jia</strong>, Kevin Wang, Yixiang Zheng, Defu Cao, Yan Liu</p><div class="paper-meta"><span class="venue"><span class="venue-name">EAAI-24</span></span><a class="paper-resource" href="https://ojs.aaai.org/index.php/AAAI/article/view/30383">Paper<span class="resource-arrow" aria-hidden="true">↗</span></a><a class="paper-resource" href="https://github.com/Flora-jia-jfr/GPT4MTS-Prompt-based-Large-Language-Model-for-Multimodal-Time-series-Forecasting">Code<span class="resource-arrow" aria-hidden="true">↗</span></a></div></article></li><li class="paper" id="i2i"><article><h3 class="paper-title"><a href="https://arxiv.org/abs/2304.02168">I2I: Initializing Adapters with Improvised Knowledge</a></h3><p class="authors">Tejas Srinivasan, <strong>Furong Jia</strong>, Mohammad Rostami, Jesse Thomason</p><div class="paper-meta"><span class="venue"><span class="venue-name">CoLLAs 2023</span></span><a class="paper-resource" href="https://arxiv.org/abs/2304.02168">Paper<span class="resource-arrow" aria-hidden="true">↗</span></a></div></article></li></ul></section><section class="section " id="academic-services"><h2>Academic service</h2><ul class="plain-list"><li><strong>Reviewer:</strong> NeurIPS 2026, NeurIPS 2025; ML4H 2025; ACL ARR 2024 (June, October), ACL ARR 2025 (February, May).</li><li><strong>Teaching Assistant:</strong> Duke University, Natural Language Processing (CS 572), Spring 2026; Duke University, Applied Machine Learning (CS 290), Spring 2025; University of Southern California, Algorithms and Theory of Computing (CSCI 270), Spring 2022; University of Southern California, Web Publishing and Front-end Development (ITP 104), Fall 2021 - Spring 2024.</li></ul></section></main>
+      <footer class="site-footer"><span>Furong Jia · Duke University</span><a href="mailto:flora.jia@duke.edu">Contact</a></footer>
+    </div>
+  </div>
 </body>
-
 </html>
