@@ -31,15 +31,13 @@
     "I am particularly interested in how models learn from diverse data—including text, time series, and multimodal inputs—and adapt to changes during training and deployment. A central application of my work is clinical NLP, where understanding model capabilities, limitations, and generalization is especially important.",
     "Previously, I received my B.S. in Computer Science and Applied and Computational Mathematics from the <a href=\"https://www.usc.edu/\">University of Southern California</a>, where I was fortunate to work with <a href=\"https://sites.google.com/view/yanliu-ai/home\">Prof. Yan Liu</a>, <a href=\"https://jessethomason.com/\">Prof. Jesse Thomason</a>, and <a href=\"https://maja-mataric.web.app/\">Prof. Maja Matarić</a>."
   ],
-  "announcement": "Open to 2026 research opportunities: in-semester (part-time).",
   "publications": [
     {
       "id": "batch-of-thought",
       "title": "Batch-of-Thought: Cross-Instance Learning for Enhanced LLM Reasoning",
       "authors": "Xuan Yang, Furong Jia, Roy Xie, Xi Xiong, Jian Li, Monica Agrawal",
       "year": 2026,
-      "venue": "Under Review",
-      "preprint": true,
+      "venue": "arXiv",
       "links": [
         {
           "label": "Paper",
@@ -53,15 +51,12 @@
       "authors": "Shariar Vaez-Ghaemi*, Furong Jia*, Monica Agrawal",
       "year": 2025,
       "venue": "ML4H 2025",
-      "preprint": false,
       "links": [
         {
           "label": "Paper",
           "url": "https://openreview.net/pdf?id=ldSvsVeEDJ"
         }
-      ],
-      "description": "Distribution shift degrades ML performance, especially in clinical text. Therefore, actionability requires not just detection but explanation. We establish an extensible benchmark suite that induces synthetic distribution shifts using real clinical notes and develop two methods for assessing generated shift explanations. We further introduce SIReNs, a general-domain end-to-end approach that explains distributional differences by selecting representative notes from each. SIReNs reliably recover salient binary shifts with comparatively lower performance on subtle continuous changes, showing a gap to a ground-truth oracle and suggesting room for improvement in future methods.",
-      "image": "photos/project-demo/dataset-shift.png"
+      ]
     },
     {
       "id": "counting-clues",
@@ -69,15 +64,12 @@
       "authors": "Furong Jia*, Yuan Pu*, Finn Guo, Monica Agrawal",
       "year": 2025,
       "venue": "ML4H 2025 Findings",
-      "preprint": false,
       "links": [
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2512.12868"
         }
-      ],
-      "description": "We probed whether LLM success on clinical Multiple-Choice Diagnostic Questions reflects probabilistic inference by developing the Frequency-Based Diagnostic Ranker (FBDR), a simple Naive Bayes approach that extracts clinical concepts and scores diagnosis options using co-occurrence statistics from pretraining corpora. We found that FBDR achieved accuracy closely matched by a corresponding 7B LLM using the same pretraining corpora, and the predictions are complementary. While LLM performance appears driven by mechanisms beyond simple frequency aggregation, a historically grounded, low-complexity, expert-system style approach still accounts for a substantial portion of benchmark performance.",
-      "image": "photos/project-demo/counting-clues.png"
+      ]
     },
     {
       "id": "diagnosing-datasets",
@@ -85,7 +77,6 @@
       "authors": "Furong Jia, David Sontag, Monica Agrawal",
       "year": 2025,
       "venue": "CHIL 2025",
-      "preprint": false,
       "links": [
         {
           "label": "Paper",
@@ -95,9 +86,7 @@
           "label": "Code",
           "url": "https://github.com/Flora-jia-jfr/diagnosing_our_datasets"
         }
-      ],
-      "description": "We examined the relationship of clinical information (clinical jargon understanding and unsupported medical claims) between the occurrence of keyword pairs in pretraining corpora and model performance. For clinical jargon understanding, we also curated a benchmark Medlingo using clinical abbreviations from real-world clinical notes. We further analyzed the sources of clinical information in pretraining datasets to guide future corpus design.",
-      "image": "photos/project-demo/diagnosing-datasets.png"
+      ]
     },
     {
       "id": "patient-assumptions",
@@ -105,7 +94,6 @@
       "authors": "Raymond M Xiong, Furong Jia, Lionel Wong, Monica Agrawal",
       "year": 2025,
       "venue": "ML4H 2025 Findings",
-      "preprint": false,
       "links": [
         {
           "label": "Paper",
@@ -119,7 +107,6 @@
       "authors": "Defu Cao, Furong Jia, Sercan O Arik, Tomas Pfister, Yixiang Zheng, Wen Ye, Yan Liu",
       "year": 2024,
       "venue": "ICLR 2024",
-      "preprint": false,
       "links": [
         {
           "label": "Paper",
@@ -133,7 +120,6 @@
       "authors": "Furong Jia, Kevin Wang, Yixiang Zheng, Defu Cao, Yan Liu",
       "year": 2024,
       "venue": "EAAI-24",
-      "preprint": false,
       "links": [
         {
           "label": "Paper",
@@ -143,9 +129,7 @@
           "label": "Code",
           "url": "https://github.com/Flora-jia-jfr/GPT4MTS-Prompt-based-Large-Language-Model-for-Multimodal-Time-series-Forecasting"
         }
-      ],
-      "description": "We introduced GPT4MTS, a prompt-based framework that fuses numeric time series with aligned textual context. We also built a GDELT-derived multimodal news impact dataset and showed consistent forecasting gains over strong unimodal baselines, demonstrating effective multimodal fusion and the value of extra-textual information.",
-      "image": "photos/project-demo/gpt4mts.png"
+      ]
     },
     {
       "id": "i2i",
@@ -153,7 +137,6 @@
       "authors": "Tejas Srinivasan, Furong Jia, Mohammad Rostami, Jesse Thomason",
       "year": 2023,
       "venue": "CoLLAs 2023",
-      "preprint": false,
       "links": [
         {
           "label": "Paper",

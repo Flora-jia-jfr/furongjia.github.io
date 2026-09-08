@@ -1,6 +1,6 @@
 # Furong Jia's academic website
 
-A personal academic website with a wide reading column, a sticky profile on desktop, all publications, and separate experience, service, and CV pages. The design takes inspiration from Minimal Light; the layout, styles, and generator are written for this site. No Jekyll theme, frontend framework, or package installation is required.
+A personal academic website with a sticky top navigation, a wide reading column, a sticky profile on desktop, all publications, and separate experience, service, and CV pages. The design takes inspiration from Minimal Light; the layout, styles, and generator are written for this site. No Jekyll theme, frontend framework, or package installation is required.
 
 Live website: https://flora-jia-jfr.github.io/furongjia.github.io/
 
@@ -19,7 +19,6 @@ python3 scripts/check.py
 | --- | --- |
 | 姓名、邮箱、照片、CV 链接 | `profile` |
 | About 的三个段落 | `about`（支持简单 HTML 链接） |
-| 机会 / 招聘提示 | `announcement`，设为空字符串即可隐藏 |
 | 全部论文和预印本 | `publications` |
 | 学历 | `education` |
 | Research experience | `research_experience` |
@@ -38,7 +37,6 @@ python3 scripts/check.py
   "authors": "First Author, Furong Jia, Last Author",
   "year": 2026,
   "venue": "Conference 2026",
-  "preprint": false,
   "links": [
     {"label": "Paper", "url": "https://example.org/paper"},
     {"label": "Code", "url": "https://github.com/example/repository"}
@@ -47,10 +45,9 @@ python3 scripts/check.py
 ```
 
 - `id` 必须唯一，用于论文链接锚点。
-- 预印本设 `preprint: true`，并填写准确的 `venue` / 状态。
+- 所有论文统一按年份排列，不分 Preprints。未发表的论文可将 `venue` 写为 `arXiv`，也可留空。
 - 年份自动倒序；同一年内按数据文件的排列顺序显示。可以把重要的论文往前放。
 - 本人的名字自动加粗，不需要在作者字段手写 HTML。
-- 可选的 `description` 和 `image` 放在展开的 “Research details” 中。
 - Paper、Code、Project、Slides 等入口统一使用 `links`，不需要独立 Projects 栏目。
 
 ### 更新照片与简历
@@ -59,7 +56,7 @@ python3 scripts/check.py
 
 ### 调整排版
 
-编辑 `assets/site.css`。桌面最大宽度在 `.site-layout` 中设为 `1200px`，左栏 `244px`，右栏使用余下空间。左栏使用 `position: sticky`，整个文档正常滚动，没有两套嵌套滚动条。窄屏或过矮的窗口恢复自然流布局，以保证所有链接可达。
+编辑 `assets/site.css`。桌面最大宽度在 `.site-layout` 中设为 `1200px`，左栏 `244px`，右栏使用余下空间。顶部固定显示导航和太阳／月亮外观图标；左栏仅显示照片和个人信息，使用 `position: sticky` 停在导航下方。整个文档正常滚动，没有两套嵌套滚动条。窄屏或过矮的窗口恢复自然流布局，以保证所有链接可达。
 
 ## 本地预览
 

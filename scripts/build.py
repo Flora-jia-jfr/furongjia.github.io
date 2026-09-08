@@ -32,23 +32,16 @@ def paper_row(paper):
     title = link(paper['title'], paper['links'][0]['url']) if paper['links'] else esc(paper['title'])
     authors = esc(paper['authors']).replace(esc(PROFILE['name']), f'<strong>{esc(PROFILE["name"])}</strong>')
     links = ''.join(link(l['label'], l['url']) for l in paper['links'])
-    details = ''
-    if paper.get('description'):
-        image = f'<img src="{esc(paper["image"])}" alt="Research overview for {esc(paper["title"])}" loading="lazy">' if paper.get('image') else ''
-        details = f'<details class="paper-details"><summary>Research details</summary><p>{esc(paper["description"])}</p>{image}</details>'
-    return f'<li class="paper" id="{esc(paper["id"])}"><article><h3 class="paper-title">{title}</h3><p class="authors">{authors}</p><div class="paper-meta"><span class="venue">{esc(paper["venue"])}</span>{links}</div>{details}</article></li>'
+    venue = f'<span class="venue">{esc(paper["venue"])}</span>' if paper.get('venue') else ''
+    return f'<li class="paper" id="{esc(paper["id"])}"><article><h3 class="paper-title">{title}</h3><p class="authors">{authors}</p><div class="paper-meta">{venue}{links}</div></article></li>'
 
 
 def papers(page=False):
     tag = 'h1' if page else 'h2'
     result = f'<section class="section" id="publications"><div class="section-heading"><{tag}>Publications</{tag}><span class="equal-contribution">* Equal contribution</span></div>'
-    preprints = [p for p in DATA['publications'] if p['preprint']]
-    published = [p for p in DATA['publications'] if not p['preprint']]
     groups = []
-    if preprints:
-        groups.append(('Preprints', sorted(preprints, key=lambda p: p['year'], reverse=True)))
-    for year in sorted({p['year'] for p in published}, reverse=True):
-        groups.append((str(year), [p for p in published if p['year'] == year]))
+    for year in sorted({p['year'] for p in DATA['publications']}, reverse=True):
+        groups.append((str(year), [p for p in DATA['publications'] if p['year'] == year]))
     for title, rows in groups:
         result += f'<h3 class="year-heading">{title}</h3><ul class="paper-list">' + ''.join(map(paper_row, rows)) + '</ul>'
     return result + '</section>'
@@ -74,7 +67,7 @@ def experience():
 
 
 def build_page(filename, title, content, current, description=None):
-    routes = [('About', 'index.html', 'about'), ('Publications', 'index.html#publications', 'publications'), ('Experience', 'experience.html', 'experience'), ('Service', 'service.html', 'service'), ('CV', 'cv.html', 'cv')]
+    routes = [('About', 'index.html', 'about'), ('Publications', 'publications.html', 'publications'), ('Experience', 'experience.html', 'experience'), ('Service', 'service.html', 'service'), ('CV', 'cv.html', 'cv')]
     navigation = ''.join(link(label, url, ' aria-current="page"' if key == current else '') for label, url, key in routes)
     socials = ''.join(link(row['label'], row['url']) for row in PROFILE['socials'])
     canonical = urljoin(PROFILE['url'], '' if filename == 'index.html' else filename)
@@ -91,12 +84,10 @@ def redirect(filename, target):
 
 def main():
     about = '<section class="section about" id="about"><h1>About me</h1>' + ''.join(f'<p>{p}</p>' for p in DATA['about'])
-    if DATA.get('announcement'):
-        about += f'<p class="opportunity">{esc(DATA["announcement"])}</p>'
     about += '</section>'
     service_summary = '<section class="section" id="academic-services"><div class="section-heading"><h2>Academic service</h2>' + link('Service & teaching →', 'service.html') + '</div>' + items(DATA['service']) + '</section>'
     build_page('index.html', 'Furong Jia', about + papers() + service_summary, 'about')
-    build_page('publications.html', 'Publications · Furong Jia', papers(page=True), 'publications', 'All publications and preprints by Furong Jia, with papers, code, and research details.')
+    build_page('publications.html', 'Publications · Furong Jia', papers(page=True), 'publications', 'All papers by Furong Jia, organized by year, with publication and code links.')
     build_page('experience.html', 'Experience · Furong Jia', experience(), 'experience', 'Research experience, teaching, and honors of Furong Jia.')
     service_page = '<section class="section" id="academic-services"><h1>Academic service</h1>' + items(DATA['service']) + '</section>' + section('Teaching', items(DATA['teaching']), 'teaching')
     build_page('service.html', 'Academic service · Furong Jia', service_page, 'service', 'Academic reviewing and teaching service by Furong Jia.')

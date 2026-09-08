@@ -8,7 +8,10 @@
   function render() {
     const dark = preference ? preference === 'dark' : system.matches;
     document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
-    button.textContent = dark ? 'Use light appearance' : 'Use dark appearance';
+    document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    const label = dark ? 'Switch to light mode' : 'Switch to dark mode';
+    button.setAttribute('aria-label', label);
+    button.setAttribute('title', label);
   }
   button.hidden = false;
   button.addEventListener('click', () => {

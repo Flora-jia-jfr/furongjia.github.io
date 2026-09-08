@@ -50,7 +50,7 @@ def main():
         page = pages[ROOT / filename]
         assert all(page.ids.count(key) == 1 for key in expected), f'Missing or repeated papers in {filename}'
         rendered = [key for key in page.ids if key in expected]
-        ordered = sorted(DATA['publications'], key=lambda p: (not p['preprint'], -p['year']))
+        ordered = sorted(DATA['publications'], key=lambda p: -p['year'])
         assert rendered == [p['id'] for p in ordered], f'Unexpected paper order in {filename}'
     assert all((ROOT / p['image']).is_file() for p in DATA['publications'] if p.get('image'))
     print(f'Checked {len(pages)} pages, {checked} internal links, and all {len(expected)} papers on both publication views.')
