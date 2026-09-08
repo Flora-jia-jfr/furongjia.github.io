@@ -24,7 +24,7 @@ python3 scripts/check.py
 | Research experience | `research_experience` |
 | Teaching | `teaching` |
 | Academic service | `service` |
-| 荣誉 | `honors` |
+| 荣誉（保留数据，当前不展示） | `honors` |
 
 ### 添加论文
 
@@ -110,7 +110,7 @@ assets/site.js      # 明暗外观切换 + 首页当前栏目提示
 assets/icons/       # 社交 logo 及许可证
 index.html          # About + 全部论文 + Reviewer / Teaching Assistant
 publications.html   # 跳转至首页 Publications 标题
-experience.html     # Research experience + Teaching + Honors
+experience.html     # 仅 Research experience
 service.html        # 跳转至首页 Academic service 标题
 cv.html             # PDF 简历 + Education
 ```

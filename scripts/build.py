@@ -61,7 +61,7 @@ def experience():
         role = f'<span>{esc(row["role"])}</span>' if row.get('role') else ''
         mentor = f'<span>{esc(row["mentor_label"])}: {esc(row["mentor"])}</span>'
         result += f'<article class="experience"><div class="experience-meta"><span>{esc(row["period"])}</span><span>{esc(row["location"])}</span></div><h2>{esc(row["institution"])}</h2><p class="mentor">{role}{mentor}</p>{projects}</article>'
-    return result + '</section>' + section('Teaching', items(DATA['teaching']), 'teaching') + section('Honors and awards', items(DATA['honors']), 'honors-and-awards')
+    return result + '</section>'
 
 
 def build_page(filename, title, content, current, description=None):
@@ -93,7 +93,7 @@ def main():
     teaching = '; '.join(row.removeprefix('Teaching Assistant, ') for row in DATA['teaching'])
     service_summary = section('Academic service', f'<ul class="plain-list"><li><strong>Reviewer:</strong> {esc(reviewing)}.</li><li><strong>Teaching Assistant:</strong> {esc(teaching)}.</li></ul>', 'academic-services')
     build_page('index.html', 'Furong Jia', about + papers() + service_summary, 'about')
-    build_page('experience.html', 'Experience · Furong Jia', experience(), 'experience', 'Research experience, teaching, and honors of Furong Jia.')
+    build_page('experience.html', 'Experience · Furong Jia', experience(), 'experience', 'Research experience of Furong Jia.')
     cv_url = esc(PROFILE['cv'])
     cv = f'<section class="section"><h1>Curriculum vitae</h1><div class="document-actions"><a class="document-link" href="{cv_url}">Open CV (PDF) ↗</a><a href="{cv_url}" download>Download</a></div><object class="cv-preview" data="{cv_url}" type="application/pdf" aria-label="Furong Jia curriculum vitae"><p><a href="{cv_url}">Open the CV PDF</a></p></object></section>'
     build_page('cv.html', 'CV · Furong Jia', cv + section('Education', education(), 'education'), 'cv', 'Curriculum vitae and education of Furong Jia, Computer Science Ph.D. student at Duke University.')
