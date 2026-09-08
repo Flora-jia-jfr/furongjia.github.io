@@ -10,6 +10,8 @@
   --paper: light-dark(#fff, #151c24);
   --ink: light-dark(#303c48, #e2e8ef);
   --muted: light-dark(#667482, #acb9c7);
+  /* Custom Duke-inspired blues; official Duke Navy is #012169, Royal is #00539B.
+     Color reference: https://brand.duke.edu/colors/ */
   --accent: light-dark(#234f70, #aacde8);
   --line: light-dark(#e2e8ef, #303d4b);
   --soft: light-dark(#f4f7fa, #202b37);
