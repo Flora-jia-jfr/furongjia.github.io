@@ -10,7 +10,7 @@
     "photo": "figures/me.jpg",
     "cv": "files/Furong_Flora__Jia_CV____Duke.pdf",
     "url": "https://flora-jia-jfr.github.io/furongjia.github.io/",
-    "description": "Furong Jia is a Computer Science Ph.D. student at Duke University interested in AI for science, AI for healthcare, LLM reliability, agent behavior, and human–agent interaction.",
+    "description": "Furong Jia is a Computer Science Ph.D. student at Duke University studying how data shapes LLM behavior and how LLMs interpret data, with interests in probabilistic knowledge, AI agents, and AI for healthcare.",
     "socials": [
       {
         "label": "Google Scholar",
@@ -31,7 +31,7 @@
   },
   "about": [
     "Hi! I am a second-year Computer Science PhD student at <a href=\"https://www.duke.edu/\">Duke University</a>, supervised by Prof. <a\n                    href=\"https://www.monicaagrawal.com/\">Monica Agrawal</a>. Previously, I received my Bachelor of Science in Computer Science and Applied and Computational Mathematics from <a href=\"https://www.usc.edu/\">University of Southern California</a>, where I was fortunate to work with <a href=\"https://sites.google.com/view/yanliu-ai/home\">Prof. Yan Liu</a>, <a href=\"https://jessethomason.com/\">Prof. Jesse Thomason</a>, and <a href=\"https://maja-mataric.web.app/\">Prof. Maja Matarić</a>.",
-    "<b>Research:</b> My research focuses on <b>large foundation models</b>, particularly <b>large language models (LLMs)</b>, and AI agents. I am broadly interested in making these systems <b>reliable, interpretable, and robust</b> by understanding how <b>data shapes model behavior</b> at training and inference time. This includes developing methods that use <b>diverse data</b> (text, time series, and multimodal inputs) to improve model capabilities, understand their limitations, and make them <b>adaptable to changes</b> during training and deployment. I am also interested in <b>understanding agent behavior</b> and <b>human–agent interaction</b>, including how agents collaborate with people and when they should seek human input. I am interested in applying these approaches to <b>AI for science</b> and <b>AI for healthcare</b>, particularly in <b>clinical contexts</b>, where generalizability and responsible deployment are critical.",
+    "<b>Research:</b> I study <b>how data shapes LLM behavior and how LLMs interpret data</b>, with the broader goal of understanding what makes these systems <b>reliable, interpretable, and robust</b>. My work examines how pretraining data and inference-time inputs influence model reasoning, including how faithfully LLMs acquire <b>probabilistic knowledge</b> from text. My research also spans <b>diverse data</b> (text, time series, and multimodal inputs), including developing forecasting methods and studying model behavior under distribution shift. More recently, I have been investigating how LLMs identify and explain <b>distributional differences between text corpora</b>, and whether different <b>agent harnesses</b> affect performance in scientific discovery. I am also interested in <b>human–agent interaction</b>, particularly when and how agents should seek human input. My broader application interests lie in <b>AI for healthcare</b>, where generalizability and responsible deployment are especially important.",
     "Feel free to reach out to me if you'd like to discuss research or explore potential collaboration!"
   ],
   "publications": [
