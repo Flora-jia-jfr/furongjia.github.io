@@ -66,7 +66,7 @@ python3 scripts/check.py
 
 论文保持连续列表；鼠标悬停或键盘焦点进入一条论文时，会显示轻微底色和标题下划线。资源链接带有箭头提示。减少动态效果的系统设置会关闭底色过渡。
 
-会议按 `venue` 原文显示，例如 `EMNLP 2026 Main`、`ACL-IJCNLP 2026 Main`、`ML4H 2025 Findings`，中间不加分隔点。
+会议按 `venue` 原文显示，例如 `EMNLP 2026 Main`、`AACL-IJCNLP 2026 Main`、`ML4H 2025 Findings`，中间不加分隔点。
 
 顶部 About、Publications、Service 直接链接到首页对应标题；Experience 和 CV 保留独立页面。首页 Academic service 合并显示为 Reviewer 和 Teaching Assistant 两项，由 `service` 和 `teaching` 数组生成，保留各会议、课程与日期。
 

@@ -46,8 +46,9 @@ def papers():
 def education():
     result = ''
     for row in DATA['education']:
+        period = f'<p class="period">{esc(row["period"])}</p>' if row.get('period') else ''
         detail = f'<p class="muted">{esc(row["detail"])}</p>' if row['detail'] else ''
-        result += f'<article class="experience"><h3>{esc(row["degree"])}</h3><p>{esc(row["institution"])}</p>{detail}</article>'
+        result += f'<article class="experience">{period}<h3>{esc(row["degree"])}</h3><p>{esc(row["institution"])}</p>{detail}</article>'
     return result
 
 

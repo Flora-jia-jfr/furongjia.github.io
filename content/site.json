@@ -30,7 +30,7 @@
     ]
   },
   "about": [
-    "Hi! I am a second-year Computer Science PhD student at <a href=\"https://www.duke.edu/\">Duke University</a>, supervised by Prof. <a\n                    href=\"https://www.monicaagrawal.com/\">Monica Agrawal</a>. Previously, I received my Bachelor of Science in Computer Science and Applied and Computational Mathematics from <a href=\"https://www.usc.edu/\">University of Southern California</a>, where I was fortunate to work with <a href=\"https://sites.google.com/view/yanliu-ai/home\">Prof. Yan Liu</a>, <a href=\"https://jessethomason.com/\">Prof. Jesse Thomason</a>, and <a href=\"https://maja-mataric.web.app/\">Prof. Maja Matarić</a>.",
+    "Hi! I am a third-year Computer Science PhD student at <a href=\"https://www.duke.edu/\">Duke University</a>, supervised by Prof. <a\n                    href=\"https://www.monicaagrawal.com/\">Monica Agrawal</a>. Previously, I received a B.S. in Computer Science and a B.S. in Applied and Computational Mathematics from <a href=\"https://www.usc.edu/\">University of Southern California</a>, where I was fortunate to work with <a href=\"https://sites.google.com/view/yanliu-ai/home\">Prof. Yan Liu</a>, <a href=\"https://jessethomason.com/\">Prof. Jesse Thomason</a>, and <a href=\"https://maja-mataric.web.app/\">Prof. Maja Matarić</a>.",
     "<b>Research:</b> I study <b>how data shapes LLM behavior and how LLMs interpret data</b>, with the broader goal of understanding what makes these systems <b>reliable, interpretable, and robust</b>. My work examines how pretraining data and inference-time inputs influence model reasoning, including how faithfully LLMs acquire <b>probabilistic knowledge</b> from text. My research also spans <b>diverse data</b> (text, time series, and multimodal inputs), including developing forecasting methods and studying model behavior under distribution shift. More recently, I have been investigating how LLMs identify and explain <b>distributional differences between text corpora</b>, and whether different <b>agent harnesses</b> affect performance in scientific discovery. I am also interested in <b>human–agent interaction</b>, particularly when and how agents should seek human input. My broader application interests lie in <b>AI for healthcare</b>, where generalizability and responsible deployment are especially important.",
     "Feel free to reach out to me if you'd like to discuss research or explore potential collaboration!"
   ],
@@ -38,7 +38,7 @@
     {
       "id": "batch-of-thought",
       "title": "Batch-of-Thought: Cross-Instance Learning for Enhanced LLM Reasoning",
-      "authors": "Xuan Yang, Furong Jia, Roy Xie, Xi Xiong, Jian Li, Monica Agrawal",
+      "authors": "Xuan Yang, Furong Jia, Roy Xie, Xiong Xi, Hengwei Bian, Jian Li, Monica Agrawal",
       "year": 2026,
       "venue": "EMNLP 2026 Main",
       "links": [
@@ -66,7 +66,7 @@
       "title": "Counting Clues: A Lightweight Probabilistic Baseline Can Match an LLM",
       "authors": "Furong Jia*, Yuan Pu*, Finn Guo, Monica Agrawal",
       "year": 2026,
-      "venue": "ACL-IJCNLP 2026 Main",
+      "venue": "AACL-IJCNLP 2026 Main",
       "links": [
         {
           "label": "Paper",
@@ -75,15 +75,36 @@
       ]
     },
     {
+      "id": "kidney-transplant",
+      "title": "Leveraging Large Language Models to Identify Barriers to Kidney Transplant in the STEPS Study",
+      "authors": "Monica Agrawal, Metin Gurcan, Sarah Peskoe, Freya Gulamali, Furong Jia, Tara Strigo, Ebony Boulware, Clarissa Diamantidis",
+      "year": 2026,
+      "venue": "Am. J. Kidney Dis. 2026 (Abstract)",
+      "links": []
+    },
+    {
+      "id": "auditing-variability",
+      "title": "Challenges of Auditing: Variability in Outputs of Large Language Models for Health",
+      "authors": "Yuan Pu, Yewon Chang, Furong Jia, Xunjian Yin, Jessica Ma, Ayman Ali, Monica Agrawal",
+      "year": 2026,
+      "venue": "arXiv 2026",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.16590"
+        }
+      ]
+    },
+    {
       "id": "diagnosing-datasets",
-      "title": "Diagnosing our datasets: How does my language model understand clinical text?",
+      "title": "How does my language model understand clinical text?",
       "authors": "Furong Jia, David Sontag, Monica Agrawal",
       "year": 2025,
       "venue": "CHIL 2025",
       "links": [
         {
           "label": "Paper",
-          "url": "https://arxiv.org/abs/2505.15024"
+          "url": "https://proceedings.mlr.press/v287/jia25a.html"
         },
         {
           "label": "Code",
@@ -150,12 +171,20 @@
   ],
   "education": [
     {
+      "period": "Aug 2024 - 2029 (expected)",
       "degree": "Ph.D. in Computer Science",
       "institution": "Duke University",
       "detail": "Advisor: Prof. Monica Agrawal"
     },
     {
-      "degree": "B.S. in Computer Science and Applied and Computational Mathematics",
+      "period": "Sep 2026",
+      "degree": "M.S. in Computer Science (en route)",
+      "institution": "Duke University",
+      "detail": ""
+    },
+    {
+      "period": "May 2024",
+      "degree": "B.S. in Computer Science; B.S. in Applied and Computational Mathematics",
       "institution": "University of Southern California",
       "detail": ""
     }
@@ -170,10 +199,10 @@
       "location": "Boston, MA",
       "projects": [
         {
-          "title": "",
+          "title": "When does the harness matter for LLM-driven discovery?",
           "bullets": [
-            "Developing modular AI-agent harnesses for scientific discovery, comparing orchestration, structured search, memory, and role-based components under matched backbone, interface, and compute budgets.",
-            "Studying where humans should intervene in agentic scientific workflows, with focus on failure modes, task boundaries beyond current agent capability, and help-seeking policies that elicit useful human input."
+            "Led a controlled comparison of 11 LLM search harnesses, from best-of-N sampling to evolutionary search and coding agents, on math construction, GPU kernel optimization, and nanoGPT training, under a shared task interface, evaluators, and API-cost ledger.",
+            "Found that choosing a harness often mattered more than upgrading the model, but the best harness depends on the setup: rankings change with how the budget is measured and which model is used."
           ]
         }
       ]
@@ -213,13 +242,13 @@
           "title": "Large Language Models for Time Series Forecasting",
           "bullets": [
             "Developed GPT4MTS to combine time series and text for multimodal forecasting.",
-            "Developed TEMPO with trend decomposition and adaptive prompting for forecasting under distribution shift."
+            "Co-developed TEMPO with trend decomposition and adaptive prompting for forecasting under distribution shift."
           ]
         }
       ]
     },
     {
-      "period": "Aug 2022 - Present",
+      "period": "Aug 2022 - June 2024",
       "institution": "GLAMOR Lab, University of Southern California",
       "role": "Research Assistant",
       "mentor": "Jesse Thomason",
@@ -242,9 +271,12 @@
     "Teaching Assistant, University of Southern California, Web Publishing and Front-end Development (ITP 104), Fall 2021 - Spring 2024"
   ],
   "service": [
-    "Reviewer: NeurIPS 2026, NeurIPS 2025",
-    "Reviewer: ML4H 2025",
-    "Reviewer: ACL ARR 2024 (June, October), ACL ARR 2025 (February, May)"
+    "Reviewer: NeurIPS 2025, 2026 (2026 Top Reviewer)",
+    "Reviewer: ICLR 2027",
+    "Reviewer: ML4H 2025, 2026",
+    "Reviewer: ACL ARR 2024 (February, June, October), ACL ARR 2025 (February, May)",
+    "Reviewer: NeurIPS FMTS Workshop 2026",
+    "Reviewer: COLM DAIH Workshop 2026"
   ],
   "honors": [
     "Albert Dorman Future Leader Award, University of Southern California, 2024",
