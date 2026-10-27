@@ -36,20 +36,11 @@ def paper_row(paper):
     return f'<li class="paper" id="{esc(paper["id"])}"><article><h3 class="paper-title">{title}</h3><p class="authors">{authors}</p><div class="paper-meta">{venue}{links}</div></article></li>'
 
 
-def papers():
-    result = '<section class="section" id="publications"><div class="section-heading"><h2>Publications</h2><span class="equal-contribution">* Equal contribution</span></div>'
-    rows = sorted(DATA['publications'], key=lambda p: p['year'], reverse=True)
+def papers(heading, rows, tag='h2', more=''):
+    result = f'<section class="section" id="publications"><div class="section-heading"><{tag}>{heading}</{tag}><span class="equal-contribution">* Equal contribution</span></div>'
+    rows = sorted(rows, key=lambda p: p['year'], reverse=True)
     result += '<ul class="paper-list">' + ''.join(map(paper_row, rows)) + '</ul>'
-    return result + '</section>'
-
-
-def education():
-    result = ''
-    for row in DATA['education']:
-        period = f'<p class="period">{esc(row["period"])}</p>' if row.get('period') else ''
-        detail = f'<p class="muted">{esc(row["detail"])}</p>' if row['detail'] else ''
-        result += f'<article class="experience">{period}<h3>{esc(row["degree"])}</h3><p>{esc(row["institution"])}</p>{detail}</article>'
-    return result
+    return result + more + '</section>'
 
 
 def experience():
@@ -57,7 +48,8 @@ def experience():
     for row in DATA['research_experience']:
         projects = ''
         for project in row['projects']:
-            heading = f'<h3>{esc(project["title"])}</h3>' if project.get('title') else ''
+            title = link(project['title'], f'publications.html#{project["paper"]}') if project.get('paper') else esc(project.get('title', ''))
+            heading = f'<h3>{title}</h3>' if project.get('title') else ''
             projects += f'<div class="research-project">{heading}{items(project["bullets"])}</div>'
         role = f'<span>{esc(row["role"])}</span>' if row.get('role') else ''
         mentor = f'<span>{esc(row["mentor_label"])}: {esc(row["mentor"])}</span>'
@@ -67,7 +59,7 @@ def experience():
 
 def build_page(filename, title, content, current, description=None):
     home = '' if filename == 'index.html' else 'index.html'
-    routes = [('About', f'{home}#about', 'about'), ('Publications', f'{home}#publications', 'publications'), ('Experience', 'experience.html', 'experience'), ('Service', f'{home}#academic-services', 'service'), ('CV', 'cv.html', 'cv')]
+    routes = [('About', f'{home}#about', 'about'), ('Publications', 'publications.html', 'publications'), ('Experience', 'experience.html', 'experience'), ('Service', f'{home}#academic-services', 'service'), ('CV', 'cv.html', 'cv')]
     active = 'location' if filename == 'index.html' else 'page'
     navigation = ''.join(link(label, url, f' aria-current="{active}"' if key == current else '') for label, url, key in routes)
     socials = ''
@@ -93,18 +85,21 @@ def main():
     reviewing = '; '.join(row.removeprefix('Reviewer: ') for row in DATA['service'])
     teaching = '; '.join(row.removeprefix('Teaching Assistant, ') for row in DATA['teaching'])
     service_summary = section('Academic service', f'<ul class="plain-list"><li><strong>Reviewer:</strong> {esc(reviewing)}.</li><li><strong>Teaching Assistant:</strong> {esc(teaching)}.</li></ul>', 'academic-services')
-    build_page('index.html', 'Furong Jia', about + papers() + service_summary, 'about')
+    selected = [p for p in DATA['publications'] if p.get('selected')]
+    more = '<p><a class="document-link" href="publications.html">All publications →</a></p>'
+    build_page('index.html', 'Furong Jia', about + papers('Selected publications', selected, more=more) + service_summary, 'about')
+    build_page('publications.html', 'Publications · Furong Jia', papers('Publications', DATA['publications'], 'h1'), 'publications', 'Publications of Furong Jia.')
     build_page('experience.html', 'Experience · Furong Jia', experience(), 'experience', 'Research experience of Furong Jia.')
     cv_url = esc(PROFILE['cv'])
     cv = f'<section class="section"><h1>Curriculum vitae</h1><div class="document-actions"><a class="document-link" href="{cv_url}">Open CV (PDF) ↗</a><a href="{cv_url}" download>Download</a></div><object class="cv-preview" data="{cv_url}" type="application/pdf" aria-label="Furong Jia curriculum vitae"><p><a href="{cv_url}">Open the CV PDF</a></p></object></section>'
-    build_page('cv.html', 'CV · Furong Jia', cv + section('Education', education(), 'education'), 'cv', 'Curriculum vitae and education of Furong Jia, Computer Science Ph.D. student at Duke University.')
-    for filename, target in [('publications.html', 'index.html#publications'), ('service.html', 'index.html#academic-services'), ('projects.html', 'index.html#publications'), ('blogs.html', 'index.html'), ('photography.html', 'index.html')]:
+    build_page('cv.html', 'CV · Furong Jia', cv, 'cv', 'Curriculum vitae of Furong Jia, Computer Science Ph.D. student at Duke University.')
+    for filename, target in [('service.html', 'index.html#academic-services'), ('projects.html', 'publications.html'), ('blogs.html', 'index.html'), ('photography.html', 'index.html')]:
         redirect(filename, target)
-    urls = [PROFILE['url']] + [urljoin(PROFILE['url'], f) for f in ['experience.html', 'cv.html']]
+    urls = [PROFILE['url']] + [urljoin(PROFILE['url'], f) for f in ['publications.html', 'experience.html', 'cv.html']]
     (ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{esc(url)}</loc></url>\n' for url in urls) + '</urlset>\n')
     (ROOT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {PROFILE["url"]}sitemap.xml\n')
     (ROOT / '.nojekyll').touch()
-    print(f'Built 3 pages and 5 legacy redirects with {len(DATA["publications"])} papers.')
+    print(f'Built 4 pages and 4 legacy redirects with {len(DATA["publications"])} papers ({len(selected)} selected).')
 
 
 if __name__ == '__main__':

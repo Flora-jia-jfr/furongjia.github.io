@@ -33,7 +33,7 @@ def main():
     checked = 0
     for path, page in pages.items():
         assert len(page.ids) == len(set(page.ids)), f'Duplicate IDs in {path.name}'
-        if path.name not in ('publications.html', 'service.html', 'projects.html', 'blogs.html', 'photography.html'):
+        if path.name not in ('service.html', 'projects.html', 'blogs.html', 'photography.html'):
             assert page.titles == 1, f'Expected one h1 in {path.name}'
         for href in page.links:
             url = urlsplit(href)
@@ -46,14 +46,15 @@ def main():
                 assert unquote(url.fragment) in pages[target].ids, f'Broken anchor in {path.name}: {href}'
             checked += 1
     expected = [paper['id'] for paper in DATA['publications']]
-    for filename in ('index.html',):
+    ordered = [p['id'] for p in sorted(DATA['publications'], key=lambda p: -p['year'])]
+    selected = [p['id'] for p in sorted(DATA['publications'], key=lambda p: -p['year']) if p.get('selected')]
+    assert selected, 'No selected papers for the homepage'
+    for filename, papers in (('publications.html', ordered), ('index.html', selected)):
         page = pages[ROOT / filename]
-        assert all(page.ids.count(key) == 1 for key in expected), f'Missing or repeated papers in {filename}'
         rendered = [key for key in page.ids if key in expected]
-        ordered = sorted(DATA['publications'], key=lambda p: -p['year'])
-        assert rendered == [p['id'] for p in ordered], f'Unexpected paper order in {filename}'
+        assert rendered == papers, f'Missing, repeated, or misordered papers in {filename}'
     assert all((ROOT / p['image']).is_file() for p in DATA['publications'] if p.get('image'))
-    print(f'Checked {len(pages)} HTML files, {checked} internal links, and all {len(expected)} papers on the homepage.')
+    print(f'Checked {len(pages)} HTML files, {checked} internal links, all {len(expected)} papers on the publications page, and {len(selected)} selected on the homepage.')
 
 
 if __name__ == '__main__':

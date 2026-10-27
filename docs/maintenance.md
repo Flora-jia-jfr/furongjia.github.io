@@ -1,6 +1,6 @@
 # Website maintenance
 
-A personal academic website with a sticky top navigation, a wide reading column, a sticky profile on desktop, all publications and academic service on the homepage, and separate experience and CV pages. The design takes inspiration from Minimal Light; the layout, styles, and generator are written for this site. No Jekyll theme, frontend framework, or package installation is required.
+A personal academic website with a sticky top navigation, a wide reading column, a sticky profile on desktop, selected publications and academic service on the homepage, and separate publications, experience, and CV pages. The design takes inspiration from Minimal Light; the layout, styles, and generator are written for this site. No Jekyll theme, frontend framework, or package installation is required.
 
 Live website: https://flora-jia-jfr.github.io/furongjia.github.io/
 
@@ -19,8 +19,7 @@ python3 scripts/check.py
 | --- | --- |
 | 姓名、邮箱、照片、CV 链接 | `profile` |
 | Bio 的三个段落 | `about`（Research 保留模型可靠性、可解释性、鲁棒性、数据与适应性等原有方向，并补充 AI for science / healthcare、agent behavior 和 human–agent interaction；其余段落保留原文，未经要求不自动改写） |
-| 全部论文和预印本 | `publications` |
-| 学历 | `education` |
+| 全部论文和预印本（`selected: true` 的同时显示在首页） | `publications` |
 | Research experience | `research_experience` |
 | Teaching | `teaching` |
 | Academic service | `service` |
@@ -45,6 +44,7 @@ python3 scripts/check.py
 ```
 
 - `id` 必须唯一，用于论文链接锚点。
+- Publications 页显示全部论文；设置 `"selected": true` 的论文也显示在首页 Selected publications，首页列表下方链接到 Publications 页。
 - 所有论文显示为一个连续列表，不显示年份分组或 Preprints 分组。未发表的论文可将 `venue` 写为 `arXiv`，也可留空。
 - `year` 仅用于倒序排序；同一年内按数据文件的排列顺序显示。会议名称和年份按 `venue` 原文展示。
 - 本人的名字自动加粗，不需要在作者字段手写 HTML。
@@ -68,9 +68,9 @@ python3 scripts/check.py
 
 会议按 `venue` 原文显示，例如 `EMNLP 2026 Main`、`AACL-IJCNLP 2026 Main`、`ML4H 2025 Findings`，中间不加分隔点。
 
-顶部 About、Publications、Service 直接链接到首页对应标题；Experience 和 CV 保留独立页面。首页 Academic service 合并显示为 Reviewer 和 Teaching Assistant 两项，由 `service` 和 `teaching` 数组生成，保留各会议、课程与日期。
+顶部 About、Service 直接链接到首页对应标题；Publications、Experience 和 CV 为独立页面。CV 页只显示 PDF 简历，不再单独列 Education。首页 Academic service 合并显示为 Reviewer 和 Teaching Assistant 两项，由 `service` 和 `teaching` 数组生成，保留各会议、课程与日期。
 
-研究经历按机构、职位、日期及项目组织。`research_experience` 中每项包含 `period`、`institution`、`role`、`mentor`、`mentor_label`、`location` 和 `projects`。每个项目的 `title` 为项目标题，`bullets` 为简短的研究要点；若简历只列职位下的工作描述，可将项目标题留空。Duke 职位为 PhD Student，USC 两段职位为 Research Assistant。所有研究内容使用 bullet points，Duke 和 USC 的描述按作者要求从 CV 大幅精简；IBM 保留 CV 的两项工作描述。Service 与 Teaching 根据提供的两页 CV 更新，课程编号沿用已有数据及作者确认的 Duke CS 572。
+研究经历按机构、职位、日期及项目组织。`research_experience` 中每项包含 `period`、`institution`、`role`、`mentor`、`mentor_label`、`location` 和 `projects`。每个项目的 `title` 为项目标题，`bullets` 为简短的研究要点；若简历只列职位下的工作描述，可将项目标题留空。项目可加 `paper`（论文的 `id`），标题会链接到 Publications 页对应论文。Duke 职位为 PhD Student，USC 两段职位为 Research Assistant。所有研究内容使用 bullet points，各项目按 CV 的 Research Experience 拆成简短要点，内容与 CV 保持一致。Service 与 Teaching 根据提供的两页 CV 更新，课程编号沿用已有数据及作者确认的 Duke CS 572。
 
 ## 本地预览
 
@@ -110,14 +110,14 @@ scripts/check.py    # 检查本地链接、锚点、照片、论文完整性与�
 assets/site.css     # 字体、宽度、留白、响应式布局
 assets/site.js      # 明暗外观切换 + 首页当前栏目提示
 assets/icons/       # 社交 logo 及许可证
-index.html          # About + 全部论文 + Reviewer / Teaching Assistant
-publications.html   # 跳转至首页 Publications 标题
+index.html          # About + Selected publications + Reviewer / Teaching Assistant
+publications.html   # 全部论文
 experience.html     # 仅 Research experience
 service.html        # 跳转至首页 Academic service 标题
-cv.html             # PDF 简历 + Education
+cv.html             # PDF 简历
 ```
 
-以前的 `projects.html` 跳转到首页论文区，`blogs.html` 和 `photography.html` 跳转到首页。已有论文图、照片和 PDF 路径保留，旧模板源代码仍可在 Git 历史中找到。
+以前的 `projects.html` 跳转到 Publications 页，`blogs.html` 和 `photography.html` 跳转到首页。已有论文图、照片和 PDF 路径保留，旧模板源代码仍可在 Git 历史中找到。
 
 ## Design references
 

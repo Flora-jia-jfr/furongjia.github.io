@@ -41,6 +41,7 @@
       "authors": "Xuan Yang, Furong Jia, Roy Xie, Xiong Xi, Hengwei Bian, Jian Li, Monica Agrawal",
       "year": 2026,
       "venue": "EMNLP 2026 Main",
+      "selected": true,
       "links": [
         {
           "label": "Paper",
@@ -54,6 +55,7 @@
       "authors": "Shariar Vaez-Ghaemi*, Furong Jia*, Monica Agrawal",
       "year": 2025,
       "venue": "ML4H 2025",
+      "selected": true,
       "links": [
         {
           "label": "Paper",
@@ -67,6 +69,7 @@
       "authors": "Furong Jia*, Yuan Pu*, Finn Guo, Monica Agrawal",
       "year": 2026,
       "venue": "AACL-IJCNLP 2026 Main",
+      "selected": true,
       "links": [
         {
           "label": "Paper",
@@ -101,6 +104,7 @@
       "authors": "Furong Jia, David Sontag, Monica Agrawal",
       "year": 2025,
       "venue": "CHIL 2025",
+      "selected": true,
       "links": [
         {
           "label": "Paper",
@@ -131,6 +135,7 @@
       "authors": "Defu Cao, Furong Jia, Sercan O Arik, Tomas Pfister, Yixiang Zheng, Wen Ye, Yan Liu",
       "year": 2024,
       "venue": "ICLR 2024",
+      "selected": true,
       "links": [
         {
           "label": "Paper",
@@ -169,26 +174,6 @@
       ]
     }
   ],
-  "education": [
-    {
-      "period": "Aug 2024 - 2029 (expected)",
-      "degree": "Ph.D. in Computer Science",
-      "institution": "Duke University",
-      "detail": "Advisor: Prof. Monica Agrawal"
-    },
-    {
-      "period": "Sep 2026",
-      "degree": "M.S. in Computer Science (en route)",
-      "institution": "Duke University",
-      "detail": ""
-    },
-    {
-      "period": "May 2024",
-      "degree": "B.S. in Computer Science; B.S. in Applied and Computational Mathematics",
-      "institution": "University of Southern California",
-      "detail": ""
-    }
-  ],
   "research_experience": [
     {
       "period": "May 2026 - Aug 2026",
@@ -216,16 +201,34 @@
       "location": "Durham, NC",
       "projects": [
         {
-          "title": "Understanding LLM dynamics as a function of pretraining data",
+          "title": "How faithfully do LLMs acquire probabilistic knowledge?",
           "bullets": [
-            "Studying how pretraining data shapes clinical LLM behavior and probabilistic knowledge.",
-            "Developed corpus-based probabilistic baselines that complement LLM diagnostic reasoning."
+            "Continually pretrained OLMo-2 1B and 7B on millions of notes generated from 650 synthetic Bayesian networks, so learned probabilities can be checked exactly.",
+            "Found relational compression: models get individual probabilities about right and rank outcomes correctly, yet understate how far apart outcomes are and how much strong evidence should shift a prediction. Standard metrics miss this."
           ]
         },
         {
-          "title": "Interpreting Dataset Shift in Clinical Notes",
+          "title": "How do LLMs learn clinical knowledge?",
+          "paper": "diagnosing-datasets",
           "bullets": [
-            "Developed SIReNs to explain dataset shifts in clinical notes; extending this work to agent-based shift analysis."
+            "Built MedLingo, a jargon benchmark from real clinical notes, and showed that term–meaning co-occurrence counts in pretraining corpora predict which jargon a model understands; jargon common in clinical notes is often rare in pretraining data.",
+            "Models reject disputed medical claims when asked directly but are far likelier to endorse them when the question presupposes them."
+          ]
+        },
+        {
+          "title": "Can counting match an LLM?",
+          "paper": "counting-clues",
+          "bullets": [
+            "Introduced FBPR, a Naive Bayes that ranks MedQA diagnoses using concept–diagnosis co-occurrence counts from an LLM's pretraining corpus; it matches that LLM's diagnostic accuracy (OLMo 7B, LLaMA 65B).",
+            "The two get largely different questions right, so LLMs are not simply aggregating frequencies, and a simple hybrid of the two beats both."
+          ]
+        },
+        {
+          "title": "Interpreting dataset shift in clinical notes",
+          "paper": "dataset-shift",
+          "bullets": [
+            "Built a benchmark that induces controlled shifts in real MIMIC-IV notes, and SIReNs, which explains a shift by showing an LLM representative notes from each dataset.",
+            "SIReNs nearly matches an oracle on clear-cut binary shifts but struggles with gradual continuous ones. Now extending this to LLM agents and harnesses on multifactorial shifts."
           ]
         }
       ]
@@ -239,10 +242,19 @@
       "location": "Los Angeles, CA",
       "projects": [
         {
-          "title": "Large Language Models for Time Series Forecasting",
+          "title": "GPT4MTS: Prompt-Based Large Language Model for Multimodal Time-Series Forecasting",
+          "paper": "gpt4mts",
           "bullets": [
-            "Developed GPT4MTS to combine time series and text for multimodal forecasting.",
-            "Co-developed TEMPO with trend decomposition and adaptive prompting for forecasting under distribution shift."
+            "Built an LLM pipeline that pairs time series with related news summaries and used it to create a GDELT news-coverage dataset for 55 U.S. regions.",
+            "Feeding the text to GPT-2 as soft prompts cut MSE by 4% over the best LLM baseline."
+          ]
+        },
+        {
+          "title": "TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting",
+          "paper": "tempo",
+          "bullets": [
+            "Co-developed and ran training experiments for a GPT-2 forecaster that splits each series into trend, seasonal, and residual parts and uses prompts to adapt to distribution shift.",
+            "In zero-shot forecasting on unseen datasets, it outperformed baselines evaluated the same way (e.g., 19% lower MAE than PatchTST on ETTm1)."
           ]
         }
       ]
@@ -256,9 +268,11 @@
       "location": "Los Angeles, CA",
       "projects": [
         {
-          "title": "Initializing Adapters with Improvised Knowledge for Multimodal Continual Learning",
+          "title": "I2I: Initializing Adapters with Improvised Knowledge",
+          "paper": "i2i",
           "bullets": [
-            "Studied adapter-based knowledge transfer for continual visual question answering to improve forward transfer and reduce forgetting."
+            "Trained CLIP-BART for a method that starts each new task's adapter from a distilled blend of earlier ones.",
+            "On five VQA tasks it raised new-task scores 4% relative to independent adapters, while AdapterFusion lowered them 2%: reuse works best as a starting point."
           ]
         }
       ]
