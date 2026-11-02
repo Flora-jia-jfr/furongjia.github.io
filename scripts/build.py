@@ -43,14 +43,19 @@ def papers(heading, rows, tag='h2', more=''):
     return result + more + '</section>'
 
 
+def project_papers(ids):
+    papers = {paper['id']: paper for paper in DATA['publications']}
+    rows = ''.join(f'<li>{link(papers[key]["title"], f"publications.html#{key}")} <span class="venue-name">{esc(papers[key]["venue"])}</span></li>' for key in ids)
+    return f'<ul class="project-papers">{rows}</ul>' if ids else ''
+
+
 def experience():
     result = '<section class="section" id="research-experience"><h1>Research experience</h1>'
     for row in DATA['research_experience']:
         projects = ''
         for project in row['projects']:
-            title = link(project['title'], f'publications.html#{project["paper"]}') if project.get('paper') else esc(project.get('title', ''))
-            heading = f'<h3>{title}</h3>' if project.get('title') else ''
-            projects += f'<div class="research-project">{heading}{items(project["bullets"])}</div>'
+            heading = f'<h3>{esc(project["title"])}</h3>' if project.get('title') else ''
+            projects += f'<div class="research-project">{heading}{items(project["bullets"])}{project_papers(project.get("papers", []))}</div>'
         role = f'<span>{esc(row["role"])}</span>' if row.get('role') else ''
         mentor = f'<span>{esc(row["mentor_label"])}: {esc(row["mentor"])}</span>'
         result += f'<article class="experience"><div class="experience-meta"><span>{esc(row["period"])}</span><span>{esc(row["location"])}</span></div><h2>{esc(row["institution"])}</h2><p class="mentor">{role}{mentor}</p>{projects}</article>'
