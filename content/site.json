@@ -31,7 +31,7 @@
   },
   "about": [
     "Hi! I am a third-year Computer Science PhD student at <a href=\"https://www.duke.edu/\">Duke University</a>, supervised by Prof. <a\n                    href=\"https://www.monicaagrawal.com/\">Monica Agrawal</a>. Previously, I received a B.S. in Computer Science and a B.S. in Applied and Computational Mathematics from <a href=\"https://www.usc.edu/\">University of Southern California</a>, where I was fortunate to work with <a href=\"https://sites.google.com/view/yanliu-ai/home\">Prof. Yan Liu</a>, <a href=\"https://jessethomason.com/\">Prof. Jesse Thomason</a>, and <a href=\"https://maja-mataric.web.app/\">Prof. Maja Matarić</a>.",
-    "<b>Research:</b> I study <b>how data shapes LLM behavior and how LLMs interpret data</b>, with the broader goal of understanding what makes these systems <b>reliable, interpretable, and robust</b>. My work examines how pretraining data and inference-time inputs influence model reasoning, including how faithfully LLMs acquire <b>probabilistic knowledge</b> from text. My research also spans <b>diverse data</b> (text, time series, and multimodal inputs), including developing forecasting methods and studying model behavior under distribution shift. More recently, I have been investigating how LLMs identify and explain <b>distributional differences between text corpora</b>, and whether different <b>agent harnesses</b> affect performance in scientific discovery. I am also interested in <b>human–agent interaction</b>, particularly when and how agents should seek human input. My broader application interests lie in <b>AI for healthcare</b>, where generalizability and responsible deployment are especially important.",
+    "<b>Research:</b> I study <b>how data shapes LLM behavior and how LLMs interpret data</b>, with the broader goal of understanding what makes these systems <b>reliable, interpretable, and robust</b>. My work examines how pretraining data and inference-time inputs influence model reasoning, including how faithfully LLMs acquire <b>probabilistic knowledge</b> from text. My research also spans <b>diverse data</b> (text, time series, and multimodal inputs), including developing forecasting methods and studying model behavior under distribution shift. Building on this, I now study <b>LLM agents</b> for <b>healthcare</b> and <b>scientific discovery</b>: when agent design actually matters, and how agents can analyze and explain clinical data.",
     "Feel free to reach out to me if you'd like to discuss research or explore potential collaboration!"
   ],
   "publications": [
@@ -185,10 +185,9 @@
       "location": "Boston, MA",
       "projects": [
         {
-          "title": "When does the harness matter for LLM-driven discovery?",
+          "title": "Harnesses for LLM-driven discovery",
           "bullets": [
-            "Led a controlled comparison of 11 LLM search harnesses, from best-of-N sampling to evolutionary search and coding agents, on math construction, GPU kernel optimization, and nanoGPT training, under a shared task interface, evaluators, and API-cost ledger.",
-            "Found that choosing a harness often mattered more than upgrading the model, but the best harness depends on the setup: rankings change with how the budget is measured and which model is used."
+            "To separate a harness's effect from task, model, and budget, we led a controlled comparison of 11 search harnesses on mathematical construction, GPU kernel optimization, and language-model training. Harness choice often mattered more than a model upgrade, but the winner depended on the setup: counting budget in candidates instead of API cost changed the top harness in half of the settings, switching the model reversed 41% of harness pairs, and running the autoresearch loop via a coding agent, not a fixed pipeline, benefited from using the stronger model but rarely the weaker."
           ]
         }
       ]
@@ -202,34 +201,30 @@
       "location": "Durham, NC",
       "projects": [
         {
-          "title": "How faithfully do LLMs acquire probabilistic knowledge?",
+          "title": "Probabilistic knowledge from pretraining",
           "bullets": [
-            "Continually pretrained OLMo-2 1B and 7B on millions of notes generated from 650 synthetic Bayesian networks, so learned probabilities can be checked exactly.",
-            "Found relational compression: models get individual probabilities about right and rank outcomes correctly, yet understate how far apart outcomes are and how much strong evidence should shift a prediction. Standard metrics miss this."
-          ]
-        },
-        {
-          "title": "How do LLMs learn clinical knowledge?",
-          "paper": "diagnosing-datasets",
-          "bullets": [
-            "Built MedLingo, a jargon benchmark from real clinical notes, and showed that term–meaning co-occurrence counts in pretraining corpora predict which jargon a model understands; jargon common in clinical notes is often rare in pretraining data.",
-            "Models reject disputed medical claims when asked directly but are far likelier to endorse them when the question presupposes them."
-          ]
-        },
-        {
-          "title": "Can counting match an LLM?",
-          "paper": "counting-clues",
-          "bullets": [
-            "Introduced FBPR, a Naive Bayes that ranks MedQA diagnoses using concept–diagnosis co-occurrence counts from an LLM's pretraining corpus; it matches that LLM's diagnostic accuracy (OLMo 7B, LLaMA 65B).",
-            "The two get largely different questions right, so LLMs are not simply aggregating frequencies, and a simple hybrid of the two beats both."
+            "We studied how faithfully LLMs acquire probabilistic knowledge from pretraining text. We built a controlled continual-pretraining framework where known data-generating networks define ground-truth distributions, synthetic clinical-style corpora verbalize sampled configurations, and OLMo-2 models are evaluated by comparing native next-token probabilities with ground-truth posteriors. We found that models recover individual probabilities well but compress the relations between them, understating how far apart outcomes are and how much evidence should move a prediction. We call this relational compression, which is typically under-measured by standard metrics because they score each probability in isolation."
           ]
         },
         {
           "title": "Interpreting dataset shift in clinical notes",
           "paper": "dataset-shift",
           "bullets": [
-            "Built a benchmark that induces controlled shifts in real MIMIC-IV notes, and SIReNs, which explains a shift by showing an LLM representative notes from each dataset.",
-            "SIReNs nearly matches an oracle on clear-cut binary shifts but struggles with gradual continuous ones. Now extending this to LLM agents and harnesses on multifactorial shifts."
+            "We addressed the need to explain, more than just detect, distribution shifts in clinical text. We established an extensible benchmark suite that induces synthetic shifts using real clinical notes, developed methods for evaluating generated shift explanations, and introduced SIReNs, an end-to-end approach that explains distributional differences by selecting representative notes from each distribution. We are also extending this work to benchmark agent capabilities and agent harnesses for interpreting shifts in multi-factorial settings and more general textual domains."
+          ]
+        },
+        {
+          "title": "Where LLMs learn clinical knowledge",
+          "paper": "diagnosing-datasets",
+          "bullets": [
+            "We examined how evidence in pretraining corpora shapes clinical LLM behavior. We linked keyword-pair occurrences in pretraining data to model performance on clinical jargon understanding and unsupported medical claims, curated MedLingo from real-world clinical-note abbreviations, and analyzed sources of clinical information in pretraining datasets to guide future corpus design."
+          ]
+        },
+        {
+          "title": "Counting baselines for diagnosis",
+          "paper": "counting-clues",
+          "bullets": [
+            "We tested how much of LLMs' diagnostic accuracy can be explained by pretraining-corpus statistics. We built FBPR, a Naive Bayes ranker that scores MedQA diagnoses using concept–diagnosis co-occurrence counts from an LLM's pretraining corpus (or its open reproduction), and found that it matches that LLM's diagnostic accuracy. The two get largely different questions right, and a simple hybrid of the two beats both."
           ]
         }
       ]
@@ -243,19 +238,10 @@
       "location": "Los Angeles, CA",
       "projects": [
         {
-          "title": "GPT4MTS: Prompt-Based Large Language Model for Multimodal Time-Series Forecasting",
-          "paper": "gpt4mts",
+          "title": "Large Language Models for Multimodal Time Series Forecasting",
           "bullets": [
-            "Built an LLM pipeline that pairs time series with related news summaries and used it to create a GDELT news-coverage dataset for 55 U.S. regions.",
-            "Feeding the text to GPT-2 as soft prompts cut MSE by 4% over the best LLM baseline."
-          ]
-        },
-        {
-          "title": "TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting",
-          "paper": "tempo",
-          "bullets": [
-            "Co-developed and ran training experiments for a GPT-2 forecaster that splits each series into trend, seasonal, and residual parts and uses prompts to adapt to distribution shift.",
-            "In zero-shot forecasting on unseen datasets, it outperformed baselines evaluated the same way (e.g., 19% lower MAE than PatchTST on ETTm1)."
+            "We introduced GPT4MTS, a prompt-based framework that fuses numeric time series with text. We also built a GDELT-derived multimodal news impact dataset and showed consistent forecasting gains over strong unimodal baselines, demonstrating effective multimodal fusion and the value of extra-textual information.",
+            "We developed TEMPO, a GPT architecture-based time series framework that combines seasonal trend decomposition with adaptive, selection-based prompting for non-stationary distribution shift. It achieves zero-shot state-of-the-art across diverse and unseen (including multi-modal) benchmarks, indicating strong potential as a foundation model for time series forecasting."
           ]
         }
       ]
@@ -269,11 +255,10 @@
       "location": "Los Angeles, CA",
       "projects": [
         {
-          "title": "I2I: Initializing Adapters with Improvised Knowledge",
+          "title": "Parameter-efficient finetuning for Multimodal Continual Learning",
           "paper": "i2i",
           "bullets": [
-            "Trained CLIP-BART for a method that starts each new task's adapter from a distilled blend of earlier ones.",
-            "On five VQA tasks it raised new-task scores 4% relative to independent adapters, while AdapterFusion lowered them 2%: reuse works best as a starting point."
+            "We applied parameter-efficient knowledge transfer using adapters in multimodal models for visual question answering tasks. We implemented and trained model architectures on multiple vision-language tasks (VQAv2, Visual7W, VQA-Abstract, VizWiz, DAQUAR) to enhance forward transfer and reduce knowledge forgetting."
           ]
         }
       ]
