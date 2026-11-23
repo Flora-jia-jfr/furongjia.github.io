@@ -42,7 +42,12 @@
       "year": 2026,
       "venue": "Under review",
       "selected": true,
-      "links": []
+      "links": [
+        {
+          "label": "Paper",
+          "url": "files/when-does-the-harness-matter-for-llm-driven-discovery.pdf"
+        }
+      ]
     },
     {
       "id": "probability",
