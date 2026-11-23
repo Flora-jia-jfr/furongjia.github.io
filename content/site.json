@@ -56,7 +56,12 @@
       "year": 2026,
       "venue": "Under review",
       "selected": true,
-      "links": []
+      "links": [
+        {
+          "label": "Paper",
+          "url": "files/how-faithfully-do-language-models-acquire-probabilistic-knowledge.pdf"
+        }
+      ]
     },
     {
       "id": "batch-of-thought",
