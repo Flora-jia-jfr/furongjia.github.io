@@ -54,6 +54,8 @@ python3 scripts/check.py
 
 照片位于 `figures/me.jpg`。CV 文件位于 `files/`，具体文件名由 `profile.cv` 指定。替换 PDF 后，如果文件名变化，也要同步更新这个字段。
 
+替换 CV 后重新运行构建脚本；脚本会根据 PDF 内容自动更新预览和下载链接的版本参数，避免浏览器沿用旧版 PDF 缓存。
+
 照片在页面中以 4:5 竖幅、轻微圆角显示，原照片文件保持完整。姓名和栏目标题采用本地托管的 Source Serif 4，字体及 SIL Open Font License 位于 `assets/fonts/`。正文使用系统无衬线字体。
 
 左栏 Google Scholar、GitHub 和 Twitter 使用本地 SVG logo，配置在 `profile.socials` 的 `label`、`url`、`icon` 字段。图标使用统一主题色，并提供名称提示和无障碍标签。图标来自 Font Awesome Free 6.7.2，文件及许可证位于 `assets/icons/`。

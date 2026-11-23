@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build the GitHub Pages HTML from local content, using Python's standard library."""
+import hashlib
 import html
 import json
 from pathlib import Path
@@ -95,7 +96,8 @@ def main():
     build_page('index.html', 'Furong Jia', about + papers('Selected publications', selected, more=more) + service_summary, 'about')
     build_page('publications.html', 'Publications · Furong Jia', papers('Publications', DATA['publications'], 'h1'), 'publications', 'Publications of Furong Jia.')
     build_page('experience.html', 'Experience · Furong Jia', experience(), 'experience', 'Research experience of Furong Jia.')
-    cv_url = esc(PROFILE['cv'])
+    cv_version = hashlib.sha256((ROOT / PROFILE['cv']).read_bytes()).hexdigest()[:12]
+    cv_url = esc(f'{PROFILE["cv"]}?v={cv_version}')
     cv = f'<section class="section"><h1>Curriculum vitae</h1><div class="document-actions"><a class="document-link" href="{cv_url}">Open CV (PDF) ↗</a><a href="{cv_url}" download>Download</a></div><object class="cv-preview" data="{cv_url}" type="application/pdf" aria-label="Furong Jia curriculum vitae"><p><a href="{cv_url}">Open the CV PDF</a></p></object></section>'
     build_page('cv.html', 'CV · Furong Jia', cv, 'cv', 'Curriculum vitae of Furong Jia, Computer Science Ph.D. student at Duke University.')
     for filename, target in [('service.html', 'index.html#academic-services'), ('projects.html', 'publications.html'), ('blogs.html', 'index.html'), ('photography.html', 'index.html')]:
